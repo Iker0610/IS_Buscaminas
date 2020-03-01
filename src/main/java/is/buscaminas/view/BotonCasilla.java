@@ -1,4 +1,4 @@
-package view;
+package is.buscaminas.view;
 
 
 import javafx.scene.control.Button;

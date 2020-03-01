@@ -1,6 +1,6 @@
-package model;
+package is.buscaminas.model;
 
-import model.casillas.Casilla;
+import is.buscaminas.model.casillas.Casilla;
 
 public class Tablero {
     private static Tablero mTablero;
