@@ -42,7 +42,7 @@ public class Partida extends Application {
         Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
         stageAct.setScene(new Scene(root));
 
-        //Se muestra
+        //Se muestra una vez cargado
         stageAct.show();
     }
 }

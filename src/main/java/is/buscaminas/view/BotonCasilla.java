@@ -5,15 +5,16 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 
-//TODO: Añadir el patrón Observer
-public class BotonCasilla extends Button {
+public class BotonCasilla extends Button implements PropertyChangeListener {
     //Descripción:
     // - Elemento UI dedicado a las casillas
 
     //Atributos
-    private final int size = 20;
+    private final int size = 30;
     private ImageView imagenCasilla;
 
     //Constructora
@@ -22,23 +23,41 @@ public class BotonCasilla extends Button {
         //Se configura el boton
         super();
         setText(null);
-        setPrefHeight(Button.USE_COMPUTED_SIZE);
-        setPrefWidth(Button.USE_COMPUTED_SIZE);
+        setPrefHeight(30);
+        setPrefWidth(30);
         setStyle("-fx-background-color: transparent;");
 
         //Se configura la apariencia del boton
         imagenCasilla = new ImageView();
-        imagenCasilla.fitWidthProperty().bind(((Button) imagenCasilla.getParent()).widthProperty());
-        imagenCasilla.fitHeightProperty().bind(((Button) imagenCasilla.getParent()).heightProperty());
+        imagenCasilla.setPreserveRatio(false);
+        imagenCasilla.fitWidthProperty().bind(this.widthProperty());
+        imagenCasilla.fitHeightProperty().bind(this.heightProperty());
 
         this.getChildren().add(imagenCasilla);
         super.setGraphic(imagenCasilla);
 
         //Se carga y se aplica
-        Image skin = new Image(new File("src/resources/hidden.jpg").toURI().toString());
-        imagenCasilla.setImage(skin);
+        Image aspecto = new Image(new File("is/buscaminas/ui/assets/casillas/.keep.gif").toURI().toString());
+        imagenCasilla.setImage(aspecto);
+
+        //Se carga y se aplica
+        cambiarApariencia("oculta");
     }
 
     //Metodos
     //Aquí van los métodos para actualizar el botón, los eventos NO VAN AQUÍ, se cargan en el controller
+
+    //Metodo del patrón observer
+    @Override
+    public void propertyChange (PropertyChangeEvent propertyChangeEvent)
+    {
+        //TODO: Finalizar el patrón Observer
+    }
+
+    //Metodo para cambiar el aspecto de la casilla:
+    private void cambiarApariencia (String pString)
+    {
+        Image aspecto = new Image(new File("is/buscaminas/ui/assets/casillas/" + pString + ".gif").toURI().toString());
+        imagenCasilla.setImage(aspecto);
+    }
 }
