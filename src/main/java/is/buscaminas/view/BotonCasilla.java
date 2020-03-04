@@ -41,7 +41,7 @@ public class BotonCasilla extends Button implements PropertyChangeListener {
         imagenCasilla.setImage(aspecto);
 
         //Se carga y se aplica
-        cambiarApariencia("oculta");
+        cambiarApariencia("oculto");
     }
 
     //Metodos
