@@ -51,22 +51,26 @@ public class Partida extends Application {
     }
 
     //Singleton
-    public Partida getPartida(){
+    public static Partida getPartida ()
+    {
         if (mPartida == null) mPartida = new Partida();
         return mPartida;
     }
 
     //Metodos publicos de la clase:
-    public int getDificultad(){
+    public int getDificultad ()
+    {
         return dificultad;
     }
 
     //Metodos relacionados a la partida
-    private void iniciarPartida(){
+    private void iniciarPartida ()
+    {
 
     }
 
-    public void finalizarPartida (boolean pVictoria){
+    public void finalizarPartida (boolean pVictoria)
+    {
         //TODO
         System.exit(0);
     }
