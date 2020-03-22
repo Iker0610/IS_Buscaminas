@@ -6,6 +6,7 @@ import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
 import is.buscaminas.view.BotonCasilla;
+import javafx.util.Pair;
 
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class Tablero {
     private static Tablero mTablero;
     private Casilla[][] matrizCasillas;
     private int casillasPorDespejar; //Las que no son minas y aún ocultas
-    private int minasSinMarcar; //
+    private int numMinas; //
 
     //Constructora
     private Tablero ()
@@ -45,8 +46,8 @@ public class Tablero {
                 matrizCasillas = new Casilla[12][25];
                 break;
         }
-        minasSinMarcar = matrizCasillas[0].length * dificultad;
-        casillasPorDespejar = (matrizCasillas.length * matrizCasillas[0].length) - minasSinMarcar;
+        numMinas = matrizCasillas[0].length * dificultad;
+        casillasPorDespejar = (matrizCasillas.length * matrizCasillas[0].length) - numMinas;
     }
 
     //----------------------------------------------
@@ -62,7 +63,7 @@ public class Tablero {
     {
         int fila, columna;
         Random random = new Random();
-        int numMinas = minasSinMarcar;
+        int numMinas = this.numMinas;
 
         while (numMinas > 0) {
             fila = random.nextInt(matrizCasillas.length);
@@ -113,7 +114,30 @@ public class Tablero {
     //----------------------------------------------
     public void despejarCasilla (int pFila, int pColumna)
     {
-
+        Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].despejar();
+        if (resultado.getValue()) {
+            casillasPorDespejar--;
+        }
+        if (casillasPorDespejar == 0) { Partida.getPartida().finalizarPartida(true); }
+        else if (resultado.getKey()) {
+            if (resultado.getValue()) {
+                //En caso de que se haya despejado una mina con número 0;
+                //Se despejan todas las minas alrededor
+                for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
+                    for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
+                        //Se comprueba que se está dentro del tablero
+                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
+                            columna < matrizCasillas[0].length) {
+                            despejarCasilla(fila, columna);
+                        }
+                    }
+                }
+            }
+            else {
+                //En caso de bomba
+                Partida.getPartida().finalizarPartida(false);
+            }
+        }
     }
     //----------------------------------------------
 }
