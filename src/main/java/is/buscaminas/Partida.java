@@ -13,13 +13,14 @@ public class Partida extends Application {
      * Esta clase se encarga de administrar la partida:
      * - Guardará el nombre del Usuario
      * - Guardará el nivel de dificultad
-     * - Se encarga del tránsito entre pantallas
+     * - Se encarga del tránsito entre ventanas
      */
 
     //Atibutos
+    private static Partida mPartida;
     private String nombreJugador;
-    private int dificultad;
-    private Stage stageAct;
+    private int dificultad = 1;
+    private Stage ventanaAct;
 
     //MAINS
     public static void main (String[] args)
@@ -31,18 +32,42 @@ public class Partida extends Application {
     @Override
     public void start (Stage pStage) throws IOException
     {
+        //Se guarda la instancia
+        mPartida = this;
+
         //Se guarda el Stage
-        stageAct = pStage;
+        ventanaAct = pStage;
 
         //Se configura el Stage
-        stageAct.setTitle("Buscaminas");
-        stageAct.centerOnScreen();
+        ventanaAct.setTitle("Buscaminas");
+        ventanaAct.centerOnScreen();
 
         //Se carga la pantalla
         Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
-        stageAct.setScene(new Scene(root));
+        ventanaAct.setScene(new Scene(root));
 
         //Se muestra una vez cargado
-        stageAct.show();
+        ventanaAct.show();
+    }
+
+    //Singleton
+    public Partida getPartida(){
+        if (mPartida == null) mPartida = new Partida();
+        return mPartida;
+    }
+
+    //Metodos publicos de la clase:
+    public int getDificultad(){
+        return dificultad;
+    }
+
+    //Metodos relacionados a la partida
+    private void iniciarPartida(){
+
+    }
+
+    public void finalizarPartida (boolean pVictoria){
+        //TODO
+        System.exit(0);
     }
 }
