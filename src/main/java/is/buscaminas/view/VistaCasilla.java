@@ -27,22 +27,23 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
         setMaxHeight(size);
         setMaxWidth(size);
 
-        //Se carga y se aplica
-        Image imagenCasilla = new Image(new File("is/buscaminas/ui/assets/casillas/Oculto.gif").toURI().toString());
-        BackgroundSize backgroundSize = new BackgroundSize(size,size,false,false,false,false);
-        setBackground(new Background(new BackgroundImage(imagenCasilla,null,null,null,backgroundSize)));
+        cambiarApariencia("Oculto");
     }
 
     //Metodo del patrón observer
     @Override
-    public void propertyChange (PropertyChangeEvent propertyChangeEvent)
+    public void propertyChange (PropertyChangeEvent pNuevoEstado)
     {
-        //TODO: Finalizar el patrón Observer
+        String nuevaEstado = (String) pNuevoEstado.getNewValue();
+        cambiarApariencia(nuevaEstado);
     }
 
     //Metodo para cambiar el aspecto de la casilla:
     private void cambiarApariencia (String pString)
     {
-        Image aspecto = new Image(new File("is/buscaminas/ui/assets/casillas/" + pString + ".gif").toURI().toString());
+        //Se carga y se aplica
+        Image imagenCasilla = new Image(new File("is/buscaminas/ui/assets/casilla/" + pString + ".gif").toURI().toString());
+        BackgroundSize backgroundSize = new BackgroundSize(size, size, false, false, false, false);
+        setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize)));
     }
 }

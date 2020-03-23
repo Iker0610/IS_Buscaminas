@@ -1,14 +1,13 @@
 package is.buscaminas.view;
 
-import javax.swing.text.html.ImageView;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 public class VistaContador extends javafx.scene.Node implements PropertyChangeListener {
-    ImageView cifra1;
-    ImageView cifra2;
-    ImageView cifra3;
-    ImageView cifra4;
+    VistaCifraContador cifra1;
+    VistaCifraContador cifra2;
+    VistaCifraContador cifra3;
+    VistaCifraContador cifra4;
 
     public VistaContador ()
     {
