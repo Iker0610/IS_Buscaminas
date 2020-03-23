@@ -6,37 +6,47 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Contador {
-
-    private int seconds;
+    private static Contador miContador;
+    private int seconds,preSeconds;
     private Timer timer;
-    private PropertyChangeSupport pcs;
+    private PropertyChangeSupport observers; //lista de observers
 
-    public Contador ()
-    {
-        pcs = new PropertyChangeSupport(this);
+
+    private Contador(){
+        observers = new PropertyChangeSupport(this);
         timer = new Timer(true);
+    }
+    public static Contador getContador ()
+    {
+        if (miContador==null) {
+            miContador = new Contador();
+        }
+        return miContador;
     }
 
     public Contador (PropertyChangeListener pObserver)
     {
-        pcs = new PropertyChangeSupport(this);
-        pcs.addPropertyChangeListener(pObserver);
+        observers = new PropertyChangeSupport(this);
+        observers.addPropertyChangeListener(pObserver);
         timer = new Timer(true);
     }
 
     public void addObserver (PropertyChangeListener pObserver)
     {
-        pcs.addPropertyChangeListener(pObserver);
+        observers.addPropertyChangeListener(pObserver);
     }
 
     public void start ()
     {
-        seconds = 0;
+        seconds = -1;
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
-            public void run ()
-            {
-                pcs.firePropertyChange("seconds", seconds, ++seconds);
+            public void run () {
+                preSeconds=seconds;
+                seconds++;
+                if (seconds < 10000) {
+                    observers.firePropertyChange("seconds", preSeconds, seconds);
+                }
             }
         }, 1000L, 1000L);
     }
