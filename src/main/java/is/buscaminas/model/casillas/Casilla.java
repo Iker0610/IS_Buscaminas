@@ -28,14 +28,14 @@ public abstract class Casilla {
     {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null,
-                this.getClass().getSimpleName() + pEstado.getClass().getSimpleName());
+                pEstado.getClass().getSimpleName());
     }
 
     protected void cambiarEstado (IEstadoBoton pEstado, int pNum)
     {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null,
-                this.getClass().getSimpleName() + pEstado.getClass().getSimpleName() + pNum);
+                pEstado.getClass().getSimpleName() + pNum);
     }
 
 }
