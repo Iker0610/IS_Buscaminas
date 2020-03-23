@@ -4,6 +4,9 @@ package is.buscaminas.view;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundSize;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
@@ -14,38 +17,22 @@ public class BotonCasilla extends Button implements PropertyChangeListener {
     // - Elemento UI dedicado a las casillas
 
     //Atributos
-    private final int size = 30;
-    private ImageView imagenCasilla;
+    private static final int size = 30;
 
-    //Constructora
     public BotonCasilla ()
     {
-        //Se configura el boton
         super();
-        setText(null);
-        setPrefHeight(30);
-        setPrefWidth(30);
-        setStyle("-fx-background-color: transparent;");
-
-        //Se configura la apariencia del boton
-        imagenCasilla = new ImageView();
-        imagenCasilla.setPreserveRatio(false);
-        imagenCasilla.fitWidthProperty().bind(this.widthProperty());
-        imagenCasilla.fitHeightProperty().bind(this.heightProperty());
-
-        this.getChildren().add(imagenCasilla);
-        super.setGraphic(imagenCasilla);
+        //Se configura el tamaño
+        setMinHeight(size);
+        setMinWidth(size);
+        setMaxHeight(size);
+        setMaxWidth(size);
 
         //Se carga y se aplica
-        Image aspecto = new Image(new File("is/buscaminas/ui/assets/casillas/.keep.gif").toURI().toString());
-        imagenCasilla.setImage(aspecto);
-
-        //Se carga y se aplica
-        cambiarApariencia("oculto");
+        Image imagenCasilla = new Image(new File("is/buscaminas/ui/assets/casillas/Oculto.gif").toURI().toString());
+        BackgroundSize backgroundSize = new BackgroundSize(size,size,false,false,false,false);
+        setBackground(new Background(new BackgroundImage(imagenCasilla,null,null,null,backgroundSize)));
     }
-
-    //Metodos
-    //Aquí van los métodos para actualizar el botón, los eventos NO VAN AQUÍ, se cargan en el controller
 
     //Metodo del patrón observer
     @Override
@@ -58,6 +45,5 @@ public class BotonCasilla extends Button implements PropertyChangeListener {
     private void cambiarApariencia (String pString)
     {
         Image aspecto = new Image(new File("is/buscaminas/ui/assets/casillas/" + pString + ".gif").toURI().toString());
-        imagenCasilla.setImage(aspecto);
     }
 }
