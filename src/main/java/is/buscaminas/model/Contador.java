@@ -6,52 +6,52 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Contador {
-    private static Contador miContador;
-    private int seconds,preSeconds;
+    private static Contador mContador;
+    private int seconds;
     private Timer timer;
-    private PropertyChangeSupport observers; //lista de observers
+    private PropertyChangeSupport lObservers; //lista de observers
 
 
-    private Contador(){
-        observers = new PropertyChangeSupport(this);
+    private Contador ()
+    {
+        lObservers = new PropertyChangeSupport(this);
         timer = new Timer(true);
     }
+
     public static Contador getContador ()
     {
-        if (miContador==null) {
-            miContador = new Contador();
+        if (mContador == null) {
+            mContador = new Contador();
         }
-        return miContador;
-    }
-
-    public Contador (PropertyChangeListener pObserver)
-    {
-        observers = new PropertyChangeSupport(this);
-        observers.addPropertyChangeListener(pObserver);
-        timer = new Timer(true);
+        return mContador;
     }
 
     public void addObserver (PropertyChangeListener pObserver)
     {
-        observers.addPropertyChangeListener(pObserver);
+        lObservers.addPropertyChangeListener(pObserver);
     }
 
-    public void start ()
+    public void inicio ()
     {
         seconds = -1;
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
-            public void run () {
-                preSeconds=seconds;
+            public void run ()
+            {
                 seconds++;
-                if (seconds < 10000) {
-                    observers.firePropertyChange("seconds", preSeconds, seconds);
-                }
+                actualizarVistaTimer();
             }
         }, 1000L, 1000L);
     }
 
-    public void stop ()
+    private void actualizarVistaTimer ()
+    {
+        if (seconds < 10000) {
+            lObservers.firePropertyChange("seconds", null, seconds);
+        }
+    }
+
+    public void parar ()
     {
         timer.cancel();
         timer.purge();
@@ -66,7 +66,7 @@ public class Contador {
         while (true) {
             try {
                 Thread.sleep(1000);
-                pcs.firePropertyChange("seconds", seconds, ++seconds);
+                lObservers.firePropertyChange("seconds", seconds, ++seconds);
             }
             catch (Exception e) {
                 e.printStackTrace();
