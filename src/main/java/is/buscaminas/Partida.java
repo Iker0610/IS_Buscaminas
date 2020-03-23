@@ -18,7 +18,7 @@ public class Partida extends Application {
 
     //Atibutos
     private static Partida mPartida;
-    private String nombreJugador;
+    //private String nombreJugador;
     private int dificultad = 1;
     private Stage ventanaAct;
 
@@ -42,6 +42,7 @@ public class Partida extends Application {
         ventanaAct.setTitle("Buscaminas");
         ventanaAct.centerOnScreen();
 
+        iniciarPartida();
     }
 
     //Singleton
@@ -49,12 +50,6 @@ public class Partida extends Application {
     {
         if (mPartida == null) mPartida = new Partida();
         return mPartida;
-    }
-
-    //Metodos publicos de la clase:
-    public int getDificultad ()
-    {
-        return dificultad;
     }
 
     //Metodos relacionados a la partida
@@ -72,5 +67,11 @@ public class Partida extends Application {
     {
         //TODO: pantalla GAME OVER Y WIN
         System.exit(0);
+    }
+
+    //Metodos publicos de la clase:
+    public int getDificultad ()
+    {
+        return dificultad;
     }
 }

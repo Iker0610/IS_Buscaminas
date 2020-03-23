@@ -135,8 +135,7 @@ public class Tablero {
                 for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
                     for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                         //Se comprueba que se está dentro del tablero
-                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
-                            columna < matrizCasillas[0].length) {
+                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna && columna < matrizCasillas[0].length) {
                             despejarCasilla(fila, columna);
                         }
                     }

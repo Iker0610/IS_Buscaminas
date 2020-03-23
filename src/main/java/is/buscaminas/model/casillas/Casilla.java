@@ -1,6 +1,7 @@
 package is.buscaminas.model.casillas;
 
 import is.buscaminas.model.casillas.estados.IEstadoBoton;
+import is.buscaminas.model.casillas.estados.Oculto;
 import is.buscaminas.view.BotonCasilla;
 import javafx.util.Pair;
 
@@ -13,6 +14,7 @@ public abstract class Casilla {
 
     protected Casilla (BotonCasilla pBotonCasilla)
     {
+        estadoAct = new Oculto();
         lObservers = new PropertyChangeSupport(this);
         lObservers.addPropertyChangeListener(pBotonCasilla);
     }
@@ -27,6 +29,13 @@ public abstract class Casilla {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null,
                 this.getClass().getSimpleName() + pEstado.getClass().getSimpleName());
+    }
+
+    protected void cambiarEstado (IEstadoBoton pEstado, int pNum)
+    {
+        estadoAct = pEstado;
+        lObservers.firePropertyChange("estado", null,
+                this.getClass().getSimpleName() + pEstado.getClass().getSimpleName() + pNum);
     }
 
 }

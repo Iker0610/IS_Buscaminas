@@ -9,7 +9,11 @@ public class Oculto implements IEstadoBoton {
     public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
     {
         pCasilla.cambiarEstado(new Despejado());
-        if (pCasilla instanceof CasillaNum) { return new Pair<>(((CasillaNum) pCasilla).hayMinasAdyacentes(), true); }
-        else { return new Pair<>(true, false); }
+        if (pCasilla instanceof CasillaNum) {
+            return new Pair<>(!((CasillaNum) pCasilla).hayMinasAdyacentes(), true);
+        }
+        else {
+            return new Pair<>(true, false);
+        }
     }
 }

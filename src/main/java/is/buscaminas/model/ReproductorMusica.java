@@ -1,4 +1,4 @@
-package is.buscaminas;
+package is.buscaminas.model;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
