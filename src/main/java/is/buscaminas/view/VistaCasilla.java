@@ -11,14 +11,14 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 
-public class BotonCasilla extends Button implements PropertyChangeListener {
+public class VistaCasilla extends Button implements PropertyChangeListener {
     //Descripción:
     // - Elemento UI dedicado a las casillas
 
     //Atributos
     private static final int size = 30;
 
-    public BotonCasilla ()
+    public VistaCasilla ()
     {
         super();
         //Se configura el tamaño

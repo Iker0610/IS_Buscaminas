@@ -2,14 +2,14 @@ package is.buscaminas.model.casillas;
 
 import is.buscaminas.model.casillas.estados.Despejado;
 import is.buscaminas.model.casillas.estados.IEstadoBoton;
-import is.buscaminas.view.BotonCasilla;
+import is.buscaminas.view.VistaCasilla;
 
 public class CasillaNum extends Casilla {
     private int minasAdyacentes;
 
-    public CasillaNum (int pMinasAdyacentes, BotonCasilla pBotonCasilla)
+    public CasillaNum (int pMinasAdyacentes, VistaCasilla pVistaCasilla)
     {
-        super(pBotonCasilla);
+        super(pVistaCasilla);
         minasAdyacentes = pMinasAdyacentes;
     }
 

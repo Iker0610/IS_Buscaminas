@@ -5,7 +5,7 @@ import is.buscaminas.Partida;
 import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
-import is.buscaminas.view.BotonCasilla;
+import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
 import java.util.Random;
@@ -53,13 +53,13 @@ public class Tablero {
     //----------------------------------------------
     //Metodos para generar las casillas del tablero
     //----------------------------------------------
-    public void generarCasillasTablero (int pFila, int pColumna, BotonCasilla[][] pMatrizBotones)
+    public void generarCasillasTablero (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
     {
         generarMinas(pFila, pColumna, pMatrizBotones);
         generarNoMinas(pMatrizBotones);
     }
 
-    private void generarMinas (int pFila, int pColumna, BotonCasilla[][] pMatrizBotones)
+    private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
     {
         int fila, columna;
         Random random = new Random();
@@ -76,7 +76,7 @@ public class Tablero {
         }
     }
 
-    private void generarNoMinas (BotonCasilla[][] pMatrizBotones)
+    private void generarNoMinas (VistaCasilla[][] pMatrizBotones)
     {
         for (int fila = 0; fila < matrizCasillas.length; fila++) {
             for (int columna = 0; columna < matrizCasillas[fila].length; columna++) {
