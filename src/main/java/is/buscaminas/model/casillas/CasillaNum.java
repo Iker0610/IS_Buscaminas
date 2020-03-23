@@ -1,16 +1,20 @@
 package is.buscaminas.model.casillas;
 
+import is.buscaminas.model.casillas.estados.Oculto;
 import is.buscaminas.view.BotonCasilla;
-import javafx.util.Pair;
 
 public class CasillaNum extends Casilla {
+    private int minasAdyacentes;
 
-    public CasillaNum (int minasAdyacentes, BotonCasilla pBotonCasilla) {super(pBotonCasilla);}
-
-    @Override
-    public Pair<Boolean, Boolean> despejar ()
+    public CasillaNum (int pMinasAdyacentes, BotonCasilla pBotonCasilla)
     {
-        //TODO
-        return null;
+        super(pBotonCasilla);
+        minasAdyacentes = pMinasAdyacentes;
+        cambiarEstado(new Oculto());
+    }
+
+    public boolean hayMinasAdyacentes ()
+    {
+        return (minasAdyacentes == 0);
     }
 }

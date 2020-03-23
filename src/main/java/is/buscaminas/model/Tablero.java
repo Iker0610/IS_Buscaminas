@@ -114,7 +114,16 @@ public class Tablero {
     //----------------------------------------------
     public void despejarCasilla (int pFila, int pColumna)
     {
+        /*
+         * resultado, código boolean (key, value):
+         * - (0,0) = no hacer absolutamente nada
+         * - (0,1) = no hacer nada en especial, únicamente disminuir el contador de casillasPorDespejar
+         * - (1,0) = mina, fin de la partida
+         * - (1,1) = casilla sin minas adyacentes -> Despejar las de alrededor
+         */
+
         Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].despejar();
+
         if (resultado.getValue()) {
             casillasPorDespejar--;
         }

@@ -42,12 +42,6 @@ public class Partida extends Application {
         ventanaAct.setTitle("Buscaminas");
         ventanaAct.centerOnScreen();
 
-        //Se carga la pantalla
-        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
-        ventanaAct.setScene(new Scene(root));
-
-        //Se muestra una vez cargado
-        ventanaAct.show();
     }
 
     //Singleton
@@ -64,14 +58,19 @@ public class Partida extends Application {
     }
 
     //Metodos relacionados a la partida
-    private void iniciarPartida ()
+    private void iniciarPartida () throws IOException
     {
+        //Se carga la pantalla
+        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
+        ventanaAct.setScene(new Scene(root));
 
+        //Se muestra una vez cargado
+        ventanaAct.show();
     }
 
     public void finalizarPartida (boolean pVictoria)
     {
-        //TODO
+        //TODO: pantalla GAME OVER Y WIN
         System.exit(0);
     }
 }
