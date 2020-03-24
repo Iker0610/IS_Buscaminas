@@ -1,10 +1,13 @@
 package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
+import is.buscaminas.model.Contador;
 import is.buscaminas.model.Tablero;
 import is.buscaminas.view.VistaCasilla;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
@@ -36,21 +39,28 @@ public class ventanaPartidaPrincipalController {
             {
                 //Se mira si es un click izquierdo
                 if (event.isPrimaryButtonDown()) {
-                    /*TODO:
-                        -Obtener el gridpane como matriz
-                        -Llamar a tablero para que genere las casillas
-                        -Iniciar el timer
-                    */
+                    //Obtenemos la fila y columna de la casilla que se ha clickado
+                    int fila = GridPane.getRowIndex((Node)event.getTarget());
+                    int columna = GridPane.getColumnIndex((Node)event.getTarget());
+
+                    //Obtenemos la matriz de Casillas
+                    VistaCasilla[][] matrizCasillas = getMatrizCasillas();
+
+                    //Llamamos al tablero
+                    Tablero.getTablero().generarCasillasTablero(fila,columna,matrizCasillas);
+
+                    //Se inicia el contador
+                    Contador.getContador().inicio();
 
                     //Se elimina el evento
-                    tableroCasillas.removeEventFilter(MouseEvent.MOUSE_CLICKED, this);
+                    tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
                 else { event.consume(); }
             }
         };
 
         //Se le añade al GridPane el evento
-        tableroCasillas.addEventFilter(MouseEvent.MOUSE_CLICKED, primerClick);
+        tableroCasillas.addEventFilter(MouseEvent.MOUSE_PRESSED, primerClick);
     }
 
     private void crearCasillasTablero ()
@@ -87,7 +97,7 @@ public class ventanaPartidaPrincipalController {
         GridPane.setFillHeight(nuevaCasilla, true);
 
         //Evento click izquierdo
-        nuevaCasilla.setOnMouseClicked((onActionEvent) -> {
+        nuevaCasilla.setOnMousePressed((onActionEvent) -> {
             if (onActionEvent.isPrimaryButtonDown()) {
                 int filaCasilla = GridPane.getRowIndex(nuevaCasilla);
                 int columnaCasilla = GridPane.getColumnIndex(nuevaCasilla);
@@ -96,5 +106,17 @@ public class ventanaPartidaPrincipalController {
         });
 
         return nuevaCasilla;
+    }
+
+    private VistaCasilla[][] getMatrizCasillas ()
+    {
+        VistaCasilla[][] matrizCasillas = new VistaCasilla[tableroCasillas.getRowCount()][tableroCasillas.getColumnCount()];
+        ObservableList<Node> casillas = tableroCasillas.getChildren();
+
+        for (Node casilla : casillas) {
+            matrizCasillas[GridPane.getRowIndex(casilla)][GridPane.getColumnIndex(casilla)] = (VistaCasilla) casilla;
+        }
+
+        return matrizCasillas;
     }
 }

@@ -71,7 +71,7 @@ public class Partida extends Application {
     {
         Contador.getContador().parar();
         //TODO: pantalla GAME OVER Y WIN
-        System.exit(0);
+        //System.exit(0);
     }
 
     //Metodos publicos de la clase:

@@ -13,7 +13,7 @@ public class CasillaNum extends Casilla {
         minasAdyacentes = pMinasAdyacentes;
     }
 
-    public boolean hayMinasAdyacentes ()
+    public boolean estaDespejado ()
     {
         return (minasAdyacentes == 0);
     }
