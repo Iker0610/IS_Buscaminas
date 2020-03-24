@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import is.buscaminas.view.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
+    <top>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <VistaContador />
+        </HBox>
+    </top>
+    <center>
+        <GridPane fx:id="tableroCasillas" alignment="CENTER" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

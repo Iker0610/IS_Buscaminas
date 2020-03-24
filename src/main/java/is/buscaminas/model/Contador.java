@@ -33,7 +33,7 @@ public class Contador {
 
     public void inicio ()
     {
-        seconds = -1;
+        seconds = 0;
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run ()

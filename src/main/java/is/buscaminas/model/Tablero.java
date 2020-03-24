@@ -34,9 +34,6 @@ public class Tablero {
         // Genera una matriz vacía del tamaño adecuado al nivel seleccionado.
         int dificultad = Partida.getPartida().getDificultad();
         switch (dificultad) {
-            case 1:
-                matrizCasillas = new Casilla[7][10];
-                break;
 
             case 2:
                 matrizCasillas = new Casilla[10][15];
@@ -44,6 +41,10 @@ public class Tablero {
 
             case 3:
                 matrizCasillas = new Casilla[12][25];
+                break;
+
+            default:
+                matrizCasillas = new Casilla[7][10];
                 break;
         }
         numMinas = matrizCasillas[0].length * dificultad;
@@ -135,7 +136,8 @@ public class Tablero {
                 for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
                     for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                         //Se comprueba que se está dentro del tablero
-                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna && columna < matrizCasillas[0].length) {
+                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
+                            columna < matrizCasillas[0].length) {
                             despejarCasilla(fila, columna);
                         }
                     }

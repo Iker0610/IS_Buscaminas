@@ -42,7 +42,7 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
     private void cambiarApariencia (String pString)
     {
         //Se carga y se aplica
-        Image imagenCasilla = new Image(new File("is/buscaminas/ui/assets/casilla/" + pString + ".gif").toURI().toString());
+        Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/assets/casilla/" + pString + ".gif").toURI().toString());
         BackgroundSize backgroundSize = new BackgroundSize(size, size, false, false, false, false);
         setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize)));
     }
