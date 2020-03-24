@@ -43,6 +43,7 @@ public class Partida extends Application {
         //Se configura el Stage
         ventanaAct.setTitle("Buscaminas");
         ventanaAct.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/logoBuscaminas.png").toURI().toString()));
+        ventanaAct.setResizable(false);
         ventanaAct.centerOnScreen();
 
         iniciarPartida();
