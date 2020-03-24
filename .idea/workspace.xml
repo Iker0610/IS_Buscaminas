@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Contad">
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/logo/logoBuscaminas.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/logo/logoBuscaminas.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCifraContador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCifraContador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +25,26 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/logo" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\logo" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Partida">
     <configuration name="Contador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -78,11 +85,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a73ee3ba-c336-4704-8dc8-76bfac84c1c9" name="Default Changelist" comment="" />
+      <changelist id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
       <created>1584983352838</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584983352838</updated>
+      <workItem from="1585045528053" duration="1639000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste Contador">
       <created>1584992621856</created>
@@ -91,12 +99,24 @@
       <option name="project" value="LOCAL" />
       <updated>1584992621856</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Contador y parte del controller">
+      <created>1585011933542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585011933542</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ajuste Contador" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste Contador" />
+    <MESSAGE value="Contador y parte del controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Contador y parte del controller" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="188" key="#Notifications" timestamp="1584984623808">
@@ -112,10 +132,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585011433230">
+    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585050980637">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585011433230" />
+    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585050980637" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -125,37 +145,38 @@
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="1874" height="188" key="GridCell.Tab.0.bottom" timestamp="1585009911088">
+    <state width="1874" height="279" key="GridCell.Tab.0.bottom" timestamp="1585050965603">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="1874" height="188" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585009911088" />
-    <state width="1874" height="188" key="GridCell.Tab.0.center" timestamp="1585009911086">
+    <state width="1874" height="279" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585050965603" />
+    <state width="1874" height="279" key="GridCell.Tab.0.center" timestamp="1585050965603">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="1874" height="188" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585009911086" />
-    <state width="1874" height="188" key="GridCell.Tab.0.left" timestamp="1585009911086">
+    <state width="1874" height="279" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585050965603" />
+    <state width="1874" height="279" key="GridCell.Tab.0.left" timestamp="1585050965603">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="1874" height="188" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585009911086" />
-    <state width="1874" height="188" key="GridCell.Tab.0.right" timestamp="1585009911087">
+    <state width="1874" height="279" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585050965603" />
+    <state width="1874" height="279" key="GridCell.Tab.0.right" timestamp="1585050965603">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="1874" height="188" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585009911087" />
+    <state width="1874" height="279" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585050965603" />
     <state x="554" y="171" key="SettingsEditor" timestamp="1584986170557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1584992625877">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585011937703">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1584992625877" />
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584983360630">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585011937703" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585045530908">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585045530908" />
   </component>
 </project>

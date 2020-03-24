@@ -4,8 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Partida extends Application {
@@ -40,6 +42,7 @@ public class Partida extends Application {
 
         //Se configura el Stage
         ventanaAct.setTitle("Buscaminas");
+        ventanaAct.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/logoBuscaminas.png").toURI().toString()));
         ventanaAct.centerOnScreen();
 
         iniciarPartida();
