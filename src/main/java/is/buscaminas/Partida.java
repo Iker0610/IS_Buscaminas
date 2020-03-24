@@ -21,7 +21,6 @@ public class Partida extends Application {
 
     //Atibutos
     private static Partida mPartida;
-    //private String nombreJugador;
     private int dificultad = 1;
     private Stage ventanaAct;
 
