@@ -33,22 +33,14 @@ public class Contador {
 
     public void inicio ()
     {
-        seconds = 0;
+        seconds = -1;
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run ()
             {
-                seconds++;
-                actualizarVistaTimer();
+                lObservers.firePropertyChange("seconds", seconds, ++seconds);
             }
-        }, 1000L, 1000L);
-    }
-
-    private void actualizarVistaTimer ()
-    {
-        if (seconds < 10000) {
-            lObservers.firePropertyChange("seconds", null, seconds);
-        }
+        }, 0, 1000);
     }
 
     public void parar ()

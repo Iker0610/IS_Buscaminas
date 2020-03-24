@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import is.buscaminas.view.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
     <top>
-        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
-            <VistaContador />
-        </HBox>
+        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"
+                                   percentWidth="33.0"/>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" minWidth="10.0" percentWidth="33.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <VistaContador GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
+            <VistaEmoji GridPane.columnIndex="1"/>
+        </GridPane>
     </top>
     <center>
-        <GridPane fx:id="tableroCasillas" alignment="CENTER" BorderPane.alignment="CENTER"/>
+        <GridPane fx:id="tableroCasillas" alignment="CENTER" BorderPane.alignment="CENTER" />
     </center>
 </BorderPane>

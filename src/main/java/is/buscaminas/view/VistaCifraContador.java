@@ -1,14 +1,14 @@
 package is.buscaminas.view;
 
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.Pane;
 
 import java.io.File;
 
-public class VistaCifraContador extends Button {
+public class VistaCifraContador extends Pane {
     //Atributos
     private int cifraAct;
     private static final int height = 35;

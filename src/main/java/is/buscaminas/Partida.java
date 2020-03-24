@@ -6,8 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.io.File;
 import java.io.IOException;
 
@@ -23,12 +27,20 @@ public class Partida extends Application {
     private static Partida mPartida;
     private int dificultad = 1;
     private Stage ventanaAct;
+    private boolean partidaActiva;
+    private PropertyChangeSupport lObservers;
 
     //MAINS
     public static void main (String[] args)
     {
         //NO TOCAR!
         launch(args);
+    }
+
+    public Partida ()
+    {
+        partidaActiva = false;
+        lObservers = new PropertyChangeSupport(this);
     }
 
     @Override
@@ -63,6 +75,9 @@ public class Partida extends Application {
         Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
         ventanaAct.setScene(new Scene(root));
 
+        //Se activa el boolean
+        partidaActiva = true;
+
         //Se muestra una vez cargado
         ventanaAct.show();
     }
@@ -70,13 +85,23 @@ public class Partida extends Application {
     public void finalizarPartida (boolean pVictoria)
     {
         Contador.getContador().parar();
-        //TODO: pantalla GAME OVER Y WIN
-        //System.exit(0);
+        partidaActiva = false;
+        lObservers.firePropertyChange("estadoPartida", null, pVictoria);
     }
 
     //Metodos publicos de la clase:
     public int getDificultad ()
     {
         return dificultad;
+    }
+
+    public boolean hayPartidaActiva ()
+    {
+        return partidaActiva;
+    }
+
+    public void addObserver (PropertyChangeListener pObserver)
+    {
+        lObservers.addPropertyChangeListener(pObserver);
     }
 }
