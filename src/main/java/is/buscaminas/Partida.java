@@ -1,5 +1,6 @@
 package is.buscaminas;
 
+import is.buscaminas.model.Contador;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -69,6 +70,7 @@ public class Partida extends Application {
 
     public void finalizarPartida (boolean pVictoria)
     {
+        Contador.getContador().parar();
         //TODO: pantalla GAME OVER Y WIN
         System.exit(0);
     }

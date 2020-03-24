@@ -3,6 +3,7 @@ package is.buscaminas.controller;
 import is.buscaminas.Partida;
 import is.buscaminas.model.Tablero;
 import is.buscaminas.view.VistaCasilla;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -28,18 +29,28 @@ public class ventanaPartidaPrincipalController {
         tableroCasillas.setVgap(0);
         tableroCasillas.setHgap(0);
 
-        tableroCasillas.addEventFilter(MouseEvent.MOUSE_CLICKED, (MouseEvent event) ->
-        {
-            if (event.isPrimaryButtonDown()) {
-                /*TODO:
-                    -Obtener el gridpane como matriz
-                    -Llamar a tablero para que genere las casillas
-                    -Iniciar el timer
-                    -Eliminar este evento (IMPORTANTE)
-                 */
+        //Se crea el evento del primer click
+        EventHandler<MouseEvent> primerClick = new EventHandler<>() {
+            @Override
+            public void handle (MouseEvent event)
+            {
+                //Se mira si es un click izquierdo
+                if (event.isPrimaryButtonDown()) {
+                    /*TODO:
+                        -Obtener el gridpane como matriz
+                        -Llamar a tablero para que genere las casillas
+                        -Iniciar el timer
+                    */
+
+                    //Se elimina el evento
+                    tableroCasillas.removeEventFilter(MouseEvent.MOUSE_CLICKED, this);
+                }
+                else { event.consume(); }
             }
-            else { event.consume(); }
-        });
+        };
+
+        //Se le añade al GridPane el evento
+        tableroCasillas.addEventFilter(MouseEvent.MOUSE_CLICKED, primerClick);
     }
 
     private void crearCasillasTablero ()

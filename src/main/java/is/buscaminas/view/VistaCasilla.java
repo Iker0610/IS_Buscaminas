@@ -16,7 +16,7 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
     // - Elemento UI dedicado a las casillas
 
     //Atributos
-    private static final int size = 30;
+    private static final int size = 25;
 
     public VistaCasilla ()
     {
