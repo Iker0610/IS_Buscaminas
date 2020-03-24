@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import is.buscaminas.view.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: '#c0c0c0'; -fx-border-color: '#777777';-fx-border-width: 3" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.ventanaPartidaPrincipalController">
     <top>
-        <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <GridPane alignment="CENTER" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER">
             <columnConstraints>
-                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"
-                                   percentWidth="33.0"/>
-                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
-                <ColumnConstraints fillWidth="false" halignment="CENTER" minWidth="10.0" percentWidth="33.0"/>
+                <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="33.0" />
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints fillWidth="false" halignment="RIGHT" minWidth="10.0" percentWidth="33.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
+                <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
             </rowConstraints>
-            <VistaContador GridPane.columnIndex="2" GridPane.halignment="CENTER"/>
-            <VistaEmoji GridPane.columnIndex="1"/>
+            <VistaContador GridPane.columnIndex="2" />
+            <VistaEmoji GridPane.columnIndex="1" />
+            <BorderPane.margin>
+                <Insets bottom="3.0" left="6.0" right="6.0" top="6.0" />
+            </BorderPane.margin>
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+            </padding>
         </GridPane>
     </top>
     <center>
-        <GridPane fx:id="tableroCasillas" alignment="CENTER" BorderPane.alignment="CENTER" />
+        <GridPane fx:id="tableroCasillas" alignment="CENTER" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="6.0" left="6.0" right="6.0" top="3.0" />
+            </BorderPane.margin>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+        </GridPane>
     </center>
 </BorderPane>
