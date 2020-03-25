@@ -40,6 +40,8 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
 
     //Metodo para cambiar el aspecto de la casilla:
     private void cambiarApariencia (String pString)
+    //Pre: Un String indicando el estado
+    //Post: Se ha cargado la imagen
     {
         //Se carga y se aplica
         Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/assets/casilla/" + pString + ".gif").toURI().toString());

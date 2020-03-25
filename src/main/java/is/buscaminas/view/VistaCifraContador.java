@@ -29,6 +29,8 @@ public class VistaCifraContador extends Pane {
     }
 
     public void cambiarCifra (int pCifra)
+            //Pre: Un entero
+            //Post: Se ha cambiado la cifra
     {
         //Se carga y se aplica si es diferente
         if (cifraAct != pCifra) {

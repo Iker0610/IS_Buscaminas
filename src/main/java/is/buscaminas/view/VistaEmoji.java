@@ -40,6 +40,8 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
     public void propertyChange (PropertyChangeEvent pNuevoEstado) {}
 
     private void actualizarEmojiFinPartida (PropertyChangeEvent propertyChangeEvent)
+            //Pre:
+            //Post:Se ha actualizado el emoji al correspondiente según si el jugador ha ganado la partida o no
     {
         if ((Boolean)propertyChangeEvent.getNewValue()){
             cambiarEmoji("victoria");
@@ -50,6 +52,8 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
     }
 
     private void actualizarEmojiTiempo (PropertyChangeEvent propertyChangeEvent)
+            //Pre:
+            //Post: Se ha a actualizado el emoji
     {
         if ((Integer) propertyChangeEvent.getNewValue() == 999) {
             cambiarEmoji("tiempo");
@@ -58,6 +62,8 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
 
     //Metodo para cambiar el aspecto de la casilla:
     private void cambiarEmoji (String pString)
+    //Pre: Un string
+    //Post: Se ha cambiado el emoji correctamente
     {
         //Se carga y se aplica
         Image imagenCasilla = new Image(new File(

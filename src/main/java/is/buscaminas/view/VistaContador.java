@@ -31,6 +31,8 @@ public class VistaContador extends GridPane implements PropertyChangeListener {
     }
 
     private void actualizarContador (int pTiempo)
+            //Pre: Un entero indicando el tiempo
+            //Post: Se ha actualizado el valor del contador
     {
         int cifraAct;
 
