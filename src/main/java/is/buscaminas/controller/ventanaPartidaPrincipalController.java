@@ -19,6 +19,8 @@ public class ventanaPartidaPrincipalController {
     //Constructora
     @FXML
     public void initialize ()
+    //Pre:
+    //Post: El tablero se ha generado y configurado, y se han añadido las casillas
     {
         //Se genera y configura el tablero (incluidos el listener del click inicial)
         inicializarTablero();
@@ -28,6 +30,8 @@ public class ventanaPartidaPrincipalController {
     }
 
     private void inicializarTablero ()
+            //Pre:
+            //Post: Se ha generado y configurado el trablero
     {
         tableroCasillas.setVgap(0);
         tableroCasillas.setHgap(0);
@@ -36,6 +40,8 @@ public class ventanaPartidaPrincipalController {
         EventHandler<MouseEvent> primerClick = new EventHandler<>() {
             @Override
             public void handle (MouseEvent event)
+            //Pre:
+            //Post: Se ha generado y configurado el trablero
             {
                 //Se mira si es un click izquierdo
                 if (event.isPrimaryButtonDown()) {
@@ -64,6 +70,8 @@ public class ventanaPartidaPrincipalController {
     }
 
     private void crearCasillasTablero ()
+            //Pre:
+            //Post: Se han añadido las caasillas al tablero
     {
         int numColumnas, numFilas;
 
@@ -92,6 +100,8 @@ public class ventanaPartidaPrincipalController {
     }
 
     private VistaCasilla generarCasilla ()
+            //Pre:
+            //Post: Se ha generado la casilla
     {
         VistaCasilla nuevaCasilla = new VistaCasilla();
         GridPane.setFillHeight(nuevaCasilla, true);
@@ -109,6 +119,8 @@ public class ventanaPartidaPrincipalController {
     }
 
     private VistaCasilla[][] getMatrizCasillas ()
+            //Pre:
+            //Post: Se ha creado una matriz de casillas
     {
         VistaCasilla[][] matrizCasillas = new VistaCasilla[tableroCasillas.getRowCount()][tableroCasillas.getColumnCount()];
         ObservableList<Node> casillas = tableroCasillas.getChildren();
