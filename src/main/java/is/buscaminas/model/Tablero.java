@@ -31,6 +31,8 @@ public class Tablero {
 
     //Metodo para generar la matriz
     private void generarMatrizTablero ()
+    //Pre:
+    //Post: Se ha generado una matriz del tamaño indicado para el nivel de dificultad seleccionado
     {
         // Genera una matriz vacía del tamaño adecuado al nivel seleccionado.
         int dificultad = Partida.getPartida().getDificultad();
@@ -56,12 +58,16 @@ public class Tablero {
     //Metodos para generar las casillas del tablero
     //----------------------------------------------
     public void generarCasillasTablero (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
+    //Pre: Un entero indicando las filas, otro indicando las columnas y una matriz de VistaCasilla
+    //Post: Se ha generado el tablero de casillas
     {
         generarMinas(pFila, pColumna, pMatrizBotones);
         generarNoMinas(pMatrizBotones);
     }
 
     private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
+            //Pre: Un entero indicando las filas, otro indicando las columnas y una matriz de VistaCasilla
+            //Post: Se han generado las minas aleatoriamente
     {
         int fila, columna;
         Random random = new Random();
@@ -79,6 +85,8 @@ public class Tablero {
     }
 
     private void generarNoMinas (VistaCasilla[][] pMatrizBotones)
+            //Pre: Una matriz de VistaCasilla
+            //Post: Se han generado las casillas que no contienen minas
     {
         for (int fila = 0; fila < matrizCasillas.length; fila++) {
             for (int columna = 0; columna < matrizCasillas[fila].length; columna++) {
@@ -115,6 +123,8 @@ public class Tablero {
     //Metodos accesibles por el controlador
     //----------------------------------------------
     public void despejarCasilla (int pFila, int pColumna)
+    //Pre: La fila y la columna pertenecen a valores de la matriz
+    //Post: Se ha despejado la casilla corectamente
     {
         /*
          * resultado, código boolean (key, value):

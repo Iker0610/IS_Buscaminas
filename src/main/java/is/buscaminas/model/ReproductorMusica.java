@@ -9,6 +9,7 @@ import java.io.File;
 public class ReproductorMusica {
     private static MediaPlayer reproductorMusica;
 
+    //Constructora
     public ReproductorMusica ()
     {
         Media h = new Media(new File("src/resources/SuperMarioBrosMedley.mp3").toURI().toString());
@@ -18,11 +19,15 @@ public class ReproductorMusica {
     }
 
     public void reproducir ()
+            //Pre:
+            //Post: Se ha reproducido la música
     {
         reproductorMusica.play();
     }
 
     public void parar ()
+            //Pre:
+            //Post: Se ha detenido la música
     {
         reproductorMusica.pause();
     }

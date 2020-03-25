@@ -27,11 +27,15 @@ public class Contador {
     }
 
     public void addObserver (PropertyChangeListener pObserver)
+            //Pre: Un observer
+            //Post: Se ha añadido el observer a la lista de observers
     {
         lObservers.addPropertyChangeListener(pObserver);
     }
 
     public void inicio ()
+            //Pre:
+            //Post: Se ha iniciado el contador
     {
         seconds = -1;
         timer.scheduleAtFixedRate(new TimerTask() {
@@ -44,6 +48,8 @@ public class Contador {
     }
 
     public void parar ()
+            //Pre:
+            //Post: Se ha parado el contador
     {
         timer.cancel();
         timer.purge();
