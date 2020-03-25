@@ -7,6 +7,8 @@ import javafx.util.Pair;
 public class Oculto implements IEstadoBoton {
     @Override
     public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
+            //Pre: Una casilla
+            //Post: Dependiendo del tipo de casilla devuelve un par de booleans diferente.
     {
         pCasilla.cambiarEstado(new Despejado());
         if (pCasilla instanceof CasillaNum) {
