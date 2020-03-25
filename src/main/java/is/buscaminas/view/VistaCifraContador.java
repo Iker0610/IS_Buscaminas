@@ -29,16 +29,20 @@ public class VistaCifraContador extends Pane {
     }
 
     public void cambiarCifra (int pCifra)
-            //Pre: Un entero
-            //Post: Se ha cambiado la cifra
+    //Pre: Un entero
+    //Post: Se ha cambiado la cifra
     {
         //Se carga y se aplica si es diferente
         if (cifraAct != pCifra) {
+
+            //Se actualiza el valor de la cifra
+            cifraAct = pCifra;
+
+            //Se carga la imagen adecuada
             Image imagenCasilla = new Image(new File(
                     "src/main/resources/is/buscaminas/ui/assets/timer/time" + pCifra + ".gif").toURI().toString());
             BackgroundSize backgroundSize = new BackgroundSize(width, height, false, false, false, false);
             setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize)));
-            cifraAct = pCifra;
         }
     }
 }

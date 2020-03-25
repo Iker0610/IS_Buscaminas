@@ -27,6 +27,6 @@ public class CasillaNum extends Casilla {
             //Post: Se ha cambiado de estado
     {
         if (pEstado instanceof Despejado) { cambiarEstado(pEstado, minasAdyacentes); }
-        else { cambiarEstado(pEstado); }
+        else { super.cambiarEstado(pEstado); }
     }
 }

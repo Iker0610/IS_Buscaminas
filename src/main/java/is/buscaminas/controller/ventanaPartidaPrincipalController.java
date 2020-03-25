@@ -107,15 +107,18 @@ public class ventanaPartidaPrincipalController {
         GridPane.setFillHeight(nuevaCasilla, true);
 
         //Evento click izquierdo
-        nuevaCasilla.setOnMousePressed((onActionEvent) -> {
-            if (onActionEvent.isPrimaryButtonDown()) {
-                int filaCasilla = GridPane.getRowIndex(nuevaCasilla);
-                int columnaCasilla = GridPane.getColumnIndex(nuevaCasilla);
-                Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
-            }
-        });
+        nuevaCasilla.setOnMousePressed(this::gestionarEventoCasilla);
 
         return nuevaCasilla;
+    }
+
+    private void gestionarEventoCasilla(MouseEvent event){
+        VistaCasilla casilla = (VistaCasilla) event.getTarget();
+        if (event.isPrimaryButtonDown()) {
+            int filaCasilla = GridPane.getRowIndex(casilla);
+            int columnaCasilla = GridPane.getColumnIndex(casilla);
+            Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
+        }
     }
 
     private VistaCasilla[][] getMatrizCasillas ()

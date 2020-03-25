@@ -52,7 +52,7 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
     }
 
     private void actualizarEmojiTiempo (PropertyChangeEvent propertyChangeEvent)
-            //Pre:
+            //Pre: Los
             //Post: Se ha a actualizado el emoji
     {
         if ((Integer) propertyChangeEvent.getNewValue() == 999) {
