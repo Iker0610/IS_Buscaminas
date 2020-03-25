@@ -20,11 +20,16 @@ public abstract class Casilla {
     }
 
     public Pair<Boolean, Boolean> despejar ()
+            //Pre:
+            //Post: Un par de booleans indicando qué acción se realizará
     {
+
         return estadoAct.despejar(this);
     }
 
     public void cambiarEstado (IEstadoBoton pEstado)
+            //Pre: Un estado
+            //Post: Se ha cambiado el estado
     {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null,
@@ -32,6 +37,8 @@ public abstract class Casilla {
     }
 
     protected void cambiarEstado (IEstadoBoton pEstado, int pNum)
+            //Pre: Un estado y un número entero indicando las casillas adyacentes
+            //Post:Se ha cambiado el estado
     {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null,
