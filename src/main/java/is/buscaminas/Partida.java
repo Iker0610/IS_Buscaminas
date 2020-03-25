@@ -45,6 +45,8 @@ public class Partida extends Application {
 
     @Override
     public void start (Stage pStage) throws IOException
+            //Pre: Un elemento Stage
+            //Post: Se inicia la partida
     {
         //Se guarda la instancia
         mPartida = this;
@@ -70,6 +72,8 @@ public class Partida extends Application {
 
     //Metodos relacionados a la partida
     private void iniciarPartida () throws IOException
+    //Pre:
+    //Post: Se inicia la partida
     {
         //Se carga la pantalla
         Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
@@ -83,6 +87,8 @@ public class Partida extends Application {
     }
 
     public void finalizarPartida (boolean pVictoria)
+            //Pre: Un boolean indicando si el jugador a ganado o no la partida
+            //Post: Se ha finalizado la partida
     {
         Contador.getContador().parar();
         partidaActiva = false;
@@ -91,16 +97,22 @@ public class Partida extends Application {
 
     //Metodos publicos de la clase:
     public int getDificultad ()
+    //Pre:
+    //Post: Devuelve el nivel de dificultad
     {
         return dificultad;
     }
 
     public boolean hayPartidaActiva ()
+            //Pre:
+            //Post: Devuelve un boolean indicando si hay una partida activa o no
     {
         return partidaActiva;
     }
 
     public void addObserver (PropertyChangeListener pObserver)
+            //Pre: Un observer
+            //Post: Se ha añadido el observer a la lista de observer
     {
         lObservers.addPropertyChangeListener(pObserver);
     }
