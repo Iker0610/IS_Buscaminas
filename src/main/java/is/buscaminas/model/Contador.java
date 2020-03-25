@@ -6,6 +6,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class Contador {
+    //TODO: documentar
+    //Atributos
     private static Contador mContador;
     private int seconds;
     private Timer timer;

@@ -5,11 +5,13 @@ import is.buscaminas.model.casillas.CasillaNum;
 import javafx.util.Pair;
 
 public class Oculto implements IEstadoBoton {
+
     @Override
     public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
-            //Pre: Una casilla
-            //Post: Dependiendo del tipo de casilla devuelve un par de booleans diferente.
     {
+        //Pre: Una casilla
+        //Post: Dependiendo del tipo de casilla devuelve un par de booleans diferente (ver tabla valores en el método despejar de Tabla).
+
         pCasilla.cambiarEstado(new Despejado());
         if (pCasilla instanceof CasillaNum) {
             return new Pair<>(((CasillaNum) pCasilla).estaDespejado(), true);

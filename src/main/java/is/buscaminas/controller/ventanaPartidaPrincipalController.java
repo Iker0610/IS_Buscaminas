@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
 public class ventanaPartidaPrincipalController {
+
     //Atributos FXML
     @FXML
     private GridPane tableroCasillas;
@@ -19,9 +20,10 @@ public class ventanaPartidaPrincipalController {
     //Constructora
     @FXML
     public void initialize ()
-    //Pre:
-    //Post: El tablero se ha generado y configurado, y se han añadido las casillas
     {
+        //Pre:
+        //Post: El tablero se ha generado y configurado, y se han añadido las casillas
+
         //Se genera y configura el tablero (incluidos el listener del click inicial)
         inicializarTablero();
 
@@ -30,49 +32,53 @@ public class ventanaPartidaPrincipalController {
     }
 
     private void inicializarTablero ()
-            //Pre:
-            //Post: Se ha generado y configurado el trablero
     {
+        //Pre:
+        //Post: Se ha generado y configurado el trablero
+
+        //Se configura el espacio entre elementos del GridPane
         tableroCasillas.setVgap(0);
         tableroCasillas.setHgap(0);
 
-        //Se crea el evento del primer click
+        //Se crea el evento que se ejecutará al despejar por primera vez una casilla (antes de despejarla en el modelo)
         EventHandler<MouseEvent> primerClick = new EventHandler<>() {
             @Override
-            public void handle (MouseEvent event)
-            //Pre:
-            //Post: Se ha generado y configurado el trablero
+            public void handle (MouseEvent pEvento)
             {
                 //Se mira si es un click izquierdo
-                if (event.isPrimaryButtonDown()) {
+                if (pEvento.isPrimaryButtonDown()) {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
-                    int fila = GridPane.getRowIndex((Node)event.getTarget());
-                    int columna = GridPane.getColumnIndex((Node)event.getTarget());
+                    int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
+                    int columna = GridPane.getColumnIndex((Node) pEvento.getTarget());
 
-                    //Obtenemos la matriz de Casillas
+                    //Obtenemos la matriz de referencias a las Casillas de la vista
                     VistaCasilla[][] matrizCasillas = getMatrizCasillas();
 
-                    //Llamamos al tablero
-                    Tablero.getTablero().generarCasillasTablero(fila,columna,matrizCasillas);
+                    //Llamamos al tablero (modelo) y le mandamos generar las casillas
+                    Tablero.getTablero().generarCasillasTablero(fila, columna, matrizCasillas);
 
                     //Se inicia el contador
                     Contador.getContador().inicio();
 
-                    //Se elimina el evento
+                    //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                else { event.consume(); }
+                else {
+                    // Si es un click derecho se consume el evento y no llegará a activar el evento
+                    pEvento.consume();
+                }
             }
         };
 
-        //Se le añade al GridPane el evento
+        //Se le añade al GridPane (el tablero de la vista) el evento anterior como un 'Filtro de eventos'
         tableroCasillas.addEventFilter(MouseEvent.MOUSE_PRESSED, primerClick);
     }
 
     private void crearCasillasTablero ()
-            //Pre:
-            //Post: Se han añadido las caasillas al tablero
     {
+        //Pre:
+        //Post: Se han añadido las casillas (vista) al tablero (vista)
+
         int numColumnas, numFilas;
 
         int dificultad = Partida.getPartida().getDificultad();
@@ -100,21 +106,24 @@ public class ventanaPartidaPrincipalController {
     }
 
     private VistaCasilla generarCasilla ()
-            //Pre:
-            //Post: Se ha generado la casilla
     {
-        VistaCasilla nuevaCasilla = new VistaCasilla();
-        GridPane.setFillHeight(nuevaCasilla, true);
+        //Pre:
+        //Post: Devuelve un VistaCasilla configurada
 
-        //Evento click izquierdo
+        // Se crea y se le añade el evento adecuado cuando se selecciona
+        VistaCasilla nuevaCasilla = new VistaCasilla();
         nuevaCasilla.setOnMousePressed(this::gestionarEventoCasilla);
+        //*Mediante el operador :: se le indica objeto y método de ese objeto al que hay que llamar
 
         return nuevaCasilla;
     }
 
-    private void gestionarEventoCasilla(MouseEvent event){
-        VistaCasilla casilla = (VistaCasilla) event.getTarget();
-        if (event.isPrimaryButtonDown()) {
+    private void gestionarEventoCasilla (MouseEvent pEvento)
+    {
+        //Pre: Un evento de ratón
+        //Post: Se llama al tablero (modelo) y se le indica que casilla se desea despejar
+        VistaCasilla casilla = (VistaCasilla) pEvento.getTarget();
+        if (pEvento.isPrimaryButtonDown()) {
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
             Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
@@ -122,16 +131,25 @@ public class ventanaPartidaPrincipalController {
     }
 
     private VistaCasilla[][] getMatrizCasillas ()
-            //Pre:
-            //Post: Se ha creado una matriz de casillas
     {
-        VistaCasilla[][] matrizCasillas = new VistaCasilla[tableroCasillas.getRowCount()][tableroCasillas.getColumnCount()];
-        ObservableList<Node> casillas = tableroCasillas.getChildren();
+        //Pre: El tableroCasilla se ha inicializado
+        //Post: Se ha creado una matriz de VistaCasillas con las casillas del tablero (vista)
 
-        for (Node casilla : casillas) {
-            matrizCasillas[GridPane.getRowIndex(casilla)][GridPane.getColumnIndex(casilla)] = (VistaCasilla) casilla;
+        if (tableroCasillas != null) {
+
+            //Se genera la matriz a devolver
+            VistaCasilla[][] matrizCasillas = new VistaCasilla[tableroCasillas.getRowCount()][tableroCasillas.getColumnCount()];
+
+            //Se obtiene la lista de nodos hijos del GridPane -> Lista de las casillas (vista)
+            ObservableList<Node> casillas = tableroCasillas.getChildren();
+
+            //Por cada casilla se obtiene su posicion (fila, columna) y se añade a la matriz resultado
+            for (Node casilla : casillas) {
+                matrizCasillas[GridPane.getRowIndex(casilla)][GridPane.getColumnIndex(casilla)] = (VistaCasilla) casilla;
+            }
+
+            return matrizCasillas;
         }
-
-        return matrizCasillas;
+        else return (new VistaCasilla[0][0]);
     }
 }

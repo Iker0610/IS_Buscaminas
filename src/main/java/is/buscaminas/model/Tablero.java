@@ -11,6 +11,8 @@ import javafx.util.Pair;
 import java.util.Random;
 
 public class Tablero {
+
+    //Atributos
     private static Tablero mTablero;
     private Casilla[][] matrizCasillas;
     private int casillasPorDespejar; //Las que no son minas y aún ocultas
@@ -31,10 +33,12 @@ public class Tablero {
 
     //Metodo para generar la matriz
     private void generarMatrizTablero ()
-    //Pre:
-    //Post: Se ha generado una matriz del tamaño indicado para el nivel de dificultad seleccionado
     {
-        // Genera una matriz vacía del tamaño adecuado al nivel seleccionado.
+        //Pre:
+        //Post: - Se ha generado una matriz del tamaño indicado para el nivel de dificultad seleccionado
+        //      - Se ha guardado el número de minas
+        //      - Se ha guardado el número de casillas sin minas
+
         int dificultad = Partida.getPartida().getDificultad();
         switch (dificultad) {
 
@@ -58,26 +62,41 @@ public class Tablero {
     //Metodos para generar las casillas del tablero
     //----------------------------------------------
     public void generarCasillasTablero (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
-    //Pre: Un entero indicando las filas, otro indicando las columnas y una matriz de VistaCasilla
-    //Post: Se ha generado el tablero de casillas
     {
+        //* Este método es llamado por el controller cuando el usuario hace el primer click
+
+        //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
+        //     - Matriz con referencias a las casillas de la Vista
+        //Post: Se ha generado el tablero de casillas
+
+        //Primero se generan las minas
         generarMinas(pFila, pColumna, pMatrizBotones);
+
+        //El resto de casillas se rellenan con casillas sin minas
         generarNoMinas(pMatrizBotones);
     }
 
     private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
-            //Pre: Un entero indicando las filas, otro indicando las columnas y una matriz de VistaCasilla
-            //Post: Se han generado las minas aleatoriamente
     {
+        //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
+        //     - Matriz con referencias a las casillas de la Vista
+        //Post: Se generan las minas con los siguientes criterios:
+        //      - El número es el adecuado a la dificultad
+        //      - Las minas se colocan aleatoriamente
+        //      - No habrá ninguna mina ni en la primera casilla seleccionada por el jugador ni en sus adyacentes.
+
+        int numMinas = this.numMinas;
         int fila, columna;
         Random random = new Random();
-        int numMinas = this.numMinas;
 
         while (numMinas > 0) {
+            //Se obtienen 2 valores random que correspondan a posiciones dentro del tablero:
             fila = random.nextInt(matrizCasillas.length);
             columna = random.nextInt(matrizCasillas[0].length);
-            if ((matrizCasillas[fila][columna] == null) &&
-                (Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) {
+
+            //Se comprueba que en esa casilla no haya nada y que no sea ni la primera ni ninguna de las adyacentes
+            // Si cumple las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
+            if ((matrizCasillas[fila][columna] == null) && (Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) {
                 matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
                 numMinas--;
             }
@@ -85,9 +104,10 @@ public class Tablero {
     }
 
     private void generarNoMinas (VistaCasilla[][] pMatrizBotones)
-            //Pre: Una matriz de VistaCasilla
-            //Post: Se han generado las casillas que no contienen minas
     {
+        //Pre: Matriz con referencias a las casillas de la Vista
+        //Post: Se han generado las casillas que no contienen minas
+
         for (int fila = 0; fila < matrizCasillas.length; fila++) {
             for (int columna = 0; columna < matrizCasillas[fila].length; columna++) {
                 if (matrizCasillas[fila][columna] == null) {
@@ -119,19 +139,20 @@ public class Tablero {
     }
     //----------------------------------------------
 
-    //----------------------------------------------
-    //Metodos accesibles por el controlador
-    //----------------------------------------------
+    //---------------------------------------------------------------------------
+    //Metodos accesibles por el controlador a la hora de seleccionar casillas
+    //---------------------------------------------------------------------------
     public void despejarCasilla (int pFila, int pColumna)
-    //Pre: La fila y la columna pertenecen a valores de la matriz
-    //Post: Se ha despejado la casilla corectamente
     {
-        /*
-         * resultado, código boolean (key, value):
+        //Pre:  La fila y la columna pertenecen a valores de la matriz
+        //Post: - Se ha despejado la casilla en caso de poderse
+        //      - Segun lo devuelto por la casilla se ejecutan las siguientes acciones:
+
+        /* resultado, código boolean (key, value):
          * - (0,0) = no hacer absolutamente nada
-         * - (0,1) = no hacer nada en especial, únicamente disminuir el contador de casillasPorDespejar
+         * - (0,1) = no hacer nada en especial, únicamente disminuir el contador 'casillasPorDespejar'
          * - (1,0) = mina, fin de la partida
-         * - (1,1) = casilla sin minas adyacentes -> Despejar las de alrededor
+         * - (1,1) = casilla sin minas adyacentes -> Despejar las de alrededor y decrementar el contador 'casillasPorDespejar'
          */
         if (Partida.getPartida().hayPartidaActiva()) {
             Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].despejar();

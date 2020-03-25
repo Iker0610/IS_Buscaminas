@@ -13,7 +13,7 @@ import java.io.File;
 
 public class VistaCasilla extends Button implements PropertyChangeListener {
     //Descripción:
-    // - Elemento UI dedicado a las casillas
+    // - Elemento UI dedicado a las casillas, extiende de Button
 
     //Atributos
     private static final int size = 25;
@@ -27,6 +27,7 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
         setMaxHeight(size);
         setMaxWidth(size);
 
+        //Se establece la apariencia inicial
         cambiarApariencia("Oculto");
     }
 
@@ -40,10 +41,11 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
 
     //Metodo para cambiar el aspecto de la casilla:
     private void cambiarApariencia (String pString)
-    //Pre: Un String indicando el estado
-    //Post: Se ha cargado la imagen
     {
-        //Se carga y se aplica
+        //Pre: Un String indicando el estado
+        //Post: Se cambia la apariencia de la casilla
+
+        //Se carga la imagen y se aplica 'como fondo'
         Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/assets/casilla/" + pString + ".gif").toURI().toString());
         BackgroundSize backgroundSize = new BackgroundSize(size, size, false, false, false, false);
         setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize)));

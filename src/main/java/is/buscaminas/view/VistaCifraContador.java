@@ -9,6 +9,8 @@ import javafx.scene.layout.Pane;
 import java.io.File;
 
 public class VistaCifraContador extends Pane {
+    //TODO: documentar
+
     //Atributos
     private int cifraAct;
     private static final int height = 35;

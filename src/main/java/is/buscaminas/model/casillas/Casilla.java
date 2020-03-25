@@ -8,6 +8,7 @@ import javafx.util.Pair;
 import java.beans.PropertyChangeSupport;
 
 public abstract class Casilla {
+
     //Atributos
     private IEstadoBoton estadoAct;
     private PropertyChangeSupport lObservers;
@@ -20,29 +21,29 @@ public abstract class Casilla {
     }
 
     public Pair<Boolean, Boolean> despejar ()
-    //Pre:
-    //Post: Un par de booleans indicando qué acción se realizará
     {
+        //Pre:
+        //Post: Un par de booleans indicando qué acción debe realizar la tabla
 
         return estadoAct.despejar(this);
     }
 
     public void cambiarEstado (IEstadoBoton pEstado)
-    //Pre: Un estado
-    //Post: Se ha cambiado el estado
     {
+        //Pre: Un estado
+        //Post: Se ha cambiado el estado y avisado a los observers con el nuevo valor
+
         estadoAct = pEstado;
-        lObservers.firePropertyChange("estado", null,
-                pEstado.getClass().getSimpleName());
+        lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName());
     }
 
     protected void cambiarEstado (IEstadoBoton pEstado, int pNum)
-    //Pre: Un estado y un número entero indicando las casillas adyacentes
-    //Post:Se ha cambiado el estado
     {
+        //Pre: Un estado y un número entero indicando las minas adyacentes
+        //Post:Se ha cambiado el estado y avisado a los observers con el nuevo valor
+
         estadoAct = pEstado;
-        lObservers.firePropertyChange("estado", null,
-                pEstado.getClass().getSimpleName() + pNum);
+        lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
     }
 
 }
