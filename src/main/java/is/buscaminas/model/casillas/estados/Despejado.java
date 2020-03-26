@@ -3,7 +3,7 @@ package is.buscaminas.model.casillas.estados;
 import is.buscaminas.model.casillas.Casilla;
 import javafx.util.Pair;
 
-public class Despejado implements IEstadoBoton {
+public class Despejado implements IEstadoCasilla {
 
     @Override
     public Pair<Boolean, Boolean> despejar (Casilla pCasilla)

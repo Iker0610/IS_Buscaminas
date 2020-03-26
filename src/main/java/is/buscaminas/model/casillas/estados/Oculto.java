@@ -4,7 +4,7 @@ import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaNum;
 import javafx.util.Pair;
 
-public class Oculto implements IEstadoBoton {
+public class Oculto implements IEstadoCasilla {
 
     @Override
     public Pair<Boolean, Boolean> despejar (Casilla pCasilla)

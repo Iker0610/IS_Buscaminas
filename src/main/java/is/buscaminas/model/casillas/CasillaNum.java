@@ -1,7 +1,7 @@
 package is.buscaminas.model.casillas;
 
 import is.buscaminas.model.casillas.estados.Despejado;
-import is.buscaminas.model.casillas.estados.IEstadoBoton;
+import is.buscaminas.model.casillas.estados.IEstadoCasilla;
 import is.buscaminas.view.VistaCasilla;
 
 public class CasillaNum extends Casilla {
@@ -25,7 +25,7 @@ public class CasillaNum extends Casilla {
     }
 
     @Override
-    public void cambiarEstado (IEstadoBoton pEstado)
+    public void cambiarEstado (IEstadoCasilla pEstado)
     {
         //Pre: Un estado
         //Post: Se ha cambiado de estado, si el nuevo estado es Despejado se indica el número de minas adyacentes
