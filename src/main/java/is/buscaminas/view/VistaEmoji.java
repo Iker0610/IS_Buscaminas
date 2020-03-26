@@ -22,6 +22,7 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
     public VistaEmoji ()
     {
         super();
+
         //Se configura el tamaño
         setMinHeight(size);
         setMinWidth(size);

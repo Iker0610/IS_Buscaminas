@@ -23,6 +23,8 @@ public class VistaContador extends GridPane implements PropertyChangeListener {
     //Constructora
     public VistaContador ()
     {
+        super();
+
         //Se inicializan las 3 cifras
         cifra1 = new VistaCifraContador();
         cifra2 = new VistaCifraContador();

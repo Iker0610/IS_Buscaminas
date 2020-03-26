@@ -21,6 +21,7 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
     public VistaCasilla ()
     {
         super();
+
         //Se configura el tamaño
         setMinHeight(size);
         setMinWidth(size);
