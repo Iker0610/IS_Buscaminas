@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Cambio Nombre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Despejado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Despejado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoBoton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Oculto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Oculto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/emoji" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/casilla" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -106,7 +101,9 @@
       <workItem from="1585066736047" duration="8569000" />
       <workItem from="1585170534424" duration="9330000" />
       <workItem from="1585216314200" duration="2732000" />
-      <workItem from="1585236135241" duration="45000" />
+      <workItem from="1585236135241" duration="80000" />
+      <workItem from="1585237168802" duration="615000" />
+      <workItem from="1585241269557" duration="1220000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste Contador">
       <created>1584992621856</created>
@@ -185,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585218709975</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Cambio Nombre">
+      <created>1585236200588</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585236200588</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +208,8 @@
     <MESSAGE value="Cambios de hoy" />
     <MESSAGE value="Documentación" />
     <MESSAGE value="Documentación 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentación 2" />
+    <MESSAGE value="Cambio Nombre" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambio Nombre" />
   </component>
   <component name="WindowStateProjectService">
     <state x="601" y="188" key="#Notifications" timestamp="1584984623808">
@@ -220,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585218707851">
+    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585238431807">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585218707851" />
+    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585238431807" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -233,26 +238,26 @@
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="2194" height="174" key="GridCell.Tab.0.bottom" timestamp="1585179998207">
+    <state width="1554" height="173" key="GridCell.Tab.0.bottom" timestamp="1585252818306">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="2194" height="174" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="2194" height="174" key="GridCell.Tab.0.center" timestamp="1585179998207">
+    <state width="1554" height="173" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585252818306" />
+    <state width="1554" height="173" key="GridCell.Tab.0.center" timestamp="1585252818305">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="2194" height="174" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="2194" height="174" key="GridCell.Tab.0.left" timestamp="1585179998207">
+    <state width="1554" height="173" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585252818305" />
+    <state width="1554" height="173" key="GridCell.Tab.0.left" timestamp="1585252818305">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="2194" height="174" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="2194" height="174" key="GridCell.Tab.0.right" timestamp="1585179998207">
+    <state width="1554" height="173" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585252818305" />
+    <state width="1554" height="173" key="GridCell.Tab.0.right" timestamp="1585252818305">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584991021235" />
-    <state width="2194" height="174" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
+    <state width="1554" height="173" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585252818305" />
     <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -274,15 +279,15 @@
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
     <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585218712760">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585238435428">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585218712760" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585236136304">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585238435428" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585338729957">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585236136304" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585338729957" />
     <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585170557520">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
