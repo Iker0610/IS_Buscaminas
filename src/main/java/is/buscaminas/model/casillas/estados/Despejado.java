@@ -13,4 +13,7 @@ public class Despejado implements IEstadoCasilla {
 
         return new Pair<>(false,false);
     }
+
+    @Override
+    public void marcar(Casilla pCasilla) { } //No ocurre nada si se manda marcar una casilla despejada
 }
