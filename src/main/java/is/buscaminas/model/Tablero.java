@@ -5,6 +5,8 @@ import is.buscaminas.Partida;
 import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
+import is.buscaminas.model.casillas.estados.IEstadoCasilla;
+import is.buscaminas.model.casillas.estados.Marcado;
 import is.buscaminas.view.VistaCasilla;
 
 import javafx.util.Pair;
@@ -97,6 +99,23 @@ public class Tablero {
         generarNoMinas(pMatrizBotones);
     }
 
+    public void marcarTableroVacio (int pFila, int pColumna, VistaCasilla pCasillaMarcada)
+    {
+        // Si no está generado el tablero y se hace click derecho, se genera una CasillaNum temporal con valor minasAdyacentes = (-1)
+
+        //      Pre:    - Fila y columna de la primera casilla seleccionada por el jugador
+        //              - Referencias a la casilla de la Vista que debe ser marcada
+        //      Post: Se ha generado una casilla marcada temporal
+
+        // Se comprueba que en esa casilla no haya nada
+        if (matrizCasillas[pFila][pColumna] == null)
+        {
+            //Se crea la CasillaNum temporal para que pueda ser marcada
+            matrizCasillas[pFila][pColumna] = new CasillaNum(-1,pCasillaMarcada);
+        }
+
+    }
+
     private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
     {
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
@@ -115,31 +134,61 @@ public class Tablero {
             fila = random.nextInt(matrizCasillas.length);
             columna = random.nextInt(matrizCasillas[0].length);
 
-            //Se comprueba que en esa casilla no haya nada y que no sea ni la primera ni ninguna de las adyacentes
-            // Si cumple las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
-            if ((matrizCasillas[fila][columna] == null) && (Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) {
-                matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
-                numMinas--;
+            // Se comprueba que no sea ni la primera ni ninguna de las adyacentes
+            // y que en esa casilla no haya nada o haya una CasillaNum (significaría que la casilla es temporal, por lo que será cambiada a CasillaMina)
+
+            // Si cumplen las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
+
+            if ((Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) // Si no es adyacente a la casilla del click
+            {
+                // Si la casilla esta vacía, se crea mina y se disminuyen las minas restantes
+                if (matrizCasillas[fila][columna]==null)
+                {
+                    matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
+                    numMinas--;
+                }
+                // Si habia una casillaNum:
+                // Se le quita el listener (La vista de esa casilla) y se crea una mina CON EL MISMO ESTADO QUE LA CASILLA TEMPORAL en esa misma posición.
+                // También disminuyen las minas restantes
+                else if(matrizCasillas[fila][columna] instanceof CasillaNum) {
+                    IEstadoCasilla estado=matrizCasillas[fila][columna].getEstado();
+                    matrizCasillas[fila][columna].eliminarListener(pMatrizBotones[fila][columna]);
+                    matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
+                    matrizCasillas[fila][columna].cambiarEstado(estado);
+                    numMinas--;
+                }
             }
+
+
         }
     }
 
-    private void generarNoMinas (VistaCasilla[][] pMatrizBotones)
+    private void generarNoMinas(VistaCasilla[][] pMatrizBotones)
     {
         //Pre: Matriz con referencias a las casillas de la Vista
         //Post: Se han generado las casillas que no contienen minas
 
         for (int fila = 0; fila < matrizCasillas.length; fila++) {
             for (int columna = 0; columna < matrizCasillas[fila].length; columna++) {
+
+                // Si la casilla no ha sido creada, se crea
                 if (matrizCasillas[fila][columna] == null) {
                     int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
                     matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, pMatrizBotones[fila][columna]);
+                }
+                // Si la casilla es de tipo casillaNum, es que es una casilla temporal(es la única forma de que exista una casillaNum hasta este punto)
+                // Se le da un valor a numMinasAdyacentes de esa casilla y mantenemos esta casilla en el tablero.
+                // En este momento, la casilla deja de ser temporal
+                else if(matrizCasillas[fila][columna] instanceof CasillaNum) {
+                    matrizCasillas[fila][columna].cambiarMinasAdyacentes(calcularMinasAdyacentes(fila, columna));
                 }
             }
         }
     }
 
-    private int calcularMinasAdyacentes (int pFila, int pColumna)
+
+
+    private int calcularMinasAdyacentes(int pFila, int pColumna)
     {
         //Pre:  La fila y la columna pertenecen a valores de la matriz
         //Post: Devuelve el número de minas adyacentes de una casilla
@@ -224,8 +273,8 @@ public class Tablero {
         {
 
 
-            if(matrizCasillas[pFila][pColumna]!=null)//Si existe la casilla (ha sido creada)
-            {
+//            if(matrizCasillas[pFila][pColumna]!=null)//Si existe la casilla (ha sido creada)
+//            {
                 Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
 
                 if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
@@ -240,7 +289,7 @@ public class Tablero {
 
                 }
 
-            } //Si se hace click derecho antes de crear tablero, me inventaré algo. OS ASEGURO QUE HARÉ ALGO AQUÍ. XABIER DEL FUTURO, TE LO ENCARGO
+//            } //Si se hace click derecho antes de crear tablero, me inventaré algo. OS ASEGURO QUE HARÉ ALGO AQUÍ. XABIER DEL FUTURO, TE LO ENCARGO
 
         }
 

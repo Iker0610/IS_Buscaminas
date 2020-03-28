@@ -54,4 +54,26 @@ public abstract class Casilla {
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
     }
 
+    public void eliminarListener(VistaCasilla pCasilla)
+    {
+        //Pre: Una casilla de la vista
+        //Post: Se ha eliminado la casilla de la vista de listener de esta casilla
+
+        lObservers.removePropertyChangeListener(pCasilla);
+    }
+
+    //METODO USADO UNICAMENTE PARA "DUPLICAR" ESTA CASILLA EN CASO DE SER TEMPORAL (Iker por favor no me mates) y crear una mina con exactamente el mismo estado
+    public IEstadoCasilla getEstado()
+    {
+        //Pre:
+        //Post: Devuelve el estado actual
+        return estadoAct;
+    }
+
+    //Metodo que solo hara algo en CasillaNum, pero es necesario ponerlo aquí para que se pueda acceder a este método desde una instancia de Casilla
+    public void cambiarMinasAdyacentes(int pNum)
+    {
+        //Pre: Recibe un numero
+        //Post: En caso de que sea CasillaNum, se actualizarán las minas adyacentes
+    }
 }
