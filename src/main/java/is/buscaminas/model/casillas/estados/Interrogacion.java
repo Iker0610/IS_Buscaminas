@@ -22,10 +22,11 @@ public class Interrogacion implements IEstadoCasilla {
     }
 
     @Override
-    public void marcar(Casilla pCasilla) {
+    public Pair<Boolean, Boolean> marcar(Casilla pCasilla) {
         //Pre: Se recibe una casilla para marcar
-        //Post: Se cambia el estado a oculto
+        //Post: Se cambia el estado a oculto. Como la casilla interrogación no cuenta como marcada, se devuelve (falase,false)
 
         pCasilla.cambiarEstado(new Oculto());
+        return new Pair<>(false,false);
     }
 }

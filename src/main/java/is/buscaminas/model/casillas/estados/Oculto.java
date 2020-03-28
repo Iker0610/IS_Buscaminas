@@ -22,11 +22,12 @@ public class Oculto implements IEstadoCasilla {
     }
 
     @Override
-    public void marcar(Casilla pCasilla)
+    public Pair<Boolean, Boolean> marcar(Casilla pCasilla)
     {
         //Pre: Se recibe una casilla para marcar
-        //Post: Se cambia el estado a marcado
+        //Post: Se cambia el estado a marcado. Al marcar esta casilla, devolvemos el par (TRUE,TRUE)
 
         pCasilla.cambiarEstado(new Marcado());
+        return new Pair<>(true,true);
     }
 }

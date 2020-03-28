@@ -28,12 +28,12 @@ public abstract class Casilla {
         return estadoAct.despejar(this);
     }
 
-    public void marcar()
+    public Pair<Boolean, Boolean> marcar()
     {
         //Pre:
         //Post: Se actualiza el estado
 
-        estadoAct.marcar(this);
+        return estadoAct.marcar(this);
     }
 
     public void cambiarEstado (IEstadoCasilla pEstado)

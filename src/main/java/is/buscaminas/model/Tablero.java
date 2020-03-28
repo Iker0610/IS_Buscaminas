@@ -6,22 +6,29 @@ import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
 import is.buscaminas.view.VistaCasilla;
+import is.buscaminas.view.VistaMarcadas;
 import javafx.util.Pair;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.util.Random;
 
 public class Tablero {
 
     //Atributos
+    private PropertyChangeSupport lObservers;
+
     private static Tablero mTablero;
     private Casilla[][] matrizCasillas;
     private int casillasPorDespejar; //Las que no son minas y aún ocultas
     private int numMinas;
+    private int numMinasPorMarcar; //numero de minas que te quedan por marcar (si marcas demasiadas casillas, será un num negativo)
 
 
     //Constructora
     private Tablero ()
     {
+        lObservers = new PropertyChangeSupport(this);
         generarMatrizTablero();
     }
 
@@ -29,6 +36,19 @@ public class Tablero {
     {
         if (mTablero == null) mTablero = new Tablero();
         return mTablero;
+    }
+
+    //Metodos--------------------------------------------
+
+    //Metodo para añadir observer del nímero del marcador de minas
+
+    public void addObserver (PropertyChangeListener pObserver)
+    {
+        //Pre: Un observer
+        //Post: Se ha añadido el observer a la lista de observers
+
+        lObservers.addPropertyChangeListener(pObserver);
+        lObservers.firePropertyChange("numMinasPorMarcar", null, numMinasPorMarcar); //para que al empezar la partida tengamos el número en pantalla
     }
 
     //Metodo para generar la matriz
@@ -56,6 +76,7 @@ public class Tablero {
         }
         numMinas = matrizCasillas[0].length * dificultad;
         casillasPorDespejar = (matrizCasillas.length * matrizCasillas[0].length) - numMinas;
+        numMinasPorMarcar = numMinas;
     }
 
     //----------------------------------------------
@@ -183,6 +204,46 @@ public class Tablero {
                 }
             }
         }
+    }
+
+    public void marcarCasilla(int pFila, int pColumna)
+    {
+        //Pre:  Recibe el número de fila y columna de la casilla seleccionada a ser marcada
+        //Post: Se marca, desmarca o "interroga" la casilla en cuestión situada en esa fila y columna
+
+        //      El resultado devuelto por la función marcar tiene la forma [key,value] (un par de (boolean,boolean))
+        //      El primer boolean señala si se ha modificado el estado de la casilla (es decir, si se a marcado o desmarcado toma el valor TRUE)
+        //      El segundo boolean (solo válido si el primer boolean es TRUE) indica con un TRUE si se ha marcado una casilla y FALSE si se ha desmarcado
+
+        // (0,X) -> No se ha modificado nada (por conveniencia, siempre devolveremos FALSE en el segundo bit del par)
+        // (1,0) -> Se ha desmarcado una casilla
+        // (1,1) -> Se ha marcado una casilla
+
+
+        if (Partida.getPartida().hayPartidaActiva()) //Si hay una partida activa
+        {
+
+
+            if(matrizCasillas[pFila][pColumna]!=null)//Si existe la casilla (ha sido creada)
+            {
+                Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
+
+                if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
+                {
+                    if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
+                    {
+                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
+                    }
+                    else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
+                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
+                    }
+
+                }
+
+            } //Si se hace click derecho antes de crear tablero, me inventaré algo. OS ASEGURO QUE HARÉ ALGO AQUÍ. XABIER DEL FUTURO, TE LO ENCARGO
+
+        }
+
     }
     //----------------------------------------------
 }

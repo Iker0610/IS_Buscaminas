@@ -63,10 +63,11 @@ public class ventanaPartidaPrincipalController {
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                else {
-                    // Si es un click derecho se consume el evento y no llegará a activar el evento
+                else if (pEvento.isSecondaryButtonDown())
+                {
+                    // Si es un click derecho se consume el evento y no llegará a activar el evento PERO HAY QUE HACER QUE SE PUEDA MARCAR UNA CASILLA MUAHAHAHA
                     pEvento.consume();
-                }
+                }else{pEvento.consume();}
             }
         };
 
@@ -121,12 +122,18 @@ public class ventanaPartidaPrincipalController {
     private void gestionarEventoCasilla (MouseEvent pEvento)
     {
         //Pre: Un evento de ratón
-        //Post: Se llama al tablero (modelo) y se le indica que casilla se desea despejar
+        //Post: Se llama al tablero (modelo) y se le indica que casilla se desea despejar o marcar
         VistaCasilla casilla = (VistaCasilla) pEvento.getTarget();
-        if (pEvento.isPrimaryButtonDown()) {
+        if (pEvento.isPrimaryButtonDown()) {                            // Si se ha hecho clic izquierdo
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
             Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
+        }
+        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho clic derecho
+        {
+            int filaCasilla = GridPane.getRowIndex(casilla);
+            int columnaCasilla = GridPane.getColumnIndex(casilla);
+            Tablero.getTablero().marcarCasilla(filaCasilla, columnaCasilla);
         }
     }
 

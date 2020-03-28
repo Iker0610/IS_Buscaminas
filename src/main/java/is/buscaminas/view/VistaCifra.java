@@ -8,7 +8,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.File;
 
-public class VistaCifraContador extends Pane {
+public class VistaCifra extends Pane {
     /*
      * Esta clase es un elemento de la vista
      * Extiende del Pane pues es el elemento más simple y la única función es mostrar una imagen.
@@ -21,7 +21,7 @@ public class VistaCifraContador extends Pane {
     private static final int height = 35;
     private static final int width = 20;
 
-    public VistaCifraContador ()
+    public VistaCifra()
     {
         super();
 
