@@ -1,10 +1,8 @@
 package is.buscaminas.view;
 
 
-import is.buscaminas.model.Tablero;
 import javafx.scene.layout.GridPane;
 
-import javax.swing.text.html.HTMLDocument;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 

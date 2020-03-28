@@ -6,7 +6,7 @@ import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
 import is.buscaminas.view.VistaCasilla;
-import is.buscaminas.view.VistaMarcadas;
+
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeListener;
