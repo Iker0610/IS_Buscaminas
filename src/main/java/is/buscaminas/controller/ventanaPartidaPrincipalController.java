@@ -45,9 +45,8 @@ public class ventanaPartidaPrincipalController {
             @Override
             public void handle (MouseEvent pEvento)
             {
-
-                //Se mira si es un click izquierdo
-                if (pEvento.isPrimaryButtonDown())
+                //Se mira si es un click izquierdo y se ha pulsado en una casilla
+                if (pEvento.isPrimaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla)
                 {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
                     int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
@@ -65,8 +64,8 @@ public class ventanaPartidaPrincipalController {
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                // Se comprueba si es click derecho
-                else if(pEvento.isSecondaryButtonDown())
+                // Se comprueba si es click derecho y se ha pulsado en una casilla
+                else if(pEvento.isSecondaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla)
                 {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
                     int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
