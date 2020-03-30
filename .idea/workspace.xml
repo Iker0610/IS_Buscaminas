@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCasilla.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MarcarPrevio" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
@@ -103,6 +108,7 @@
       <workItem from="1585216314200" duration="2732000" />
       <workItem from="1585236135241" duration="45000" />
       <workItem from="1585395994121" duration="1731000" />
+      <workItem from="1585578132798" duration="414000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste Contador">
       <created>1584992621856</created>
@@ -187,6 +193,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Ajuste Contador" />
@@ -270,15 +287,15 @@
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
     <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585218712760">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585578545589">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585218712760" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585396086347">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578545589" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585396086347" />
+    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585578133472" />
     <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585170557520">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
