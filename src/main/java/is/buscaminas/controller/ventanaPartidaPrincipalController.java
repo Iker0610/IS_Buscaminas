@@ -74,7 +74,7 @@ public class ventanaPartidaPrincipalController {
 
                     //Mandamos al tablero crear una casilla temporal en la posición del click. Se le pasa la VistaCasilla para que pueda actualizarse la vista
                     VistaCasilla casilla = getMatrizCasillas()[fila][columna];
-                    Tablero.getTablero().marcarTableroVacio(fila,columna,casilla);
+                    Tablero.getTablero().marcarPrevio(fila,columna,casilla);
                 }
                 else{ //si se ha realizado cualquier otra accion se consume el evento
                     pEvento.consume();
@@ -135,12 +135,12 @@ public class ventanaPartidaPrincipalController {
         //Pre: Un evento de ratón
         //Post: Se llama al tablero (modelo) y se le indica que casilla se desea despejar o marcar
         VistaCasilla casilla = (VistaCasilla) pEvento.getTarget();
-        if (pEvento.isPrimaryButtonDown()) {                            // Si se ha hecho clic izquierdo
+        if (pEvento.isPrimaryButtonDown()) {                            // Si se ha hecho click izquierdo
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
             Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
         }
-        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho clic derecho
+        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho click derecho
         {
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);

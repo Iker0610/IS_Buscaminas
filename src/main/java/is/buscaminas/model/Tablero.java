@@ -5,8 +5,7 @@ import is.buscaminas.Partida;
 import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
-import is.buscaminas.model.casillas.estados.IEstadoCasilla;
-import is.buscaminas.model.casillas.estados.Marcado;
+import is.buscaminas.model.casillas.CasillaTemp;
 import is.buscaminas.view.VistaCasilla;
 
 import javafx.util.Pair;
@@ -99,9 +98,9 @@ public class Tablero {
         generarNoMinas(pMatrizBotones);
     }
 
-    public void marcarTableroVacio (int pFila, int pColumna, VistaCasilla pCasillaMarcada)
+    public void marcarPrevio (int pFila, int pColumna, VistaCasilla pCasillaMarcada)
     {
-        // Si no está generado el tablero y se hace click derecho, se genera una CasillaNum temporal con valor minasAdyacentes = (-1)
+        // Si no está generado el tablero y se hace click derecho, se genera una CasillaTemp temporal
 
         //      Pre:    - Fila y columna de la primera casilla seleccionada por el jugador
         //              - Referencias a la casilla de la Vista que debe ser marcada
@@ -111,7 +110,7 @@ public class Tablero {
         if (matrizCasillas[pFila][pColumna] == null)
         {
             //Se crea la CasillaNum temporal para que pueda ser marcada
-            matrizCasillas[pFila][pColumna] = new CasillaNum(-1,pCasillaMarcada);
+            matrizCasillas[pFila][pColumna] = new CasillaTemp(pCasillaMarcada);
         }
 
     }
@@ -147,14 +146,12 @@ public class Tablero {
                     matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
                     numMinas--;
                 }
-                // Si habia una casillaNum:
+                // Si habia una casillaTemp:
                 // Se le quita el listener (La vista de esa casilla) y se crea una mina CON EL MISMO ESTADO QUE LA CASILLA TEMPORAL en esa misma posición.
                 // También disminuyen las minas restantes
-                else if(matrizCasillas[fila][columna] instanceof CasillaNum) {
-                    IEstadoCasilla estado=matrizCasillas[fila][columna].getEstado();
-                    matrizCasillas[fila][columna].eliminarListener(pMatrizBotones[fila][columna]);
-                    matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
-                    matrizCasillas[fila][columna].cambiarEstado(estado);
+                else if(matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                    //mando a la mina temp crear una casilla mina igual a ella
+                    matrizCasillas[fila][columna]=matrizCasillas[fila][columna].convertirEnMina(pMatrizBotones[fila][columna]);
                     numMinas--;
                 }
             }
@@ -176,11 +173,10 @@ public class Tablero {
                     int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
                     matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, pMatrizBotones[fila][columna]);
                 }
-                // Si la casilla es de tipo casillaNum, es que es una casilla temporal(es la única forma de que exista una casillaNum hasta este punto)
-                // Se le da un valor a numMinasAdyacentes de esa casilla y mantenemos esta casilla en el tablero.
-                // En este momento, la casilla deja de ser temporal
-                else if(matrizCasillas[fila][columna] instanceof CasillaNum) {
-                    matrizCasillas[fila][columna].cambiarMinasAdyacentes(calcularMinasAdyacentes(fila, columna));
+                // Si la casilla es de tipo casillaTemp
+                // Se le manda crear una casillaNum dandole un valor de numMinasAdyacentes y su vistaCasilla.
+                else if(matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                    matrizCasillas[fila][columna]=matrizCasillas[fila][columna].convertirEnNum(calcularMinasAdyacentes(fila, columna),pMatrizBotones[fila][columna]);
                 }
             }
         }
@@ -271,28 +267,17 @@ public class Tablero {
 
         if (Partida.getPartida().hayPartidaActiva()) //Si hay una partida activa
         {
-
-
-//            if(matrizCasillas[pFila][pColumna]!=null)//Si existe la casilla (ha sido creada)
-//            {
-                Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
-
-                if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
+            Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
+            if (resultado.getKey()) //Si se ha hecho algo (Primer boolean = TRUE)
+            {
+                if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
                 {
-                    if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
-                    {
-                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
-                    }
-                    else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
-                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
-                    }
-
+                    lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
                 }
-
-//            } //Si se hace click derecho antes de crear tablero, me inventaré algo. OS ASEGURO QUE HARÉ ALGO AQUÍ. XABIER DEL FUTURO, TE LO ENCARGO
-
+                else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
+                    lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
+                }
+            }
         }
-
     }
-    //----------------------------------------------
 }

@@ -13,13 +13,28 @@ public abstract class Casilla {
     private IEstadoCasilla estadoAct;
     private PropertyChangeSupport lObservers;
 
+    // Gets para subtipos de casillas
     protected Casilla (VistaCasilla pVistaCasilla)
     {
         estadoAct = new Oculto();
         lObservers = new PropertyChangeSupport(this);
         lObservers.addPropertyChangeListener(pVistaCasilla);
     }
+    protected IEstadoCasilla getEstado ()
+    {
+        // Pre: -
+        // Post: devuelve el estado actual de la casilla
+        return this.estadoAct;
+    }
 
+    protected PropertyChangeSupport getObservers ()
+    {
+        // Pre: -
+        // Post: devuelve la lista de observers de la casilla
+        return this.lObservers;
+    }
+
+    //Metodos
     public Pair<Boolean, Boolean> despejar ()
     {
         //Pre:
@@ -54,26 +69,11 @@ public abstract class Casilla {
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
     }
 
-    public void eliminarListener(VistaCasilla pCasilla)
-    {
-        //Pre: Una casilla de la vista
-        //Post: Se ha eliminado la casilla de la vista de listener de esta casilla
-
-        lObservers.removePropertyChangeListener(pCasilla);
+    //Métodos incluidos en esta clase abstracta únicamente para poder trabajar con ellos en CasillaTemp teniendo un objeto Casilla.
+    public Casilla convertirEnMina(VistaCasilla vistaCasilla) {
+        return null;
     }
-
-    //METODO USADO UNICAMENTE PARA "DUPLICAR" ESTA CASILLA EN CASO DE SER TEMPORAL (Iker por favor no me mates) y crear una mina con exactamente el mismo estado
-    public IEstadoCasilla getEstado()
-    {
-        //Pre:
-        //Post: Devuelve el estado actual
-        return estadoAct;
-    }
-
-    //Metodo que solo hara algo en CasillaNum, pero es necesario ponerlo aquí para que se pueda acceder a este método desde una instancia de Casilla
-    public void cambiarMinasAdyacentes(int pNum)
-    {
-        //Pre: Recibe un numero
-        //Post: En caso de que sea CasillaNum, se actualizarán las minas adyacentes
+    public Casilla convertirEnNum(int i, VistaCasilla vistaCasilla) {
+        return null;
     }
 }

@@ -25,16 +25,6 @@ public class CasillaNum extends Casilla {
         return (minasAdyacentes == 0);
     }
 
-    @Override
-    public void cambiarMinasAdyacentes(int pNum)
-    {
-        //Pre: Recibe un numero
-        //Post: Se actualizarán las minas adyacentes, pasando a ser el número introducido
-
-        minasAdyacentes = pNum;
-    }
-
-
 
     @Override
     public void cambiarEstado (IEstadoCasilla pEstado)
