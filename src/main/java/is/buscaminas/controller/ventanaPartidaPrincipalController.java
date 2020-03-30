@@ -45,10 +45,8 @@ public class ventanaPartidaPrincipalController {
             @Override
             public void handle (MouseEvent pEvento)
             {
-
                 //Se mira si es un click izquierdo
-                if (pEvento.isPrimaryButtonDown())
-                {
+                if (pEvento.isPrimaryButtonDown()) {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
                     int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
                     int columna = GridPane.getColumnIndex((Node) pEvento.getTarget());
@@ -65,20 +63,11 @@ public class ventanaPartidaPrincipalController {
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                // Se comprueba si es click derecho
-                else if(pEvento.isSecondaryButtonDown())
+                else if (pEvento.isSecondaryButtonDown())
                 {
-                    //Obtenemos la fila y columna de la casilla que se ha clickado
-                    int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
-                    int columna = GridPane.getColumnIndex((Node) pEvento.getTarget());
-
-                    //Mandamos al tablero crear una casilla temporal en la posición del click. Se le pasa la VistaCasilla para que pueda actualizarse la vista
-                    VistaCasilla casilla = getMatrizCasillas()[fila][columna];
-                    Tablero.getTablero().marcarTableroVacio(fila,columna,casilla);
-                }
-                else{ //si se ha realizado cualquier otra accion se consume el evento
+                    // Si es un click derecho se consume el evento y no llegará a activar el evento PERO HAY QUE HACER QUE SE PUEDA MARCAR UNA CASILLA MUAHAHAHA
                     pEvento.consume();
-                }
+                }else{pEvento.consume();}
             }
         };
 

@@ -36,10 +36,9 @@ public class VistaCasilla extends Button implements PropertyChangeListener {
     @Override
     public void propertyChange (PropertyChangeEvent pNuevoEstado)
     {
-        String nuevoEstado = (String) pNuevoEstado.getNewValue();
-        cambiarApariencia(nuevoEstado);
+        String nuevaEstado = (String) pNuevoEstado.getNewValue();
+        cambiarApariencia(nuevaEstado);
     }
-
 
     //Metodo para cambiar el aspecto de la casilla:
     private void cambiarApariencia (String pString)
