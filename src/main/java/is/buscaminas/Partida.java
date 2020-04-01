@@ -76,7 +76,7 @@ public class Partida extends Application {
         //Post: Se inicia la partida
 
         //Se carga la pantalla y se introduce en el Stage
-        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaPrincipal.fxml"));
+        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
         ventanaAct.setScene(new Scene(root));
 
         //Se activa el boolean que indica que existe una partida activa
