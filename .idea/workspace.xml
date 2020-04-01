@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -228,25 +229,25 @@
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1585590721910">
+    <state width="1877" height="147" key="GridCell.Tab.0.bottom" timestamp="1585762001768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585590721910" />
+    <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585762001768" />
     <state width="2194" height="174" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1585590721910">
+    <state width="1877" height="147" key="GridCell.Tab.0.center" timestamp="1585762001767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585590721910" />
+    <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585762001767" />
     <state width="2194" height="174" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1585590721910">
+    <state width="1877" height="147" key="GridCell.Tab.0.left" timestamp="1585762001767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585590721910" />
+    <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585762001767" />
     <state width="2194" height="174" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1585590721910">
+    <state width="1877" height="147" key="GridCell.Tab.0.right" timestamp="1585762001767">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585590721910" />
+    <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585762001767" />
     <state width="2194" height="174" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1585590721911">
       <screen x="0" y="0" width="1920" height="1040" />

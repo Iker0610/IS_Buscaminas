@@ -20,19 +20,7 @@ public abstract class Casilla {
         lObservers = new PropertyChangeSupport(this);
         lObservers.addPropertyChangeListener(pVistaCasilla);
     }
-    protected IEstadoCasilla getEstado ()
-    {
-        // Pre: -
-        // Post: devuelve el estado actual de la casilla
-        return this.estadoAct;
-    }
 
-    protected PropertyChangeSupport getObservers ()
-    {
-        // Pre: -
-        // Post: devuelve la lista de observers de la casilla
-        return this.lObservers;
-    }
 
     //Metodos
     public Pair<Boolean, Boolean> despejar ()
@@ -69,11 +57,34 @@ public abstract class Casilla {
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
     }
 
-    //Métodos incluidos en esta clase abstracta únicamente para poder trabajar con ellos en CasillaTemp teniendo un objeto Casilla.
-    public Casilla convertirEnMina(VistaCasilla vistaCasilla) {
-        return null;
+    // ------------------------------------------------------------------------------------------------------------------------------------
+    // Métodos incluidos en esta clase abstracta que son usados para convertir una casillaTemp en casillaMina o casillaNum:
+    // ------------------------------------------------------------------------------------------------------------------------------------
+
+    public Casilla convertirEnMina(VistaCasilla pVista) {
+        // Pre: La vista de una casilla
+        // Post: Se crea una casillaMina con el mismo estado y la misma vista que la casilla actual
+        this.eliminarListener(pVista);
+        CasillaMina nuevaCasilla = new CasillaMina(pVista);
+        nuevaCasilla.cambiarEstado(estadoAct);
+        return nuevaCasilla;
     }
-    public Casilla convertirEnNum(int i, VistaCasilla vistaCasilla) {
-        return null;
+
+    public Casilla convertirEnNum (int pNum,VistaCasilla pVista)
+    {
+        // Pre: La vista de una casilla y el num. de minas adyacentes
+        // Post: Se crea una casillaNum con el mismo estado y la misma vista que la casilla actual
+        this.eliminarListener(pVista);
+        CasillaNum nuevaCasilla = new CasillaNum(pNum,pVista);
+        nuevaCasilla.cambiarEstado(estadoAct);
+        return nuevaCasilla;
+    }
+
+    public void eliminarListener(VistaCasilla pCasilla)
+    {
+        //Pre: Una casilla (de la vista)
+        //Post: Se ha eliminado de listener la casilla (de la vista) de esta casilla
+
+        lObservers.removePropertyChangeListener(pCasilla);
     }
 }
