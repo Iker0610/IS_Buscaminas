@@ -26,7 +26,8 @@ public class Partida extends Application {
     private static Partida mPartida;
     private Stage ventanaAct;
     private PropertyChangeSupport lObservers;
-    private int dificultad = 1;
+    private String nombreUsuario;
+    private int dificultad;
     private boolean partidaActiva;
 
     //MAINS y CONSTRUCTORAS
@@ -59,7 +60,7 @@ public class Partida extends Application {
         ventanaAct.centerOnScreen();
 
         //Se inciia una partida
-        iniciarPartida();
+        iniciarLogin();
     }
 
     //Singleton
@@ -69,8 +70,18 @@ public class Partida extends Application {
         return mPartida;
     }
 
+    //Cambiar nombre
+    public void setNombre(String pNombre){
+        nombreUsuario = pNombre;
+    }
+
+    //Cambiar dificultad
+    public void setDificultad(int pDificultad){
+        dificultad = pDificultad;
+    }
+
     //Metodos relacionados a la partida
-    private void iniciarPartida () throws IOException
+    public void iniciarPartida () throws IOException
     {
         //Pre:
         //Post: Se inicia la partida
@@ -81,6 +92,19 @@ public class Partida extends Application {
 
         //Se activa el boolean que indica que existe una partida activa
         partidaActiva = true;
+
+        //Se muestra el stage una vez cargado
+        ventanaAct.show();
+    }
+
+    private void iniciarLogin () throws IOException
+    {
+        //Pre:
+        //Post: Se inicia la partida
+
+        //Se carga la pantalla y se introduce en el Stage
+        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaAcceso.fxml"));
+        ventanaAct.setScene(new Scene(root));
 
         //Se muestra el stage una vez cargado
         ventanaAct.show();
