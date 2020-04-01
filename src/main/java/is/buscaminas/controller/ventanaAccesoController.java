@@ -12,7 +12,9 @@ import java.io.IOException;
 
 public class ventanaAccesoController {
 
+    //Atributos normales
     private ToggleGroup dificultadGroup;
+
     //Atributos FXML
     @FXML
     private TextField nombreTextField;
@@ -35,18 +37,16 @@ public class ventanaAccesoController {
 
     @FXML
     public void pulsarAceptar(Event pEvent) throws IOException {
-        if(!nombreTextField.getText().equals("")){
+        //Si se introduce un nombre y se selcciona una dificultad
+        if(!nombreTextField.getText().equals("") && (Node)dificultadGroup.getSelectedToggle() != null){
             //Guardamos el nombre de jugador
             Partida.getPartida().setNombre(nombreTextField.getText());
-            //Ponemos la dificultad seleccionada
-            String dificultad = ((Node)dificultadGroup.getSelectedToggle()).getId();
+            //Introducimos la dificultad seleccionada
             int numDificultad;
-            try
-            {
+            String dificultad = ((Node) dificultadGroup.getSelectedToggle()).getId();
+            try {
                 numDificultad = Integer.parseInt(dificultad);
-            }
-            catch(Exception e)
-            {
+            } catch (Exception e) {
                 numDificultad = 1;
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "ERROR (introducir dificultad)", ButtonType.YES, ButtonType.NO);
             }
