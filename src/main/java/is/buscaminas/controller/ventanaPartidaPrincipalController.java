@@ -63,7 +63,7 @@ public class ventanaPartidaPrincipalController {
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                else if (pEvento.isSecondaryButtonDown()pEvento.getTarget() instanceof VistaCasilla)
+                else if (pEvento.isSecondaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla)
                 {
                     // Si es un click derecho se consume el evento y no llegará a activar el evento PERO HAY QUE HACER QUE SE PUEDA MARCAR UNA CASILLA MUAHAHAHA
                     pEvento.consume();
