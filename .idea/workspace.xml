@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Ajuste del nombre">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +23,14 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Iker0610/IS_Buscaminas.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1ZXRG0nZLadXWttwchBDFtrwf8h" />
   <component name="ProjectLevelVcsManager">
@@ -82,6 +91,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Contador" />
+      <item itemvalue="Application.Partida" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Partida" />
@@ -242,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585578568310">
+    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1586104143101">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578568310" />
+    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586104143101" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -305,9 +318,9 @@
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585578133472" />
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585170557520">
+    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586104176002">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585170557520" />
+    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586104176002" />
   </component>
 </project>
