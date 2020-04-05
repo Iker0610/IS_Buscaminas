@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/IS_Buscaminas.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Interrogacion.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Marcado.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Oculto.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/derrota.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/estandar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/tiempo.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/victoria.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/logo/logoBuscaminas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time-1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,11 +80,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MarcarPrevio" />
+        <entry key="$PROJECT_DIR$" value="Seguir-Jugando" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1ZXRG0nZLadXWttwchBDFtrwf8h" />
   <component name="ProjectLevelVcsManager">
@@ -40,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../programaAdministracion/src/main/java/com/ortoTerapia/App.java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/emoji" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -53,58 +114,45 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\alexp\Documents\Asignaturas\Ingeniería del Software\IS_Buscaminas\src\main\resources\is\buscaminas\ui\fxml" />
+      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\emoji" />
       <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\logo" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Partida">
-    <configuration name="Contador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="is.buscaminas.model.Contador" />
-      <module name="IS_Buscaminas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="is.buscaminas.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager">
+    <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
-    <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida" />
-      <module name="IS_Buscaminas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="is.buscaminas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Contador" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -209,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585578569405</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Maven">
+      <created>1586100029881</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1586100029881</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Maven">
+      <created>1586100058588</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586100058588</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +304,8 @@
     <MESSAGE value="Documentación" />
     <MESSAGE value="Documentación 2" />
     <MESSAGE value="Ajuste del nombre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajuste del nombre" />
+    <MESSAGE value="Maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maven" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -250,48 +313,56 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585008711890">
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586106732602">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984169266" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585008711890" />
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586106732602" />
+    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586099984912">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099984912" />
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584984430515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585578568310">
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586103044250">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578568310" />
-    <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586107687784">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="376" y="90" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1584992822024" />
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586107687784" />
+    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog" timestamp="1586107617175">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586107617175" />
     <state x="2024" y="307" key="FileChooserDialogImpl" timestamp="1585008105671">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="1877" height="82" key="GridCell.Tab.0.bottom" timestamp="1585362489555">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1874" height="307" key="GridCell.Tab.0.bottom" timestamp="1586107687795">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1877" height="82" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="2194" height="174" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="82" key="GridCell.Tab.0.center" timestamp="1585362489555">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
+    <state width="1874" height="307" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586107687795" />
+    <state width="1874" height="307" key="GridCell.Tab.0.center" timestamp="1586107687795">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1877" height="82" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="2194" height="174" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="82" key="GridCell.Tab.0.left" timestamp="1585362489555">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
+    <state width="1874" height="307" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586107687795" />
+    <state width="1874" height="307" key="GridCell.Tab.0.left" timestamp="1586107687795">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1877" height="82" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="2194" height="174" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="82" key="GridCell.Tab.0.right" timestamp="1585362489555">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
+    <state width="1874" height="307" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586107687795" />
+    <state width="1874" height="307" key="GridCell.Tab.0.right" timestamp="1586107687795">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1877" height="82" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="2194" height="174" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
+    <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
+    <state width="1874" height="307" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586107687795" />
     <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -308,23 +379,39 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
+    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586099540568">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099540568" />
     <state x="1108" y="171" key="SettingsEditor" timestamp="1585172567037">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
     <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585578573230">
+    <state x="907" y="239" key="VCS.ChangeListViewerDialog" timestamp="1586099557385">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578573230" />
+    <state x="907" y="239" key="VCS.ChangeListViewerDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099557385" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586100063442">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100063442" />
+    <state x="720" y="68" width="1734" height="839" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1586107617175">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="720" y="68" width="1734" height="839" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586107617175" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585578133472" />
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585170557520">
+    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586099572427">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585170557520" />
+    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586099572427" />
+    <state x="616" y="244" width="672" height="677" key="run.anything.popup" timestamp="1586103358310">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="616" y="244" width="672" height="677" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586103358310" />
   </component>
 </project>

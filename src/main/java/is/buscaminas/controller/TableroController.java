@@ -11,7 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
-public class ventanaPartidaPrincipalController {
+public class TableroController {
 
     //Atributos FXML
     @FXML
@@ -46,7 +46,7 @@ public class ventanaPartidaPrincipalController {
             public void handle (MouseEvent pEvento)
             {
                 //Se mira si es un click izquierdo
-                if (pEvento.isPrimaryButtonDown()) {
+                if (pEvento.isPrimaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla) {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
                     int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
                     int columna = GridPane.getColumnIndex((Node) pEvento.getTarget());
@@ -56,14 +56,14 @@ public class ventanaPartidaPrincipalController {
 
                     //Llamamos al tablero (modelo) y le mandamos generar las casillas
                     Tablero.getTablero().generarCasillasTablero(fila, columna, matrizCasillas);
-
+                    
                     //Se inicia el contador
                     Contador.getContador().inicio();
 
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                else if (pEvento.isSecondaryButtonDown())
+                else if (pEvento.isSecondaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla)
                 {
                     // Si es un click derecho se consume el evento y no llegará a activar el evento PERO HAY QUE HACER QUE SE PUEDA MARCAR UNA CASILLA MUAHAHAHA
                     pEvento.consume();
@@ -124,12 +124,12 @@ public class ventanaPartidaPrincipalController {
         //Pre: Un evento de ratón
         //Post: Se llama al tablero (modelo) y se le indica que casilla se desea despejar o marcar
         VistaCasilla casilla = (VistaCasilla) pEvento.getTarget();
-        if (pEvento.isPrimaryButtonDown()) {                            // Si se ha hecho clic izquierdo
+        if (pEvento.isPrimaryButtonDown()) {                            // Si se ha hecho click izquierdo
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
             Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
         }
-        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho clic derecho
+        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho click derecho
         {
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
