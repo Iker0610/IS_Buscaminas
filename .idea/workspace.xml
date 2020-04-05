@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Ajuste del nombre" />
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +51,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -91,13 +97,6 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Contador" />
-        <item itemvalue="Application.Partida" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -258,15 +257,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183" />
+    <state x="559" y="178" key="#Project_Structure" timestamp="1586108176403">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="559" y="178" key="#Project_Structure/0.0.3840.1040@0.0.3840.1040" timestamp="1586108176403" />
     <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586106732602">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984169266" />
     <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586106732602" />
-    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586099984912">
+    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586108108470">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099984912" />
+    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108108470" />
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584984430515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -275,39 +278,39 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586105303940">
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586108240860">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586105303940" />
-    <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586108240860" />
+    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog" timestamp="1586108082230">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="376" y="90" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1584992822024" />
+    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108082230" />
     <state x="2024" y="307" key="FileChooserDialogImpl" timestamp="1585008105671">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="1874" height="311" key="GridCell.Tab.0.bottom" timestamp="1586103519781">
+    <state width="1874" height="307" key="GridCell.Tab.0.bottom" timestamp="1586107974726">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="1874" height="311" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
-    <state width="1874" height="311" key="GridCell.Tab.0.center" timestamp="1586103519781">
+    <state width="1874" height="307" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586107974726" />
+    <state width="1874" height="307" key="GridCell.Tab.0.center" timestamp="1586107974725">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="1874" height="311" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
-    <state width="1874" height="311" key="GridCell.Tab.0.left" timestamp="1586103519781">
+    <state width="1874" height="307" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586107974725" />
+    <state width="1874" height="307" key="GridCell.Tab.0.left" timestamp="1586107974725">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="1874" height="311" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
-    <state width="1874" height="311" key="GridCell.Tab.0.right" timestamp="1586103519781">
+    <state width="1874" height="307" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586107974725" />
+    <state width="1874" height="307" key="GridCell.Tab.0.right" timestamp="1586107974725">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="1874" height="311" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
+    <state width="1874" height="307" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586107974725" />
     <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -324,10 +327,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586099540568">
+    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586108219957">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099540568" />
+    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108219957" />
     <state x="1108" y="171" key="SettingsEditor" timestamp="1585172567037">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
