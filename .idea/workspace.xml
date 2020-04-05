@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAyuda.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaEmoji.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,12 +60,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\emoji" />
       <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\logo" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Partida">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn compile" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.IS_Buscaminas [compile,javafx:run]">
     <configuration name="Contador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="is.buscaminas.model.Contador" />
       <module name="IS_Buscaminas" />
@@ -85,9 +100,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="compile" />
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Contador" />
       <item itemvalue="Application.Partida" />
+      <item itemvalue="Maven.IS_Buscaminas [compile,javafx:run]" />
     </list>
     <recent_temporary>
       <list>
@@ -208,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586100029881</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Maven">
+      <created>1586100058588</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1586100058588</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,11 +299,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585008711890">
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586103432318">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984169266" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585008711890" />
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103432318" />
     <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586099984912">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -263,10 +312,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586100028636">
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586103044250">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100028636" />
+    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586100057804">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100057804" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -276,26 +329,26 @@
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="1877" height="147" key="GridCell.Tab.0.bottom" timestamp="1585832272611">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1874" height="311" key="GridCell.Tab.0.bottom" timestamp="1586103519781">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="2194" height="174" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="147" key="GridCell.Tab.0.center" timestamp="1585832272611">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1874" height="311" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
+    <state width="1874" height="311" key="GridCell.Tab.0.center" timestamp="1586103519781">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="2194" height="174" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="147" key="GridCell.Tab.0.left" timestamp="1585832272611">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1874" height="311" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
+    <state width="1874" height="311" key="GridCell.Tab.0.left" timestamp="1586103519781">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="2194" height="174" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
-    <state width="1877" height="147" key="GridCell.Tab.0.right" timestamp="1585832272611">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1874" height="311" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
+    <state width="1874" height="311" key="GridCell.Tab.0.right" timestamp="1586103519781">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="2194" height="174" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207" />
+    <state width="1874" height="311" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586103519781" />
     <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -325,10 +378,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="907" y="239" key="VCS.ChangeListViewerDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099557385" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585578573230">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586100063442">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578573230" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100063442" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -338,5 +391,9 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586099572427" />
+    <state x="616" y="244" width="672" height="677" key="run.anything.popup" timestamp="1586103358310">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="616" y="244" width="672" height="677" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586103358310" />
   </component>
 </project>

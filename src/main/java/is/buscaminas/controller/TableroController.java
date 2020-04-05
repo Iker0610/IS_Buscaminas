@@ -11,7 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 
-public class ventanaPartidaPrincipalController {
+public class TableroController {
 
     //Atributos FXML
     @FXML
