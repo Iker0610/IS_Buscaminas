@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Ajuste del nombre" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Pantalla-Carga" />
+        <entry key="$PROJECT_DIR$" value="Seguir-Jugando" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,33 +64,7 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Partida">
-    <configuration name="Contador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="is.buscaminas.model.Contador" />
-      <module name="IS_Buscaminas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="is.buscaminas.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida" />
-      <module name="IS_Buscaminas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="is.buscaminas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -117,15 +91,8 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Application.Contador" />
-      <item itemvalue="Application.Partida" />
-      <item itemvalue="Maven.IS_Buscaminas [compile,javafx:run]" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Contador" />
         <item itemvalue="Application.Partida" />
         <item itemvalue="Application.Contador" />
         <item itemvalue="Application.Partida" />
@@ -291,11 +258,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586103432318">
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586106732602">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984169266" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103432318" />
+    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586106732602" />
     <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586099984912">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
