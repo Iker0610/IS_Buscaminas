@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +25,15 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1ZXRG0nZLadXWttwchBDFtrwf8h" />
   <component name="ProjectLevelVcsManager">
@@ -54,7 +59,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -215,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586100058588</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Ajustes raros">
+      <created>1586108274936</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1586108274936</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +261,8 @@
     <MESSAGE value="Documentación 2" />
     <MESSAGE value="Ajuste del nombre" />
     <MESSAGE value="Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maven" />
+    <MESSAGE value="Ajustes raros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajustes raros" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -278,10 +291,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586108240860">
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586108273343">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586108240860" />
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586108273343" />
     <state x="376" y="90" width="3072" height="860" key="DiffContextDialog" timestamp="1586108082230">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -327,23 +340,23 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586108219957">
+    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586108276212">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108219957" />
-    <state x="1108" y="171" key="SettingsEditor" timestamp="1585172567037">
+    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108276212" />
+    <state x="1108" y="171" key="SettingsEditor" timestamp="1586110580366">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
-    <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037" />
+    <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1586110580366" />
     <state x="907" y="239" key="VCS.ChangeListViewerDialog" timestamp="1586099557385">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="907" y="239" key="VCS.ChangeListViewerDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099557385" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586100063442">
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586108278002">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100063442" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586108278002" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -353,9 +366,13 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586099572427" />
-    <state x="616" y="244" width="672" height="677" key="run.anything.popup" timestamp="1586103358310">
+    <state x="726" y="271" width="672" height="677" key="run.anything.popup" timestamp="1586110523747">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="616" y="244" width="672" height="677" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586103358310" />
+    <state x="726" y="271" width="672" height="677" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586110523747" />
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1586110539268">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586110539268" />
   </component>
 </project>
