@@ -6,7 +6,7 @@ import java.beans.PropertyChangeListener;
 
 
 public class VistaContador extends VistaDisplay implements PropertyChangeListener {
-    // Esta clase extiende de VistaDispley, y es la encargada de crear un contador
+    // Esta clase extiende de VistaDisplay, y es la encargada de crear un contador
 
     //Atributos
 

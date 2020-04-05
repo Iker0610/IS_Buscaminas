@@ -222,28 +222,18 @@ public class Tablero {
 
         if (Partida.getPartida().hayPartidaActiva()) //Si hay una partida activa
         {
+            Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
 
-
-            if(matrizCasillas[pFila][pColumna]!=null)//Si existe la casilla (ha sido creada)
+            if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
             {
-                Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
-
-                if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
+                if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
                 {
-                    if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
-                    {
-                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
-                    }
-                    else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
-                        lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
-                    }
-
+                    lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
+                } else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
+                    lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
                 }
-
-            } //Si se hace click derecho antes de crear tablero, me inventaré algo. OS ASEGURO QUE HARÉ ALGO AQUÍ. XABIER DEL FUTURO, TE LO ENCARGO
-
+            }
         }
-
     }
     //----------------------------------------------
 }
