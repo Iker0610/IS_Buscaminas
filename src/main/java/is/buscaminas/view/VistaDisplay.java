@@ -9,7 +9,7 @@ import java.beans.PropertyChangeListener;
 import static java.lang.Math.abs;
 
 
-public abstract class VistaDisplay extends GridPane implements PropertyChangeListener{
+public class VistaDisplay extends GridPane implements PropertyChangeListener{
     // Esta clase es un elemento de la vista
     // Extiende del GridPane lo que significa que se puede considerar un GridPane con funciones especiales
     // Se ha optado por un GridPane pues este nos permitía poner elementos en el ordenadamente
