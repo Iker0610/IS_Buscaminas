@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAyuda.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaEmoji.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +64,7 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="Maven.IS_Buscaminas [compile,javafx:run]">
+  <component name="RunManager" selected="Application.Partida">
     <configuration name="Contador" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="is.buscaminas.model.Contador" />
       <module name="IS_Buscaminas" />
@@ -137,6 +128,7 @@
         <item itemvalue="Application.Contador" />
         <item itemvalue="Application.Partida" />
         <item itemvalue="Application.Contador" />
+        <item itemvalue="Application.Partida" />
       </list>
     </recent_temporary>
   </component>
@@ -316,10 +308,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586100057804">
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586105303940">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586100057804" />
+    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586105303940" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
