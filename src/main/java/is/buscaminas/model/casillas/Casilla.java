@@ -6,6 +6,7 @@ import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeSupport;
+import java.lang.reflect.InvocationTargetException;
 
 public abstract class Casilla {
 
@@ -19,6 +20,12 @@ public abstract class Casilla {
         estadoAct = new Oculto();
         lObservers = new PropertyChangeSupport(this);
         lObservers.addPropertyChangeListener(pVistaCasilla);
+    }
+
+    protected Casilla (Casilla pCasilla)
+    {
+        this.estadoAct = pCasilla.estadoAct;
+        this.lObservers = pCasilla.lObservers;
     }
 
 
@@ -55,36 +62,5 @@ public abstract class Casilla {
 
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
-    }
-
-    // ------------------------------------------------------------------------------------------------------------------------------------
-    // Métodos incluidos en esta clase abstracta que son usados para convertir una casillaTemp en casillaMina o casillaNum:
-    // ------------------------------------------------------------------------------------------------------------------------------------
-
-    public Casilla convertirEnMina(VistaCasilla pVista) {
-        // Pre: La vista de una casilla
-        // Post: Se crea una casillaMina con el mismo estado y la misma vista que la casilla actual
-        this.eliminarListener(pVista);
-        CasillaMina nuevaCasilla = new CasillaMina(pVista);
-        nuevaCasilla.cambiarEstado(estadoAct);
-        return nuevaCasilla;
-    }
-
-    public Casilla convertirEnNum (int pNum,VistaCasilla pVista)
-    {
-        // Pre: La vista de una casilla y el num. de minas adyacentes
-        // Post: Se crea una casillaNum con el mismo estado y la misma vista que la casilla actual
-        this.eliminarListener(pVista);
-        CasillaNum nuevaCasilla = new CasillaNum(pNum,pVista);
-        nuevaCasilla.cambiarEstado(estadoAct);
-        return nuevaCasilla;
-    }
-
-    public void eliminarListener(VistaCasilla pCasilla)
-    {
-        //Pre: Una casilla (de la vista)
-        //Post: Se ha eliminado de listener la casilla (de la vista) de esta casilla
-
-        lObservers.removePropertyChangeListener(pCasilla);
     }
 }

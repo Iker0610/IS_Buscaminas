@@ -107,8 +107,7 @@ public class Tablero {
         //      Post: Se ha generado una casilla marcada temporal
 
         // Se comprueba que en esa casilla no haya nada
-        if (matrizCasillas[pFila][pColumna] == null)
-        {
+        if (matrizCasillas[pFila][pColumna] == null) {
             //Se crea la CasillaNum temporal para que pueda ser marcada
             matrizCasillas[pFila][pColumna] = new CasillaTemp(pCasillaMarcada);
         }
@@ -141,17 +140,16 @@ public class Tablero {
             if ((Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) // Si no es adyacente a la casilla del click
             {
                 // Si la casilla esta vacía, se crea mina y se disminuyen las minas restantes
-                if (matrizCasillas[fila][columna]==null)
-                {
+                if (matrizCasillas[fila][columna] == null) {
                     matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
                     numMinas--;
                 }
                 // Si habia una casillaTemp:
                 // Se le quita el listener (La vista de esa casilla) y se crea una mina CON EL MISMO ESTADO QUE LA CASILLA TEMPORAL en esa misma posición.
                 // También disminuyen las minas restantes
-                else if(matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
                     //mando a la mina temp crear una casilla mina igual a ella
-                    matrizCasillas[fila][columna]=matrizCasillas[fila][columna].convertirEnMina(pMatrizBotones[fila][columna]);
+                    matrizCasillas[fila][columna] = new CasillaMina((CasillaTemp) matrizCasillas[fila][columna]);
                     numMinas--;
                 }
             }
@@ -160,7 +158,7 @@ public class Tablero {
         }
     }
 
-    private void generarNoMinas(VistaCasilla[][] pMatrizBotones)
+    private void generarNoMinas (VistaCasilla[][] pMatrizBotones)
     {
         //Pre: Matriz con referencias a las casillas de la Vista
         //Post: Se han generado las casillas que no contienen minas
@@ -175,16 +173,16 @@ public class Tablero {
                 }
                 // Si la casilla es de tipo casillaTemp
                 // Se le manda crear una casillaNum dandole un valor de numMinasAdyacentes y su vistaCasilla.
-                else if(matrizCasillas[fila][columna] instanceof CasillaTemp) {
-                    matrizCasillas[fila][columna]=matrizCasillas[fila][columna].convertirEnNum(calcularMinasAdyacentes(fila, columna),pMatrizBotones[fila][columna]);
+                else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                    int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
+                    matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, (CasillaTemp) matrizCasillas[fila][columna]);
                 }
             }
         }
     }
 
 
-
-    private int calcularMinasAdyacentes(int pFila, int pColumna)
+    private int calcularMinasAdyacentes (int pFila, int pColumna)
     {
         //Pre:  La fila y la columna pertenecen a valores de la matriz
         //Post: Devuelve el número de minas adyacentes de una casilla
@@ -251,7 +249,7 @@ public class Tablero {
         }
     }
 
-    public void marcarCasilla(int pFila, int pColumna)
+    public void marcarCasilla (int pFila, int pColumna)
     {
         //Pre:  Recibe el número de fila y columna de la casilla seleccionada a ser marcada
         //Post: Se marca, desmarca o "interroga" la casilla en cuestión situada en esa fila y columna
