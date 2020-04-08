@@ -5,6 +5,7 @@ import is.buscaminas.model.casillas.estados.Oculto;
 import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
+import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.lang.reflect.InvocationTargetException;
 
@@ -25,7 +26,8 @@ public abstract class Casilla {
     protected Casilla (Casilla pCasilla)
     {
         this.estadoAct = pCasilla.estadoAct;
-        this.lObservers = pCasilla.lObservers;
+        this.lObservers = new PropertyChangeSupport(this);
+        for (PropertyChangeListener observer:pCasilla.lObservers.getPropertyChangeListeners()) lObservers.addPropertyChangeListener(observer);
     }
 
 
