@@ -133,7 +133,7 @@ public class Tablero {
             columna = random.nextInt(matrizCasillas[0].length);
 
             // Se comprueba que no sea ni la primera ni ninguna de las adyacentes
-            // y que en esa casilla no haya nada o haya una CasillaNum (significaría que la casilla es temporal, por lo que será cambiada a CasillaMina)
+            // y que en esa casilla no haya nada o haya una CasillaTemp (significaría que la casilla es temporal, por lo que será cambiada a CasillaMina)
 
             // Si cumplen las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
 
@@ -145,7 +145,7 @@ public class Tablero {
                     numMinas--;
                 }
                 // Si habia una casillaTemp:
-                // Se le quita el listener (La vista de esa casilla) y se crea una mina CON EL MISMO ESTADO QUE LA CASILLA TEMPORAL en esa misma posición.
+                // Se manda crear una casilla mina pasandole la casillaTemp .
                 // También disminuyen las minas restantes
                 else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
                     //mando a la mina temp crear una casilla mina igual a ella
@@ -172,7 +172,7 @@ public class Tablero {
                     matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, pMatrizBotones[fila][columna]);
                 }
                 // Si la casilla es de tipo casillaTemp
-                // Se le manda crear una casillaNum dandole un valor de numMinasAdyacentes y su vistaCasilla.
+                // Se le manda crear una casillaNum dandole un valor de numMinasAdyacentes y la casillaTemp.
                 else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
                     int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
                     matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, (CasillaTemp) matrizCasillas[fila][columna]);
