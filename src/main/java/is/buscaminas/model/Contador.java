@@ -1,5 +1,7 @@
 package is.buscaminas.model;
 
+import is.buscaminas.view.VistaContador;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Timer;
@@ -69,6 +71,7 @@ public class Contador {
         timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
         timer.purge();  //Elimina el resto de tareas de la cola
     }
+
 
     /*
     Codigo alternativo empleando los Thread:

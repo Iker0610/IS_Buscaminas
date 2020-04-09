@@ -1,6 +1,8 @@
 package is.buscaminas;
 
+
 import is.buscaminas.model.Contador;
+import is.buscaminas.model.Tablero;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -75,6 +77,9 @@ public class Partida extends Application {
         //Pre:
         //Post: Se inicia la partida
 
+        //Se inicia el tablero
+        Tablero.getTablero().iniciarTablero();
+
         //Se carga la pantalla y se introduce en el Stage
         Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
         ventanaAct.setScene(new Scene(root));
@@ -121,5 +126,12 @@ public class Partida extends Application {
         //Pre: Un observer
         //Post: Se ha añadido el observer a la lista de observers
         lObservers.addPropertyChangeListener(pObserver);
+    }
+    public void reiniciarPartida() throws IOException {
+        if(partidaActiva){
+            finalizarPartida(false);
+        }
+        partidaActiva=true;
+        iniciarPartida();
     }
 }
