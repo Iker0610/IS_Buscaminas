@@ -1,18 +1,16 @@
 package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+
+
 
 public class PanelMenuBuscaminasController {
 
     @FXML
-    private void reiniciar (MouseEvent pEvento)
+    private void reiniciar (ActionEvent pEvento)
     {
-        //Se mira si es un click izquierdo y si no hay partida activa
-        if (pEvento.isPrimaryButtonDown() && !Partida.getPartida().hayPartidaActiva()) {
             Partida.getPartida().reiniciarPartida();
-        }
-
     }
 }
