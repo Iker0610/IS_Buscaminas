@@ -83,7 +83,7 @@ public class Partida extends Application {
             Tablero.getTablero().iniciarTablero();
 
             //Se carga la pantalla y se introduce en el Stage
-            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBas.fxml"));
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
             ventanaAct.setScene(new Scene(root));
 
             //Se activa el boolean que indica que existe una partida activa
