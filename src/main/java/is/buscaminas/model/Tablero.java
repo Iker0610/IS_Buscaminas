@@ -2,10 +2,9 @@ package is.buscaminas.model;
 
 
 import is.buscaminas.Partida;
-import is.buscaminas.model.casillas.Casilla;
-import is.buscaminas.model.casillas.CasillaMina;
-import is.buscaminas.model.casillas.CasillaNum;
+import is.buscaminas.model.casillas.*;
 import is.buscaminas.view.VistaCasilla;
+
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeListener;
@@ -35,6 +34,11 @@ public class Tablero {
     {
         if (mTablero == null) mTablero = new Tablero();
         return mTablero;
+    }
+
+    public void iniciarTablero ()
+    {
+        mTablero = new Tablero();
     }
 
     //Metodos--------------------------------------------
@@ -96,6 +100,22 @@ public class Tablero {
         generarNoMinas(pMatrizBotones);
     }
 
+    public void marcarPrevio (int pFila, int pColumna, VistaCasilla pCasillaMarcada)
+    {
+        // Si no está generado el tablero y se hace click derecho, se genera una CasillaTemp temporal
+
+        //      Pre:    - Fila y columna de la primera casilla seleccionada por el jugador
+        //              - Referencias a la casilla de la Vista que debe ser marcada
+        //      Post: Se ha generado una casilla marcada temporal
+
+        // Se comprueba que en esa casilla no haya nada
+        if (matrizCasillas[pFila][pColumna] == null) {
+            //Se crea la CasillaNum temporal para que pueda ser marcada
+            matrizCasillas[pFila][pColumna] = new CasillaTemp(pCasillaMarcada);
+        }
+
+    }
+
     private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones)
     {
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
@@ -114,11 +134,25 @@ public class Tablero {
             fila = random.nextInt(matrizCasillas.length);
             columna = random.nextInt(matrizCasillas[0].length);
 
-            //Se comprueba que en esa casilla no haya nada y que no sea ni la primera ni ninguna de las adyacentes
-            // Si cumple las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
-            if ((matrizCasillas[fila][columna] == null) && (Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) {
-                matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
-                numMinas--;
+            // Se comprueba que no sea ni la primera ni ninguna de las adyacentes
+            // y que en esa casilla no haya nada o haya una CasillaTemp (significaría que la casilla es temporal, por lo que será cambiada a CasillaMina)
+
+            // Si cumplen las condiciones se añade, de lo contrario se obtiene otra coordenada aleatoria
+            if ((Math.abs(pFila - fila) > 1 || Math.abs(pColumna - columna) > 1)) // Si no es adyacente a la casilla del click
+            {
+                // Si la casilla esta vacía, se crea mina y se disminuyen las minas restantes
+                if (matrizCasillas[fila][columna] == null) {
+                    matrizCasillas[fila][columna] = new CasillaMina(pMatrizBotones[fila][columna]);
+                    numMinas--;
+                }
+                // Si habia una casillaTemp:
+                // Se manda crear una casilla mina pasandole la casillaTemp .
+                // También disminuyen las minas restantes
+                else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                    //mando a la mina temp crear una casilla mina igual a ella
+                    matrizCasillas[fila][columna] = new CasillaMina((CasillaTemp) matrizCasillas[fila][columna]);
+                    numMinas--;
+                }
             }
         }
     }
@@ -130,13 +164,23 @@ public class Tablero {
 
         for (int fila = 0; fila < matrizCasillas.length; fila++) {
             for (int columna = 0; columna < matrizCasillas[fila].length; columna++) {
+
+                // Si la casilla no ha sido creada, se crea
                 if (matrizCasillas[fila][columna] == null) {
                     int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
                     matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, pMatrizBotones[fila][columna]);
                 }
+
+                // Si la casilla es de tipo casillaTemp
+                // Se le manda crear una casillaNum dandole un valor de numMinasAdyacentes y la casillaTemp.
+                else if (matrizCasillas[fila][columna] instanceof CasillaTemp) {
+                    int minasAdyacentes = calcularMinasAdyacentes(fila, columna);
+                    matrizCasillas[fila][columna] = new CasillaNum(minasAdyacentes, (CasillaTemp) matrizCasillas[fila][columna]);
+                }
             }
         }
     }
+
 
     private int calcularMinasAdyacentes (int pFila, int pColumna)
     {
@@ -205,7 +249,7 @@ public class Tablero {
         }
     }
 
-    public void marcarCasilla(int pFila, int pColumna)
+    public void marcarCasilla (int pFila, int pColumna)
     {
         //Pre:  Recibe el número de fila y columna de la casilla seleccionada a ser marcada
         //Post: Se marca, desmarca o "interroga" la casilla en cuestión situada en esa fila y columna
@@ -223,19 +267,16 @@ public class Tablero {
         {
             Pair<Boolean, Boolean> resultado = matrizCasillas[pFila][pColumna].marcar();
 
-            if (resultado.getKey())         //Si se ha hecho algo (Primer boolean = TRUE)
+            if (resultado.getKey()) //Si se ha hecho algo (Primer boolean = TRUE)
             {
                 if (resultado.getValue())           //Si se ha marcado una casilla (Segundo boolean = TRUE) se disminuye el numero de banderas "numMinasPorMarcar"
                 {
                     lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, --numMinasPorMarcar);
-                } else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
+                }
+                else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
                     lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
                 }
             }
         }
-    }
-    //----------------------------------------------
-    public void iniciarTablero(){
-            mTablero = new Tablero();
     }
 }

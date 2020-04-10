@@ -16,6 +16,12 @@ public class CasillaNum extends Casilla {
         minasAdyacentes = pMinasAdyacentes;
     }
 
+    public CasillaNum (int pMinasAdyacentes, CasillaTemp pCasilla){
+        super(pCasilla);
+        minasAdyacentes = pMinasAdyacentes;
+    }
+
+    //Metodos
     public boolean estaDespejado ()
     {
         //Pre:
