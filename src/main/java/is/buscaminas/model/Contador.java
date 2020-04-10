@@ -66,8 +66,11 @@ public class Contador {
     {
         //Pre:
         //Post: Se ha parado el contador
+        try {
+            timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
+        }
+        catch (NullPointerException ignored){}
 
-        timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
     }
 
 

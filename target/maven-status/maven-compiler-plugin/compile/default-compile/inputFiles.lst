@@ -11,6 +11,7 @@ E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\Partida.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\view\VistaContador.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\model\casillas\estados\Oculto.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\model\casillas\estados\Marcado.java
+E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\model\casillas\CasillaTemp.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\model\casillas\estados\Despejado.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\controller\TableroController.java
 E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\model\casillas\estados\Interrogacion.java
