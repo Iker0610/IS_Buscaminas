@@ -1,70 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Maven">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/IS_Buscaminas.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Despejado8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Interrogacion.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Marcado.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/casilla/Oculto.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/derrota.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/estandar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/tiempo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/emoji/victoria.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/logo/logoBuscaminas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/assets/timer/time9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/.keep" afterDir="false" />
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="UPDATE FROM MASTER">
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaTemp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IS_Buscaminas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/IS_Buscaminas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/ventanaPartidaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaContador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,8 +225,34 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Panel-Ayuda" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Panel-Ayuda" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -294,7 +273,8 @@
     <MESSAGE value="Documentación 2" />
     <MESSAGE value="Ajuste del nombre" />
     <MESSAGE value="Maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maven" />
+    <MESSAGE value="UPDATE FROM MASTER" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE FROM MASTER" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -311,10 +291,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1586107063328">
+    <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1586517683181">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586107063328" />
+    <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586517683181" />
     <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -324,26 +304,26 @@
     </state>
     <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
     <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="937" height="308" key="GridCell.Tab.0.bottom" timestamp="1586107067518">
+    <state width="3797" height="345" key="GridCell.Tab.0.bottom" timestamp="1586517550417">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="82" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="937" height="308" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586107067518" />
-    <state width="937" height="308" key="GridCell.Tab.0.center" timestamp="1586107067518">
+    <state width="3797" height="345" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586517550417" />
+    <state width="3797" height="345" key="GridCell.Tab.0.center" timestamp="1586517550417">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="82" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="937" height="308" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586107067518" />
-    <state width="937" height="308" key="GridCell.Tab.0.left" timestamp="1586107067518">
+    <state width="3797" height="345" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586517550417" />
+    <state width="3797" height="345" key="GridCell.Tab.0.left" timestamp="1586517550417">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="82" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="937" height="308" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586107067518" />
-    <state width="937" height="308" key="GridCell.Tab.0.right" timestamp="1586107067518">
+    <state width="3797" height="345" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586517550417" />
+    <state width="3797" height="345" key="GridCell.Tab.0.right" timestamp="1586517550417">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="82" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555" />
-    <state width="937" height="308" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586107067518" />
+    <state width="3797" height="345" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586517550417" />
     <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -365,14 +345,14 @@
     </state>
     <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
     <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037" />
-    <state x="100" y="100" width="1734" height="840" key="ShowDiffWithBranchDialog" timestamp="1586106970030">
+    <state x="100" y="100" width="1734" height="840" key="ShowDiffWithBranchDialog" timestamp="1586517771191">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="100" y="100" width="1734" height="840" key="ShowDiffWithBranchDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586106970030" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586107054924">
+    <state x="100" y="100" width="1734" height="840" key="ShowDiffWithBranchDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586517771191" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586517798541">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586107054924" />
+    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586517798541" />
     <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -382,5 +362,9 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585170557520" />
+    <state x="1662" y="148" key="refactoring.ChangeSignatureDialog" timestamp="1586517699685">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1662" y="148" key="refactoring.ChangeSignatureDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586517699685" />
   </component>
 </project>

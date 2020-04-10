@@ -24,7 +24,7 @@
     </rowConstraints>
 
     <VistaContador GridPane.columnIndex="2"/>
-    <VistaEmoji GridPane.columnIndex="1"/>
+    <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar"/>
     <VistaMarcadas GridPane.columnIndex="0"/>
 
     <BorderPane.margin>

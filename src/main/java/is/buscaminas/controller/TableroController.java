@@ -45,7 +45,7 @@ public class TableroController {
             @Override
             public void handle (MouseEvent pEvento)
             {
-                //Se mira si es un click izquierdo
+                //Se mira si es un click izquierdo y se ha pulsado en una casilla
                 if (pEvento.isPrimaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla) {
                     //Obtenemos la fila y columna de la casilla que se ha clickado
                     int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
@@ -56,18 +56,26 @@ public class TableroController {
 
                     //Llamamos al tablero (modelo) y le mandamos generar las casillas
                     Tablero.getTablero().generarCasillasTablero(fila, columna, matrizCasillas);
-                    
+
                     //Se inicia el contador
                     Contador.getContador().inicio();
 
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);
                 }
-                else if (pEvento.isSecondaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla)
-                {
-                    // Si es un click derecho se consume el evento y no llegará a activar el evento PERO HAY QUE HACER QUE SE PUEDA MARCAR UNA CASILLA MUAHAHAHA
+                // Se comprueba si es click derecho y se ha pulsado en una casilla
+                else if (pEvento.isSecondaryButtonDown() && pEvento.getTarget() instanceof VistaCasilla) {
+                    //Obtenemos la fila y columna de la casilla que se ha clickado
+                    int fila = GridPane.getRowIndex((Node) pEvento.getTarget());
+                    int columna = GridPane.getColumnIndex((Node) pEvento.getTarget());
+
+                    //Mandamos al tablero crear una casilla temporal en la posición del click. Se le pasa la VistaCasilla para que pueda actualizarse la vista
+                    VistaCasilla casilla = getMatrizCasillas()[fila][columna];
+                    Tablero.getTablero().marcarPrevio(fila, columna, casilla);
+                }
+                else { //si se ha realizado cualquier otra accion se consume el evento
                     pEvento.consume();
-                }else{pEvento.consume();}
+                }
             }
         };
 
@@ -129,7 +137,7 @@ public class TableroController {
             int columnaCasilla = GridPane.getColumnIndex(casilla);
             Tablero.getTablero().despejarCasilla(filaCasilla, columnaCasilla);
         }
-        else if(pEvento.isSecondaryButtonDown())                        // Si se ha hecho click derecho
+        else if (pEvento.isSecondaryButtonDown())                        // Si se ha hecho click derecho
         {
             int filaCasilla = GridPane.getRowIndex(casilla);
             int columnaCasilla = GridPane.getColumnIndex(casilla);
@@ -157,6 +165,6 @@ public class TableroController {
 
             return matrizCasillas;
         }
-        else return (new VistaCasilla[0][0]);
+        else { return (new VistaCasilla[0][0]); }
     }
 }

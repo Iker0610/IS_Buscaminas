@@ -8,4 +8,8 @@ public class CasillaMina extends Casilla {
     public CasillaMina (VistaCasilla pVistaCasilla){
         super(pVistaCasilla);
     }
+
+    public CasillaMina (CasillaTemp pCasilla){
+        super(pCasilla);
+    }
 }

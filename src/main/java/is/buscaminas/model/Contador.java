@@ -1,5 +1,7 @@
 package is.buscaminas.model;
 
+import is.buscaminas.view.VistaContador;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Timer;
@@ -17,7 +19,6 @@ public class Contador {
     private Contador ()
     {
         lObservers = new PropertyChangeSupport(this);
-        timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicación
     }
 
     //Metodo get del Singleton
@@ -50,8 +51,8 @@ public class Contador {
          * Para ello se pasa al método scheduleAtFixedRate() la tarea que se desea ejecutar (TimerTask)
          * y el tiempo hasta la primera ejecución y el tiempo entre las ejecuciones posteriores (el periodo). (Ambos en milisegundos)
          */
-
         seconds = -1;
+        timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run ()
@@ -67,8 +68,8 @@ public class Contador {
         //Post: Se ha parado el contador
 
         timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
-        timer.purge();  //Elimina el resto de tareas de la cola
     }
+
 
     /*
     Codigo alternativo empleando los Thread:
