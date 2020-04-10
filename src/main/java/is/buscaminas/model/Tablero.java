@@ -39,7 +39,7 @@ public class Tablero {
 
     //Metodos--------------------------------------------
 
-    //Metodo para añadir observer del nímero del marcador de minas
+    //Metodo para añadir observer del número del marcador de minas
 
     public void addObserver (PropertyChangeListener pObserver)
     {
@@ -235,4 +235,7 @@ public class Tablero {
         }
     }
     //----------------------------------------------
+    public void iniciarTablero(){
+            mTablero = new Tablero();
+    }
 }

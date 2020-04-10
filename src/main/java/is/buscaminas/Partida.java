@@ -1,10 +1,12 @@
 package is.buscaminas;
 
 import is.buscaminas.model.Contador;
+import is.buscaminas.model.Tablero;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -37,7 +39,7 @@ public class Partida extends Application {
     }
 
     @Override
-    public void start (Stage pStage) throws IOException
+    public void start (Stage pStage)
     {
         //Pre:
         //Post: Se inicia la aplicación
@@ -70,20 +72,33 @@ public class Partida extends Application {
     }
 
     //Metodos relacionados a la partida
-    private void iniciarPartida () throws IOException
+    private void iniciarPartida ()
     {
         //Pre:
         //Post: Se inicia la partida
 
-        //Se carga la pantalla y se introduce en el Stage
-        Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
-        ventanaAct.setScene(new Scene(root));
+        try {
+            //Se inicia el tablero
+            Tablero.getTablero().iniciarTablero();
 
-        //Se activa el boolean que indica que existe una partida activa
-        partidaActiva = true;
+            //Se carga la pantalla y se introduce en el Stage
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
+            ventanaAct.setScene(new Scene(root));
 
-        //Se muestra el stage una vez cargado
-        ventanaAct.show();
+            //Se activa el boolean que indica que existe una partida activa
+            partidaActiva = true;
+
+            //Se muestra el stage una vez cargado
+            ventanaAct.show();
+        }
+        catch (Exception e) {
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML");
+            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/ventanaPartidaBase.fxml");
+            errorDeCarga.setContentText(e.toString() + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
     }
 
     public void finalizarPartida (boolean pVictoria)
@@ -121,5 +136,14 @@ public class Partida extends Application {
         //Pre: Un observer
         //Post: Se ha añadido el observer a la lista de observers
         lObservers.addPropertyChangeListener(pObserver);
+    }
+
+    public void reiniciarPartida ()
+    {
+        if (partidaActiva) {
+            finalizarPartida(false);
+        }
+        partidaActiva = true;
+        iniciarPartida();
     }
 }
