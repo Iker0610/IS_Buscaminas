@@ -58,7 +58,7 @@ public class TableroController {
                     Tablero.getTablero().generarCasillasTablero(fila, columna, matrizCasillas);
 
                     //Se inicia el contador
-                    Contador.getContador().inicio();
+                    Contador.getContador().iniciar();
 
                     //Se elimina este mismo evento pues solo se ha de ejecutar la primera vez
                     tableroCasillas.removeEventFilter(MouseEvent.MOUSE_PRESSED, this);

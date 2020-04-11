@@ -8,6 +8,7 @@
 <?import is.buscaminas.view.VistaMarcadas?>
 <?import javafx.geometry.Insets?>
 
+<?import javafx.scene.control.Button?>
 <GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
           style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER"
           xmlns="http://javafx.com/javafx"
@@ -17,12 +18,14 @@
         <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0"/>
         <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
         <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0"/>
+        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="14.0"/>
     </columnConstraints>
 
     <rowConstraints>
         <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
     </rowConstraints>
 
+    <Button GridPane.columnIndex="3" onAction="#mostrarAyuda"/>
     <VistaContador GridPane.columnIndex="2"/>
     <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar"/>
     <VistaMarcadas GridPane.columnIndex="0"/>

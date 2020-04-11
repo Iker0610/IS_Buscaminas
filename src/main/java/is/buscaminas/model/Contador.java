@@ -40,7 +40,7 @@ public class Contador {
         lObservers.addPropertyChangeListener(pObserver);
     }
 
-    public void inicio ()
+    public void iniciar()
     {
         //Pre:
         //Post: Se ha iniciado el conteo. Cada segundo se notificará a los observers
@@ -58,16 +58,36 @@ public class Contador {
             public void run ()
             {
                 lObservers.firePropertyChange("seconds", seconds, ++seconds);
+
             }
         }, 0, 1000);
+    }
+
+    public void continuar ()
+    {
+        if (timer!=null)
+        {
+            timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run ()
+                {
+                    lObservers.firePropertyChange("seconds", seconds, ++seconds);
+
+                }
+            }, 1000, 1000);
+        }
     }
 
     public void parar ()
     {
         //Pre:
         //Post: Se ha parado el contador
+        try {
+            timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
+        }
+        catch (Exception ignored){}
 
-        timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
     }
 
 
