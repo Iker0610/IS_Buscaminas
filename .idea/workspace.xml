@@ -64,6 +64,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaPrincipal.fxml" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +127,32 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Partida">
+    <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida" />
+      <module name="IS_Buscaminas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="is.buscaminas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -153,6 +179,11 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Partida" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
