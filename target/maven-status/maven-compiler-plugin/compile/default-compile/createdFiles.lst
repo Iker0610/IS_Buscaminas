@@ -3,6 +3,7 @@ is\buscaminas\view\VistaCasilla.class
 is\buscaminas\model\casillas\estados\Marcado.class
 is\buscaminas\model\Tablero.class
 is\buscaminas\model\casillas\Casilla.class
+is\buscaminas\controller\ventanaAccesoController.class
 is\buscaminas\Partida.class
 is\buscaminas\model\Contador$1.class
 is\buscaminas\view\VistaEmoji.class
