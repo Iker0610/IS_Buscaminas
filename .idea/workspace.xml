@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
-    </list>
+    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Pantalla-Carga" />
+        <entry key="$PROJECT_DIR$" value="Pantalla-Inicio" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +73,20 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Partida">
+    <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida" />
+      <module name="IS_Buscaminas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="is.buscaminas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -102,6 +113,14 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Partida" />
+        <item itemvalue="Application.Partida" />
+        <item itemvalue="Application.Partida" />
+        <item itemvalue="Application.Partida" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -348,6 +367,14 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
+    <state x="752" y="86" key="MergeDialog" timestamp="1586965487871">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="752" y="86" key="MergeDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586965487871" />
+    <state x="1632" y="236" width="1705" height="568" key="MultipleFileMergeDialog" timestamp="1586965489918">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1632" y="236" width="1705" height="568" key="MultipleFileMergeDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586965489918" />
     <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586108276212">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>

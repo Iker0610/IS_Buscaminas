@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
+
 <BorderPane xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" style="-fx-background-color: '#c0c0c0'; -fx-border-color: '#777777';-fx-border-width: 3"
             xmlns="http://javafx.com/javafx">
