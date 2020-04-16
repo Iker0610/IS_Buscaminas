@@ -51,7 +51,7 @@ public class Contador {
          * Para ello se pasa al método scheduleAtFixedRate() la tarea que se desea ejecutar (TimerTask)
          * y el tiempo hasta la primera ejecución y el tiempo entre las ejecuciones posteriores (el periodo). (Ambos en milisegundos)
          */
-        seconds = -1;
+        reset();
         timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -65,6 +65,8 @@ public class Contador {
 
     public void continuar ()
     {
+        //Pre:
+        //Post: Continua la cuenta desde los segundos que marque la variable
         if (timer!=null)
         {
             timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
@@ -77,6 +79,15 @@ public class Contador {
                 }
             }, 1000, 1000);
         }
+    }
+
+    public void reset()
+    {
+        //Pre:
+        //Post: Se ha parado el contador y se reinician los segundos
+        parar();
+        seconds = -1;
+        timer=null;
     }
 
     public void parar ()

@@ -107,8 +107,9 @@ public class Partida extends Application {
         //Pre: Un boolean indicando si el jugador a ganado o no
         //Post: Se ha finalizado la partida
 
-        //Se para el contador
-        Contador.getContador().parar();
+        //Se para y resetea el contador
+
+        Contador.getContador().reset();
 
         //Se indica que no hay partidas activas
         partidaActiva = false;
@@ -123,7 +124,6 @@ public class Partida extends Application {
 
         try {
             Stage ventanaAyuda = new Stage();
-
             Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/menuAyuda.fxml"));
             ventanaAyuda.setScene(new Scene(root));
 

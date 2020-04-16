@@ -9,6 +9,7 @@
 <?import javafx.geometry.Insets?>
 
 <?import javafx.scene.control.Button?>
+<?import is.buscaminas.view.VistaAyuda?>
 <GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
           style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER"
           xmlns="http://javafx.com/javafx"

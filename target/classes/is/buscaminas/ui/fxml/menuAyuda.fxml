@@ -3,11 +3,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal">
-
-
-   <children>
-      <Label prefHeight="84.0" prefWidth="308.0" text="   Menú de aiuda haha" />
-   </children>
-</AnchorPane>
+<?import javafx.scene.image.ImageView?>
+<?import is.buscaminas.view.VistaAyuda?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="is.buscaminas.controller.menuAyudaController">
+   <bottom>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" BorderPane.alignment="CENTER" prefHeight="40.0"
+                style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;">
+         <Button mnemonicParsing="false" onAction="#prevAyuda" text="Prev"/>
+         <Button mnemonicParsing="false" onAction="#nextAyuda" text="Next"/>
+      </FlowPane>
+   </bottom>
+   <center>
+      <VistaAyuda/>
+   </center>
+</BorderPane>
