@@ -5,10 +5,12 @@ import is.buscaminas.view.VistaAyuda;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 import java.io.File;
 
 public class MenuAyudaController {
+
     // Atributos
     private int pagTotal;
     private int pagAct;
@@ -16,6 +18,9 @@ public class MenuAyudaController {
     // Elementos FXML
     @FXML
     private VistaAyuda panelAyuda;
+
+    @FXML
+    private Text paginacion;
 
     @FXML
     private Button btnNext;
@@ -33,6 +38,7 @@ public class MenuAyudaController {
         if (pagTotal <= 1) btnNext.setDisable(true);
         if (pagTotal > 0) {
             pagAct = 1;
+            paginacion.setText(pagAct + "/" + pagTotal);
             panelAyuda.cambiarPaginaAyuda(pagAct);
         }
     }
@@ -52,6 +58,8 @@ public class MenuAyudaController {
     private void nextAyuda ()
     {
         pagAct++;
+        paginacion.setText(pagAct + "/" + pagTotal);
+
         panelAyuda.cambiarPaginaAyuda(pagAct);
         if (pagAct == pagTotal) btnNext.setDisable(true);
         if (pagAct > 1) btnPrev.setDisable(false);
@@ -61,6 +69,8 @@ public class MenuAyudaController {
     private void prevAyuda ()
     {
         pagAct--;
+        paginacion.setText(pagAct + "/" + pagTotal);
+
         panelAyuda.cambiarPaginaAyuda(pagAct);
         if (pagAct == 1) btnPrev.setDisable(true);
         if (pagAct < pagTotal) btnNext.setDisable(false);

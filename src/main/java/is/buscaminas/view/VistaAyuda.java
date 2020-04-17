@@ -12,7 +12,7 @@ public class VistaAyuda extends Pane {
     // La Clase que muestra las páginas de ayuda
     public VistaAyuda(){
         super();
-        setPrefSize(650,450);
+        setPrefSize(820,460);
         //Ponemos la primera imagen
         cambiarPaginaAyuda(1);
     }
@@ -23,7 +23,7 @@ public class VistaAyuda extends Pane {
 
         //cargamos la imagen
         Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/ayuda/ayudaPag" + pPag + ".png").toURI().toString());
-        BackgroundSize backgroundSize = new BackgroundSize(650, 450, false, false, false, false);
+        BackgroundSize backgroundSize = new BackgroundSize(820, 460, false, false, false, false);
         setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize )));
     }
 }
