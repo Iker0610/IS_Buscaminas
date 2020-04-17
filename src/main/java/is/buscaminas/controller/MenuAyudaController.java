@@ -5,7 +5,7 @@ import is.buscaminas.model.Ayuda;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
-public class menuAyudaController {
+public class MenuAyudaController {
 
     //Metodos de eventos
     @FXML

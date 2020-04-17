@@ -1,9 +1,5 @@
 package is.buscaminas.model;
 
-import is.buscaminas.view.VistaAyuda;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
@@ -56,7 +52,7 @@ public class Ayuda {
         //Pre:
         //Post: Devuelve el número de páginas de ayuda que tenemos
 
-        File carpeta = new File("src/main/resources/is/buscaminas/ui/assets/ayuda");
+        File carpeta = new File("src/main/resources/is/buscaminas/ui/ayuda");
         return carpeta.listFiles().length;
     }
 

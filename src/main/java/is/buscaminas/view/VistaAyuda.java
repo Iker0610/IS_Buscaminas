@@ -2,7 +2,6 @@ package is.buscaminas.view;
 
 import is.buscaminas.model.Ayuda;
 import javafx.scene.image.Image;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundSize;
@@ -38,13 +37,13 @@ public class VistaAyuda extends Pane implements PropertyChangeListener {
     //para obtener tamaños de imagenes:
 
     private static double imgAnch(int i) {
-        Image imagen = new Image(new File("src/main/resources/is/buscaminas/ui/assets/ayuda/" + i + ".png").toURI().toString());
+        Image imagen = new Image(new File("src/main/resources/is/buscaminas/ui/ayuda/" + i + ".png").toURI().toString());
         return imagen.getWidth();
     }
 
 
     private static double imgAlt(int i) {
-        Image imagen = new Image(new File("src/main/resources/is/buscaminas/ui/assets/ayuda/" + i + ".png").toURI().toString());
+        Image imagen = new Image(new File("src/main/resources/is/buscaminas/ui/ayuda/" + i + ".png").toURI().toString());
         return imagen.getHeight();
     }
 
@@ -64,7 +63,7 @@ public class VistaAyuda extends Pane implements PropertyChangeListener {
         //Post: Se carga la pagina correspondiente a ese numero
 
         //cargamos la imagen
-        Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/assets/ayuda/" + pPag + ".png").toURI().toString());
+        Image imagenCasilla = new Image(new File("src/main/resources/is/buscaminas/ui/ayuda/" + pPag + ".png").toURI().toString());
         BackgroundSize backgroundSize = new BackgroundSize(anch, alt, false, false, false, false);
         setBackground(new Background(new BackgroundImage(imagenCasilla, null, null, null, backgroundSize )));
     }

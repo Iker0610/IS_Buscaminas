@@ -2,9 +2,11 @@ package is.buscaminas.model;
 
 
 import is.buscaminas.Partida;
-import is.buscaminas.model.casillas.*;
+import is.buscaminas.model.casillas.Casilla;
+import is.buscaminas.model.casillas.CasillaMina;
+import is.buscaminas.model.casillas.CasillaNum;
+import is.buscaminas.model.casillas.CasillaTemp;
 import is.buscaminas.view.VistaCasilla;
-
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeListener;

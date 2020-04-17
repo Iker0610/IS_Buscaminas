@@ -15,6 +15,7 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Partida extends Application {
     /**
@@ -159,7 +160,7 @@ public class Partida extends Application {
     {
         try {
             Stage ventanaAyuda = new Stage();
-            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/menuAyuda.fxml"));
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaMenuAyuda.fxml"));
             ventanaAyuda.setScene(new Scene(root));
 
             //Se configura el Stage
@@ -183,8 +184,8 @@ public class Partida extends Application {
         catch (IOException e) {
             Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
             errorDeCarga.setTitle("Error carga FXML");
-            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/menuAyuda.fxml");
-            errorDeCarga.setContentText(e.toString() + e.getStackTrace().toString() + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/ventanaMenuAyuda.fxml");
+            errorDeCarga.setContentText(e.toString() + Arrays.toString(e.getStackTrace()) + "\n\nLa aplicación se cerrará");
             errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
             errorDeCarga.show();
         }

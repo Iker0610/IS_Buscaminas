@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.scene.layout.*?>
-
 <?import is.buscaminas.view.VistaContador?>
 <?import is.buscaminas.view.VistaEmoji?>
 <?import is.buscaminas.view.VistaMarcadas?>
 <?import javafx.geometry.Insets?>
-
 <?import javafx.scene.control.Button?>
-<GridPane xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
-          style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER"
-          xmlns="http://javafx.com/javafx"
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" hgap="5.0" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;"
+          BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="is.buscaminas.controller.PanelMenuBuscaminasController">
 
     <columnConstraints>
-        <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0"/>
-        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0"/>
-        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="25.0"/>
-        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" percentWidth="14.0"/>
+        <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" percentWidth="25.0"/>
+        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES"/>
+        <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" percentWidth="25.0"/>
     </columnConstraints>
 
     <rowConstraints>
-        <RowConstraints fillHeight="false" minHeight="10.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES"/>
     </rowConstraints>
 
-    <Button GridPane.columnIndex="3" onAction="#mostrarAyuda"/>
-    <VistaContador GridPane.columnIndex="2"/>
-    <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar"/>
     <VistaMarcadas GridPane.columnIndex="0"/>
+    <HBox spacing="15.0" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+        <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar" focusTraversable="false" />
+        <Button focusTraversable="false" maxHeight="35" maxWidth="35" minHeight="35" minWidth="35" onAction="#mostrarAyuda"
+                style=" -fx-background-image: url(is/buscaminas/ui/assets/casilla/Interrogacion.gif);
+                -fx-background-repeat: no-repeat;
+                -fx-background-size: cover, auto;"/>
+    </HBox>
+    <VistaContador GridPane.columnIndex="2"/>
+
 
     <BorderPane.margin>
         <Insets bottom="3.0" left="6.0" right="6.0" top="6.0"/>
     </BorderPane.margin>
     <padding>
-        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0"/>
     </padding>
 
 </GridPane>
-

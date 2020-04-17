@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.GridPane?>
-
 <GridPane xmlns:fx="http://javafx.com/fxml" fx:id="tableroCasillas"
           alignment="CENTER" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;"
           BorderPane.alignment="CENTER"
@@ -14,7 +13,7 @@
         <Insets bottom="6.0" left="6.0" right="6.0" top="3.0"/>
     </BorderPane.margin>
     <padding>
-        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+        <Insets bottom="4.0" left="3.0" right="4.0" top="3.0"/>
     </padding>
 
 </GridPane>
