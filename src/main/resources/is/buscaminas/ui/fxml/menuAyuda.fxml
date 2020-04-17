@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import is.buscaminas.view.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.menuAyudaController">
+   <bottom>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" prefHeight="40.0" style="-fx-background-color: '#777777','#ffffff','#c0c0c0'; -fx-background-insets:0 0 0 0, 4 0 0 4, 4;" BorderPane.alignment="CENTER">
+         <Button mnemonicParsing="false" onAction="#prevAyuda" text="Prev" />
+         <Button mnemonicParsing="false" onAction="#nextAyuda" text="Next" />
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </FlowPane>
+   </bottom>
+   <center>
+
+      <FlowPane alignment="CENTER" columnHalignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <VistaAyuda />
+      </FlowPane>
+   </center>
+</BorderPane>

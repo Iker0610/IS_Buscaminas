@@ -1,7 +1,5 @@
 package is.buscaminas.model;
 
-import is.buscaminas.view.VistaContador;
-
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.Timer;
@@ -40,7 +38,7 @@ public class Contador {
         lObservers.addPropertyChangeListener(pObserver);
     }
 
-    public void inicio ()
+    public void iniciar()
     {
         //Pre:
         //Post: Se ha iniciado el conteo. Cada segundo se notificará a los observers
@@ -51,7 +49,8 @@ public class Contador {
          * Para ello se pasa al método scheduleAtFixedRate() la tarea que se desea ejecutar (TimerTask)
          * y el tiempo hasta la primera ejecución y el tiempo entre las ejecuciones posteriores (el periodo). (Ambos en milisegundos)
          */
-        seconds = -1;
+
+        reset();
         timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -62,6 +61,33 @@ public class Contador {
         }, 0, 1000);
     }
 
+    public void continuar ()
+    {
+        //Pre:
+        //Post: Continua la cuenta desde los segundos que marque la variable
+        if (timer!=null)
+        {
+            timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
+            timer.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run ()
+                {
+                    lObservers.firePropertyChange("seconds", seconds, ++seconds);
+
+                }
+            }, 1000, 1000);
+        }
+    }
+
+    public void reset()
+    {
+        //Pre:
+        //Post: Se ha parado el contador y se reinician los segundos
+        parar();
+        seconds = -1;
+        timer=null;
+    }
+
     public void parar ()
     {
         //Pre:
@@ -69,7 +95,7 @@ public class Contador {
         try {
             timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
         }
-        catch (NullPointerException ignored){}
+        catch (Exception ignored){}
 
     }
 

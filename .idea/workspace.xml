@@ -1,426 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ChangeListManager">
-    <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="Merge con la branch Pantalla-Inicio">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false" />
-    </list>
-    <option name="SHOW_DIALOG" value="false" />
-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-    <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Pantalla-Inicio" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1ZXRG0nZLadXWttwchBDFtrwf8h" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/assets/emoji" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\emoji" />
-      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\logo" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn compile" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Partida">
-    <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida" />
-      <module name="IS_Buscaminas" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="is.buscaminas.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IS_Buscaminas [compile,javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="compile" />
-                <option value="javafx:run" />
-              </list>
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
+    <component name="ChangeListManager">
+        <list default="true" id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="UPDATE FROM MASTER">
+        <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaTemp.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/TableroController.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false"/>
+        <change beforePath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false"
+                afterPath="$PROJECT_DIR$/target/classes/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false"/>
+        <option name="SHOW_DIALOG" value="false"/>
+        <option name="HIGHLIGHT_CONFLICTS" value="true"/>
+        <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+        <option name="LAST_RESOLUTION" value="IGNORE"/>
+    </component>
+    <component name="FileTemplateManagerImpl">
+        <option name="RECENT_TEMPLATES">
+            <list>
+                <option value="FxmlFile"/>
+                <option value="Class"/>
+            </list>
         </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Partida" />
-        <item itemvalue="Application.Partida" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment="" />
-      <created>1584983352838</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1584983352838</updated>
-      <workItem from="1585045528053" duration="3689000" />
-      <workItem from="1585054576956" duration="2975000" />
-      <workItem from="1585066736047" duration="8569000" />
-      <workItem from="1585170534424" duration="9330000" />
-      <workItem from="1585216314200" duration="2732000" />
-      <workItem from="1585236135241" duration="45000" />
-      <workItem from="1585395994121" duration="1731000" />
-      <workItem from="1585578132798" duration="461000" />
-      <workItem from="1586965744829" duration="1469000" />
-    </task>
-    <task id="LOCAL-00001" summary="Ajuste Contador">
-      <created>1584992621856</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1584992621856</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Contador y parte del controller">
-      <created>1585011933542</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1585011933542</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Logo">
-      <created>1585050993857</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1585050993857</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Ajustes Ventana">
-      <created>1585051057172</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1585051057172</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Ajustes del primer evento">
-      <created>1585052269909</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1585052269909</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Ajustes Contador">
-      <created>1585055164990</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1585055164990</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Arreglo bugs">
-      <created>1585057201186</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1585057201186</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Emoji">
-      <created>1585082052875</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1585082052875</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Cambios de hoy">
-      <created>1585160658774</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1585160658774</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Documentación">
-      <created>1585179970165</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1585179970165</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Documentación 2">
-      <created>1585218709975</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1585218709975</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Ajuste del nombre">
-      <created>1585578569405</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1585578569405</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Maven">
-      <created>1586100029881</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1586100029881</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Maven">
-      <created>1586100058588</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1586100058588</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Ajustes raros">
-      <created>1586108274936</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1586108274936</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Arreglo Bug">
-      <created>1586520770496</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1586520770496</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Merge con la branch Pantalla-Inicio">
-      <created>1586965621324</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1586965621324</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
-    <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Ajuste Contador" />
-    <MESSAGE value="Contador y parte del controller" />
-    <MESSAGE value="Logo" />
-    <MESSAGE value="Ajustes Ventana" />
-    <MESSAGE value="Ajustes del primer evento" />
-    <MESSAGE value="Ajustes Contador" />
-    <MESSAGE value="Arreglo bugs" />
-    <MESSAGE value="Emoji" />
-    <MESSAGE value="Cambios de hoy" />
-    <MESSAGE value="Documentación" />
-    <MESSAGE value="Documentación 2" />
-    <MESSAGE value="Ajuste del nombre" />
+    </component>
+    <component name="Git.Settings">
+        <option name="RECENT_BRANCH_BY_REPOSITORY">
+            <map>
+                <entry key="$PROJECT_DIR$" value="Pantalla-Inicio"/>
+            </map>
+        </option>
+        <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$"/>
+        <option name="UPDATE_TYPE" value="REBASE"/>
+    </component>
+    <component name="MavenImportPreferences">
+        <option name="importingSettings">
+            <MavenImportingSettings>
+                <option name="downloadSourcesAutomatically" value="true"/>
+                <option name="importAutomatically" value="true"/>
+                <option name="vmOptionsForImporter" value="-Xmx768m"/>
+            </MavenImportingSettings>
+        </option>
+    </component>
+    <component name="ProjectId" id="1ZXRG0nZLadXWttwchBDFtrwf8h"/>
+    <component name="ProjectLevelVcsManager">
+        <ConfirmationsSetting value="2" id="Add"/>
+    </component>
+    <component name="ProjectViewState">
+        <option name="hideEmptyMiddlePackages" value="true"/>
+        <option name="showExcludedFiles" value="true"/>
+        <option name="showLibraryContents" value="true"/>
+    </component>
+    <component name="PropertiesComponent">
+        <property name="ASKED_ADD_EXTERNAL_FILES" value="true"/>
+        <property name="RunOnceActivity.ShowReadmeOnStart" value="true"/>
+        <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true"/>
+        <property name="WebServerToolWindowFactoryState" value="false"/>
+        <property name="aspect.path.notification.shown" value="true"/>
+        <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml"/>
+        <property name="node.js.detected.package.eslint" value="true"/>
+        <property name="node.js.path.for.package.eslint" value="project"/>
+        <property name="node.js.path.for.package.tslint" value="project"/>
+        <property name="node.js.selected.package.eslint" value="(autodetect)"/>
+        <property name="node.js.selected.package.tslint" value="(autodetect)"/>
+        <property name="project.structure.last.edited" value="Modules"/>
+        <property name="project.structure.proportion" value="0.15"/>
+        <property name="project.structure.side.proportion" value="0.2"/>
+        <property name="settings.editor.selected.configurable" value="MavenSettings"/>
+    </component>
+    <component name="RecentsManager">
+        <key name="MoveFile.RECENT_KEYS">
+            <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\java\is\buscaminas\controller"/>
+        </key>
+        <key name="CopyFile.RECENT_KEYS">
+            <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\emoji"/>
+            <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\ui\assets\logo"/>
+        </key>
+    </component>
+    <component name="RunAnythingCache">
+        <option name="myCommands">
+            <command value="mvn compile"/>
+        </option>
+    </component>
+    <component name="RunManager" selected="Application.Partida">
+        <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+            <option name="MAIN_CLASS_NAME" value="is.buscaminas.Partida"/>
+            <module name="IS_Buscaminas"/>
+            <extension name="coverage">
+                <pattern>
+                    <option name="PATTERN" value="is.buscaminas.*"/>
+                    <option name="ENABLED" value="true"/>
+                </pattern>
+            </extension>
+            <method v="2">
+                <option name="Make" enabled="true"/>
+            </method>
+        </configuration>
+        <recent_temporary>
+            <list>
+                <item itemvalue="Application.Partida"/>
+                <item itemvalue="Application.Contador"/>
+            </list>
+        </recent_temporary>
+    </component>
+    <component name="SvnConfiguration">
+        <configuration/>
+    </component>
+    <component name="TaskManager">
+        <task active="true" id="Default" summary="Default task">
+            <changelist id="7f14e243-50c1-4c02-ac9e-65acfa0c20c9" name="Default Changelist" comment=""/>
+            <created>1584983352838</created>
+            <option name="number" value="Default"/>
+            <option name="presentableId" value="Default"/>
+            <updated>1584983352838</updated>
+            <workItem from="1585045528053" duration="3689000"/>
+            <workItem from="1585054576956" duration="2975000"/>
+            <workItem from="1585066736047" duration="8569000"/>
+            <workItem from="1585170534424" duration="9330000"/>
+            <workItem from="1585216314200" duration="2732000"/>
+            <workItem from="1585236135241" duration="45000"/>
+            <workItem from="1585395994121" duration="1731000"/>
+            <workItem from="1585578132798" duration="461000"/>
+            <workItem from="1586965744829" duration="1469000"/>
+        </task>
+        <task id="LOCAL-00001" summary="Ajuste Contador">
+            <created>1584992621856</created>
+            <option name="number" value="00001"/>
+            <option name="presentableId" value="LOCAL-00001"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1584992621856</updated>
+        </task>
+        <task id="LOCAL-00002" summary="Contador y parte del controller">
+            <created>1585011933542</created>
+            <option name="number" value="00002"/>
+            <option name="presentableId" value="LOCAL-00002"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585011933542</updated>
+        </task>
+        <task id="LOCAL-00003" summary="Logo">
+            <created>1585050993857</created>
+            <option name="number" value="00003"/>
+            <option name="presentableId" value="LOCAL-00003"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585050993857</updated>
+        </task>
+        <task id="LOCAL-00004" summary="Ajustes Ventana">
+            <created>1585051057172</created>
+            <option name="number" value="00004"/>
+            <option name="presentableId" value="LOCAL-00004"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585051057172</updated>
+        </task>
+        <task id="LOCAL-00005" summary="Ajustes del primer evento">
+            <created>1585052269909</created>
+            <option name="number" value="00005"/>
+            <option name="presentableId" value="LOCAL-00005"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585052269909</updated>
+        </task>
+        <task id="LOCAL-00006" summary="Ajustes Contador">
+            <created>1585055164990</created>
+            <option name="number" value="00006"/>
+            <option name="presentableId" value="LOCAL-00006"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585055164990</updated>
+        </task>
+        <task id="LOCAL-00007" summary="Arreglo bugs">
+            <created>1585057201186</created>
+            <option name="number" value="00007"/>
+            <option name="presentableId" value="LOCAL-00007"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585057201186</updated>
+        </task>
+        <task id="LOCAL-00008" summary="Emoji">
+            <created>1585082052875</created>
+            <option name="number" value="00008"/>
+            <option name="presentableId" value="LOCAL-00008"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585082052875</updated>
+        </task>
+        <task id="LOCAL-00009" summary="Cambios de hoy">
+            <created>1585160658774</created>
+            <option name="number" value="00009"/>
+            <option name="presentableId" value="LOCAL-00009"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585160658774</updated>
+        </task>
+        <task id="LOCAL-00010" summary="Documentación">
+            <created>1585179970165</created>
+            <option name="number" value="00010"/>
+            <option name="presentableId" value="LOCAL-00010"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585179970165</updated>
+        </task>
+        <task id="LOCAL-00011" summary="Documentación 2">
+            <created>1585218709975</created>
+            <option name="number" value="00011"/>
+            <option name="presentableId" value="LOCAL-00011"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585218709975</updated>
+        </task>
+        <task id="LOCAL-00012" summary="Ajuste del nombre">
+            <created>1585578569405</created>
+            <option name="number" value="00012"/>
+            <option name="presentableId" value="LOCAL-00012"/>
+            <option name="project" value="LOCAL"/>
+            <updated>1585578569405</updated>
+        </task>
+        <option name="localTasksCounter" value="13"/>
+        <servers/>
+    </component>
+    <component name="TypeScriptGeneratedFilesManager">
+        <option name="version" value="1"/>
+    </component>
+    <component name="Vcs.Log.Tabs.Properties">
+        <option name="TAB_STATES">
+            <map>
+                <entry key="MAIN">
+                    <value>
+                        <State/>
+                    </value>
+                </entry>
+            </map>
+        </option>
+    </component>
+    <component name="VcsManagerConfiguration">
+        <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true"/>
+        <MESSAGE value="Ajuste Contador"/>
+        <MESSAGE value="Contador y parte del controller"/>
+        <MESSAGE value="Logo"/>
+        <MESSAGE value="Ajustes Ventana"/>
+        <MESSAGE value="Ajustes del primer evento"/>
+        <MESSAGE value="Ajustes Contador"/>
+        <MESSAGE value="Arreglo bugs"/>
+        <MESSAGE value="Emoji"/>
+        <MESSAGE value="Cambios de hoy"/>
+        <MESSAGE value="Documentación"/>
+        <MESSAGE value="Documentación 2"/>
+        <MESSAGE value="Ajuste del nombre"/>
     <MESSAGE value="Maven" />
-    <MESSAGE value="Ajustes raros" />
-    <MESSAGE value="Arreglo Bug" />
-    <MESSAGE value="Merge con la branch Pantalla-Inicio" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge con la branch Pantalla-Inicio" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="601" y="188" key="#Notifications" timestamp="1585338150183">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183" />
-    <state x="559" y="178" key="#Project_Structure" timestamp="1586108176403">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="559" y="178" key="#Project_Structure/0.0.3840.1040@0.0.3840.1040" timestamp="1586108176403" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586106732602">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984169266" />
-    <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586106732602" />
-    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586108108470">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="590" y="212" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108108470" />
-    <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584984430515">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584984430515" />
-    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586103044250">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="690" y="270" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586103044250" />
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2" timestamp="1586966393946">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="1545" y="118" width="2110" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1586966393946" />
-    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog" timestamp="1586108082230">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="376" y="90" width="3072" height="860" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108082230" />
-    <state x="2024" y="307" key="FileChooserDialogImpl" timestamp="1585008105671">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076" />
-    <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671" />
-    <state width="3797" height="223" key="GridCell.Tab.0.bottom" timestamp="1586967080481">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="3797" height="223" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1586967080481" />
-    <state width="3797" height="223" key="GridCell.Tab.0.center" timestamp="1586967080481">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="3797" height="223" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1586967080481" />
-    <state width="3797" height="223" key="GridCell.Tab.0.left" timestamp="1586967080481">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="3797" height="223" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1586967080481" />
-    <state width="3797" height="223" key="GridCell.Tab.0.right" timestamp="1586967080481">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1877" height="147" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585832272611" />
-    <state width="3797" height="223" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1586967080481" />
-    <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1874" height="347" key="GridCell.Tab.1.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state width="1874" height="347" key="GridCell.Tab.1.center" timestamp="1585160686984">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1874" height="347" key="GridCell.Tab.1.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state width="1874" height="347" key="GridCell.Tab.1.left" timestamp="1585160686984">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1874" height="347" key="GridCell.Tab.1.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state width="1874" height="347" key="GridCell.Tab.1.right" timestamp="1585160686984">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984" />
-    <state x="752" y="86" key="MergeDialog" timestamp="1586965487871">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="752" y="86" key="MergeDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586965487871" />
-    <state x="1632" y="236" width="1705" height="568" key="MultipleFileMergeDialog" timestamp="1586965489918">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="1632" y="236" width="1705" height="568" key="MultipleFileMergeDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586965489918" />
-    <state x="890" y="234" key="RollbackChangesDialog" timestamp="1586108276212">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="890" y="234" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586108276212" />
-    <state x="1108" y="171" key="SettingsEditor" timestamp="1586966209399">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557" />
-    <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1586966209399" />
-    <state x="907" y="239" key="VCS.ChangeListViewerDialog" timestamp="1586099557385">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="907" y="239" key="VCS.ChangeListViewerDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586099557385" />
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1586108278002">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586108278002" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586965744836">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630" />
-    <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1586965744836" />
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586099572427">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040" timestamp="1586099572427" />
-    <state x="726" y="271" width="672" height="677" key="run.anything.popup" timestamp="1586110523747">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="726" y="271" width="672" height="677" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586110523747" />
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1586110539268">
-      <screen x="0" y="0" width="3840" height="1040" />
-    </state>
-    <state x="630" y="228" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1586110539268" />
-  </component>
+    <MESSAGE value="UPDATE FROM MASTER" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATE FROM MASTER" />
+        <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true"/>
+    </component>
+    <component name="WindowStateProjectService">
+        <state x="601" y="188" key="#Notifications" timestamp="1585338150183">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state x="601" y="188" key="#Notifications/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585338150183"/>
+        <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585008711890">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="463" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040"
+               timestamp="1584984169266"/>
+        <state x="926" y="185" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585008711890"/>
+        <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1584984430515">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state x="860" y="419" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040"
+               timestamp="1584984430515"/>
+        <state x="1545" y="118" key="CommitChangelistDialog2" timestamp="1585578568310">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="1545" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578568310"/>
+        <state x="376" y="90" key="DiffContextDialog" timestamp="1584992822024">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="376" y="90" key="DiffContextDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1584992822024"/>
+        <state x="2024" y="307" key="FileChooserDialogImpl" timestamp="1585008105671">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="1012" y="307" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986166076"/>
+        <state x="2024" y="307" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1585008105671"/>
+        <state width="1877" height="82" key="GridCell.Tab.0.bottom" timestamp="1585362489555">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state width="1877" height="82" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555"/>
+        <state width="2194" height="174" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207"/>
+        <state width="1877" height="82" key="GridCell.Tab.0.center" timestamp="1585362489555">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state width="1877" height="82" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555"/>
+        <state width="2194" height="174" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207"/>
+        <state width="1877" height="82" key="GridCell.Tab.0.left" timestamp="1585362489555">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state width="1877" height="82" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555"/>
+        <state width="2194" height="174" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207"/>
+        <state width="1877" height="82" key="GridCell.Tab.0.right" timestamp="1585362489555">
+            <screen x="0" y="0" width="1920" height="1040"/>
+        </state>
+        <state width="1877" height="82" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1585362489555"/>
+        <state width="2194" height="174" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585179998207"/>
+        <state width="1874" height="347" key="GridCell.Tab.1.bottom" timestamp="1585160686984">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state width="1874" height="347" key="GridCell.Tab.1.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984"/>
+        <state width="1874" height="347" key="GridCell.Tab.1.center" timestamp="1585160686984">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state width="1874" height="347" key="GridCell.Tab.1.center/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984"/>
+        <state width="1874" height="347" key="GridCell.Tab.1.left" timestamp="1585160686984">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state width="1874" height="347" key="GridCell.Tab.1.left/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984"/>
+        <state width="1874" height="347" key="GridCell.Tab.1.right" timestamp="1585160686984">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state width="1874" height="347" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1585160686984"/>
+        <state x="1108" y="171" key="SettingsEditor" timestamp="1585172567037">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="554" y="171" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584986170557"/>
+        <state x="1108" y="171" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1585172567037"/>
+        <state x="1512" y="256" key="Vcs.Push.Dialog.v2" timestamp="1585578573230">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="1512" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1585578573230"/>
+        <state x="1322" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585578133472">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="661" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1584983360630"/>
+        <state x="1322" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1585578133472"/>
+        <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585170557520">
+            <screen x="0" y="0" width="3840" height="1040"/>
+        </state>
+        <state x="929" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3840.1040@0.0.3840.1040"
+               timestamp="1585170557520"/>
+    </component>
 </project>

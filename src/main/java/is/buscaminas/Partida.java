@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.beans.PropertyChangeListener;
@@ -73,12 +74,14 @@ public class Partida extends Application {
     }
 
     //Cambiar nombre
-    public void setNombre(String pNombre){
+    public void setNombre (String pNombre)
+    {
         nombreUsuario = pNombre;
     }
 
     //Cambiar dificultad
-    public void setDificultad(int pDificultad){
+    public void setDificultad (int pDificultad)
+    {
         dificultad = pDificultad;
     }
 
@@ -140,14 +143,52 @@ public class Partida extends Application {
         //Pre: Un boolean indicando si el jugador a ganado o no
         //Post: Se ha finalizado la partida
 
-        //Se para el contador
-        Contador.getContador().parar();
+        //Se para y resetea el contador
+        Contador.getContador().reset();
 
         //Se indica que no hay partidas activas
         partidaActiva = false;
 
         //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
         lObservers.firePropertyChange("estadoPartida", null, pVictoria);
+    }
+
+
+    //Métodos relacionados con las diversas pantallas:
+    public void mostrarAyuda ()
+    {
+        try {
+            Stage ventanaAyuda = new Stage();
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/menuAyuda.fxml"));
+            ventanaAyuda.setScene(new Scene(root));
+
+            //Se configura el Stage
+            ventanaAyuda.setTitle("Ayuda");
+            ventanaAyuda.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ayuda.jpg").toURI().toString()));
+            ventanaAyuda.setResizable(false);
+            ventanaAyuda.centerOnScreen();
+            ventanaAyuda.initModality(Modality.WINDOW_MODAL);
+            ventanaAyuda.initOwner(ventanaAct);
+            ventanaAyuda.setOnCloseRequest((pHandler) -> {
+                if (partidaActiva) Contador.getContador().continuar();
+            });
+            //ventanaAyuda.setFullScreen(true);
+
+            //parar timer
+            Contador.getContador().parar();
+
+            //Cosillas de mostrar ventanas
+            ventanaAyuda.show();
+        }
+        catch (IOException e) {
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML");
+            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/menuAyuda.fxml");
+            errorDeCarga.setContentText(e.toString() + e.getStackTrace().toString() + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
+
     }
 
     //Metodos publicos de la clase para administrar los atributos:
