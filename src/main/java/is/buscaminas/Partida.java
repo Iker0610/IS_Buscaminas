@@ -63,7 +63,7 @@ public class Partida extends Application {
         ventanaAct.setResizable(false);
         ventanaAct.centerOnScreen();
 
-        //Se inciia una partida
+        // Se muestra la pantalla de Login
         iniciarLogin();
     }
 
@@ -74,122 +74,13 @@ public class Partida extends Application {
         return mPartida;
     }
 
-    //Cambiar nombre
-    public void setNombre (String pNombre)
+    // Login en la aplicacion
+    public void login (String pUsuario, int pDificultad)
     {
-        nombreUsuario = pNombre;
-    }
-
-    //Cambiar dificultad
-    public void setDificultad (int pDificultad)
-    {
+        nombreUsuario = pUsuario;
         dificultad = pDificultad;
-    }
 
-    //Metodos relacionados a la partida
-    public void iniciarPartida ()
-    {
-        //Pre:
-        //Post: Se inicia la partida
-
-        try {
-            //Se inicia el tablero
-            Tablero.getTablero().iniciarTablero();
-
-            //Se carga la pantalla y se introduce en el Stage
-            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
-            ventanaAct.setScene(new Scene(root));
-
-            //Se activa el boolean que indica que existe una partida activa
-            partidaActiva = true;
-
-            //Se muestra el stage una vez cargado
-            ventanaAct.show();
-        }
-        catch (Exception e) {
-            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
-            errorDeCarga.setTitle("Error carga FXML");
-            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/ventanaPartidaBase.fxml");
-            errorDeCarga.setContentText(e.toString() + "\n\nLa aplicación se cerrará");
-            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
-            errorDeCarga.show();
-        }
-    }
-
-    private void iniciarLogin ()
-    {
-        //Pre:
-        //Post: Se inicia la partida
-
-        try {
-            //Se carga la pantalla y se introduce en el Stage
-            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaAcceso.fxml"));
-            ventanaAct.setScene(new Scene(root));
-
-            //Se muestra el stage una vez cargado
-            ventanaAct.show();
-        }
-        catch (Exception e) {
-            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
-            errorDeCarga.setTitle("Error carga FXML");
-            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/ventanaAcceso.fxml");
-            errorDeCarga.setContentText(e.toString() + "\n\nLa aplicación se cerrará");
-            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
-            errorDeCarga.show();
-        }
-    }
-
-    public void finalizarPartida (boolean pVictoria)
-    {
-        //Pre: Un boolean indicando si el jugador a ganado o no
-        //Post: Se ha finalizado la partida
-
-        //Se para y resetea el contador
-        Contador.getContador().reset();
-
-        //Se indica que no hay partidas activas
-        partidaActiva = false;
-
-        //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
-        lObservers.firePropertyChange("estadoPartida", null, pVictoria);
-    }
-
-
-    //Métodos relacionados con las diversas pantallas:
-    public void mostrarAyuda ()
-    {
-        try {
-            Stage ventanaAyuda = new Stage();
-            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaMenuAyuda.fxml"));
-            ventanaAyuda.setScene(new Scene(root));
-
-            //Se configura el Stage
-            ventanaAyuda.setTitle("Ayuda");
-            ventanaAyuda.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ayuda.jpg").toURI().toString()));
-            ventanaAyuda.setResizable(false);
-            ventanaAyuda.centerOnScreen();
-            ventanaAyuda.initModality(Modality.WINDOW_MODAL);
-            ventanaAyuda.initOwner(ventanaAct);
-            ventanaAyuda.setOnCloseRequest((pHandler) -> {
-                if (partidaActiva) Contador.getContador().continuar();
-            });
-            //ventanaAyuda.setFullScreen(true);
-
-            //parar timer
-            Contador.getContador().parar();
-
-            //Cosillas de mostrar ventanas
-            ventanaAyuda.show();
-        }
-        catch (IOException e) {
-            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
-            errorDeCarga.setTitle("Error carga FXML");
-            errorDeCarga.setHeaderText("No se ha encontrado el archivo FXML: ui/fxml/ventanaMenuAyuda.fxml");
-            errorDeCarga.setContentText(e.toString() + Arrays.toString(e.getStackTrace()) + "\n\nLa aplicación se cerrará");
-            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
-            errorDeCarga.show();
-        }
-
+        iniciarPartida();
     }
 
     //Metodos publicos de la clase para administrar los atributos:
@@ -221,5 +112,118 @@ public class Partida extends Application {
         }
         partidaActiva = true;
         iniciarPartida();
+    }
+
+    //Metodos relacionados a la partida
+    private void iniciarPartida ()
+    {
+        //Pre:
+        //Post: Se inicia una ventana con una partida de buscaminas
+
+        try {
+            //Se inicia el tablero
+            Tablero.getTablero().iniciarTablero();
+
+            //Se carga la pantalla y se introduce en el Stage
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaPartidaBase.fxml"));
+            ventanaAct.setScene(new Scene(root));
+
+            //Se activa el boolean que indica que existe una partida activa
+            partidaActiva = true;
+
+            //Se muestra el stage una vez cargado
+            ventanaAct.show();
+        }
+        catch (Exception e) {
+            // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML");
+            errorDeCarga.setHeaderText("Error al cargar el archivo FXML: ui/fxml/ventanaPartidaBase.fxml");
+            errorDeCarga.setContentText(e.toString() + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
+    }
+
+    private void iniciarLogin ()
+    {
+        //Pre:
+        //Post: Se muestra la pantalla login
+
+        try {
+            //Se carga la pantalla y se introduce en el Stage
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaAcceso.fxml"));
+            ventanaAct.setScene(new Scene(root));
+
+            //Se muestra el stage una vez cargado
+            ventanaAct.show();
+        }
+        catch (Exception e) {
+            // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML");
+            errorDeCarga.setHeaderText("Error al cargar el archivo FXML: ui/fxml/ventanaAcceso.fxml");
+            errorDeCarga.setContentText(e.toString() + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
+    }
+
+    public void finalizarPartida (boolean pVictoria)
+    {
+        //Pre: Un boolean indicando si el jugador a ganado o no
+        //Post: Se ha finalizado la partida
+
+        //Se para y resetea el contador
+        Contador.getContador().reset();
+
+        //Se indica que no hay partidas activas
+        partidaActiva = false;
+
+        //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
+        lObservers.firePropertyChange("estadoPartida", null, pVictoria);
+    }
+
+
+    //Métodos relacionados con las diversas pantallas:
+    public void mostrarAyuda ()
+    {
+        // Pre:
+        // Post: se carga y muestra una ventana emergente que muestra el menú de ayuda
+        try {
+            // Se carga el FXML
+            Stage ventanaAyuda = new Stage();
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaMenuAyuda.fxml"));
+            ventanaAyuda.setScene(new Scene(root));
+
+            //Se configura el Stage
+            ventanaAyuda.setTitle("Ayuda");
+            ventanaAyuda.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ayuda.jpg").toURI().toString()));
+            ventanaAyuda.setResizable(false);
+            ventanaAyuda.centerOnScreen();
+            ventanaAyuda.initModality(Modality.WINDOW_MODAL);   // Hace que se carge el stage como ventana emergente (ventana hija)
+            ventanaAyuda.initOwner(ventanaAct);                 // Se indica cual es la ventana padre y la bloquea
+
+            // Se configuran las acciones al cerrar la ventana -> Se reanuda el contador
+            ventanaAyuda.setOnCloseRequest((pHandler) -> {
+                if (partidaActiva) Contador.getContador().continuar();
+            });
+
+            // Finalmente antes de mostrar la ventana se para el contador
+            Contador.getContador().parar();
+
+            // Se muestra la ventana
+            ventanaAyuda.show();
+        }
+        catch (IOException e) {
+            // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML");
+            errorDeCarga.setHeaderText("Error al cargar el archivo FXML: ui/fxml/ventanaMenuAyuda.fxml");
+            errorDeCarga.setContentText(e.toString() + Arrays.toString(e.getStackTrace()) + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
+
     }
 }

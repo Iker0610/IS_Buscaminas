@@ -10,6 +10,7 @@ public class CasillaMina extends Casilla {
     }
 
     public CasillaMina (CasillaTemp pCasilla){
+        //  Transforma la casilla temporal en una casilla mina
         super(pCasilla);
     }
 }

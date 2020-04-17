@@ -32,6 +32,11 @@ public class MenuAyudaController {
     @FXML
     private void initialize ()
     {
+        // Pre
+        // Post:    Se establece el número de páginas de ayuda
+        //          Se carga la primera página si existe.
+        //          Se bloquea el botón para ir a la página anterior.
+        //          Si no hay páginas se establece como página actual la 0 y se bloquea el botón de avanzar
         pagAct = 0;
         pagTotal = getNumPagTotal();
         btnPrev.setDisable(true);
@@ -47,7 +52,7 @@ public class MenuAyudaController {
     private int getNumPagTotal ()
     {
         //Pre:
-        //Post: Devuelve el número de páginas de ayuda que tenemos
+        //Post: Devuelve el número de páginas de ayuda que hay disponibles
 
         File[] paginas = new File("src/main/resources/is/buscaminas/ui/ayuda/").listFiles();
         return paginas != null ? paginas.length : 0;
@@ -57,22 +62,34 @@ public class MenuAyudaController {
     @FXML
     private void nextAyuda ()
     {
+        // Se actualiza el indexado
         pagAct++;
         paginacion.setText(pagAct + "/" + pagTotal);
 
+        // Se actualiza la página del menú
         panelAyuda.cambiarPaginaAyuda(pagAct);
-        if (pagAct == pagTotal) btnNext.setDisable(true);
+
+        // Si se ha llegado al final se bloquea el botón de avanzar
+        if (pagAct >= pagTotal) btnNext.setDisable(true);
+
+        // Se comprueba si es posible habilitar el botón de retroceder
         if (pagAct > 1) btnPrev.setDisable(false);
     }
 
     @FXML
     private void prevAyuda ()
     {
+        // Se actualiza el indexado
         pagAct--;
         paginacion.setText(pagAct + "/" + pagTotal);
 
+        // Se actualiza la página del menú
         panelAyuda.cambiarPaginaAyuda(pagAct);
-        if (pagAct == 1) btnPrev.setDisable(true);
+
+        // Si se ha llegado al principio se bloquea el botón de retroceder
+        if (pagAct <= 1) btnPrev.setDisable(true);
+
+        // Se comprueba si es posible habilitar el botón de avanzar
         if (pagAct < pagTotal) btnNext.setDisable(false);
     }
 }

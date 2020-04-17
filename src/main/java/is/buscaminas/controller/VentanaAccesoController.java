@@ -35,13 +35,16 @@ public class VentanaAccesoController {
     @FXML
     public void pulsarAceptar ()
     {
-        //Si se introduce un nombre y se selcciona una dificultad
+        // Si se introduce un nombre y se selcciona una dificultad
         if (!nombreTextField.getText().equals("") && dificultadGroup.getSelectedToggle() != null) {
-            //Guardamos el nombre de jugador
-            Partida.getPartida().setNombre(nombreTextField.getText());
-            //Introducimos la dificultad seleccionada
+
+            // Guardamos el nombre de jugador
+            String nombreUser = nombreTextField.getText();
+
+            // Introducimos la dificultad seleccionada
             int numDificultad;
             String dificultad = ((Node) dificultadGroup.getSelectedToggle()).getId();
+
             try {
                 numDificultad = Integer.parseInt(dificultad);
             }
@@ -49,11 +52,13 @@ public class VentanaAccesoController {
                 numDificultad = 1;
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "ERROR (introducir dificultad)", ButtonType.YES, ButtonType.NO);
             }
-            Partida.getPartida().setDificultad(numDificultad);
-            Partida.getPartida().iniciarPartida();
+
+            // Se inicia la partida
+            Partida.getPartida().login(nombreUser, numDificultad);
 
         }
         else {
+            // Se le indica al usuario que ha de seleccionar un nombre y una dificultad
             Alert alerta = new Alert(Alert.AlertType.WARNING);
             alerta.setTitle("Datos incorrectos");
             alerta.setHeaderText(null);

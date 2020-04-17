@@ -34,11 +34,10 @@ public class Contador {
     {
         //Pre: Un observer
         //Post: Se ha añadido el observer a la lista de observers
-
         lObservers.addPropertyChangeListener(pObserver);
     }
 
-    public void iniciar()
+    public void iniciar ()
     {
         //Pre:
         //Post: Se ha iniciado el conteo. Cada segundo se notificará a los observers
@@ -50,7 +49,7 @@ public class Contador {
          * y el tiempo hasta la primera ejecución y el tiempo entre las ejecuciones posteriores (el periodo). (Ambos en milisegundos)
          */
 
-        reset();
+        reset(); //Nos aseguramos de que no exista ningún timer funcionando
         timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
         timer.scheduleAtFixedRate(new TimerTask() {
             @Override
@@ -61,12 +60,20 @@ public class Contador {
         }, 0, 1000);
     }
 
+    public void reset ()
+    {
+        //Pre:
+        //Post: Se ha parado el contador y se reinician los segundos
+        parar();
+        seconds = -1;
+        timer = null;
+    }
+
     public void continuar ()
     {
         //Pre:
         //Post: Continua la cuenta desde los segundos que marque la variable
-        if (timer!=null)
-        {
+        if (timer != null) {
             timer = new Timer(true); //Con el is Daemon se indica que el hilo que generará esa clase se puede finalizar sin problemas al cerrar la aplicació
             timer.scheduleAtFixedRate(new TimerTask() {
                 @Override
@@ -79,24 +86,11 @@ public class Contador {
         }
     }
 
-    public void reset()
-    {
-        //Pre:
-        //Post: Se ha parado el contador y se reinician los segundos
-        parar();
-        seconds = -1;
-        timer=null;
-    }
-
     public void parar ()
     {
         //Pre:
         //Post: Se ha parado el contador
-        try {
-            timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos
-        }
-        catch (Exception ignored){}
-
+        if (timer != null) timer.cancel(); //Elimina la tarea que se está ejecutando en estos momentos y deshabilita permanentemente el timer
     }
 
 

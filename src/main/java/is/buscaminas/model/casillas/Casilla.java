@@ -24,6 +24,7 @@ public abstract class Casilla {
 
     protected Casilla (Casilla pCasilla)
     {
+        // Copia los valores de la casilla paramétro y se genera con ellos
         this.estadoAct = pCasilla.estadoAct;
         this.lObservers = new PropertyChangeSupport(this);
         for (PropertyChangeListener observer:pCasilla.lObservers.getPropertyChangeListeners()) lObservers.addPropertyChangeListener(observer);

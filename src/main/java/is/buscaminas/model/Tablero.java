@@ -40,6 +40,7 @@ public class Tablero {
 
     public void iniciarTablero ()
     {
+        // Se crea o resetea (si ya existia) el tablero
         mTablero = new Tablero();
     }
 
