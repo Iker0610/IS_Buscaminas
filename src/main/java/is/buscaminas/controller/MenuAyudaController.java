@@ -27,9 +27,14 @@ public class MenuAyudaController {
     @FXML
     private void initialize ()
     {
-        pagAct = 1;
+        pagAct = 0;
         pagTotal = getNumPagTotal();
         btnPrev.setDisable(true);
+        if (pagTotal <= 1) btnNext.setDisable(true);
+        if (pagTotal > 0) {
+            pagAct = 1;
+            panelAyuda.cambiarPaginaAyuda(pagAct);
+        }
     }
 
     // Metodos
@@ -38,13 +43,13 @@ public class MenuAyudaController {
         //Pre:
         //Post: Devuelve el número de páginas de ayuda que tenemos
 
-        File[] paginas = new File("src/main/resources/is/buscaminas/ui/ayuda").listFiles();
+        File[] paginas = new File("src/main/resources/is/buscaminas/ui/ayuda/").listFiles();
         return paginas != null ? paginas.length : 0;
     }
 
     // Metodos de eventos
     @FXML
-    private void nextAyuda (ActionEvent pEvento)
+    private void nextAyuda ()
     {
         pagAct++;
         panelAyuda.cambiarPaginaAyuda(pagAct);
@@ -53,7 +58,7 @@ public class MenuAyudaController {
     }
 
     @FXML
-    private void prevAyuda (ActionEvent pEvento)
+    private void prevAyuda ()
     {
         pagAct--;
         panelAyuda.cambiarPaginaAyuda(pagAct);
