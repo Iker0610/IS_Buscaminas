@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c4c4c4;" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="is.buscaminas.controller.ventanaAccesoController">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c0c0c0;" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="is.buscaminas.controller.ventanaAccesoController">
     <top>
         <Pane prefHeight="120.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <Label layoutX="312.0" layoutY="60.0" prefHeight="19.0" prefWidth="74.0" scaleX="5.0" scaleY="5.0" scaleZ="5.0" text="BUSCAMINAS">
