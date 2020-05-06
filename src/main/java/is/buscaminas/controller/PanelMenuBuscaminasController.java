@@ -17,4 +17,9 @@ public class PanelMenuBuscaminasController {
     private void mostrarAyuda (ActionEvent pEvento) {
         Partida.getPartida().mostrarAyuda();
     }
+
+    @FXML
+    private void mostrarRanking (ActionEvent pEvento) {
+        Partida.getPartida().mostrarRanking();
+    }
 }

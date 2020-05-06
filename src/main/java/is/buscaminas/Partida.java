@@ -10,7 +10,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
@@ -177,6 +182,9 @@ public class Partida extends Application {
         //Se para y resetea el contador
         Contador.getContador().reset();
 
+        //Se abre la ventana del ranking
+        this.mostrarRanking();
+
         //Se indica que no hay partidas activas
         partidaActiva = false;
 
@@ -224,6 +232,49 @@ public class Partida extends Application {
             errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
             errorDeCarga.show();
         }
+
+    }
+
+    public void mostrarRanking(){
+        // Pre:
+        // Post: se carga y muestra una ventana emergente que muestra el menú de ayuda
+        try {
+            // Se carga el FXML
+            Stage ventanaRanking = new Stage();
+            Parent root = FXMLLoader.load(Partida.class.getResource("ui/fxml/ventanaRanking.fxml"));
+            ventanaRanking.setScene(new Scene(root));
+
+            //Se configura el Stage
+            ventanaRanking.setTitle("Ranking");
+            ventanaRanking.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ranking.jpg").toURI().toString()));
+            ventanaRanking.setResizable(false);
+            ventanaRanking.centerOnScreen();
+            ventanaRanking.initModality(Modality.WINDOW_MODAL);   // Hace que se carge el stage como ventana emergente (ventana hija)
+            ventanaRanking.initOwner(ventanaAct);                 // Se indica cual es la ventana padre y la bloquea
+
+            // Se configuran las acciones al cerrar la ventana -> Se reanuda el contador
+            ventanaRanking.setOnCloseRequest((pHandler) -> {
+                if (partidaActiva) Contador.getContador().continuar();
+            });
+
+            // Finalmente antes de mostrar la ventana se para el contador
+            Contador.getContador().parar();
+
+            // Se muestra la ventana
+            ventanaRanking.show();
+        }
+        catch (IOException e) {
+            // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
+            Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
+            errorDeCarga.setTitle("Error carga FXML o XML");
+            errorDeCarga.setHeaderText("Error al cargar el archivo FXML: ui/fxml/ventanaRanking.fxml");
+            errorDeCarga.setContentText(e.toString() + Arrays.toString(e.getStackTrace()) + "\n\nLa aplicación se cerrará");
+            errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
+            errorDeCarga.show();
+        }
+    }
+
+    public void cerrarRanking(){
 
     }
 }
