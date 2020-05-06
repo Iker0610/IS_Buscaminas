@@ -2,22 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/OrderedDoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/JugadorRanking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaAccesoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaAccesoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -33,22 +41,28 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.16225547" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="is.buscaminas.model.ranking" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -80,7 +94,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587145035338</updated>
-      <workItem from="1587150372985" duration="2283000" />
+      <workItem from="1587150372985" duration="2334000" />
+      <workItem from="1587657589003" duration="79000" />
+      <workItem from="1588785212258" duration="295000" />
+      <workItem from="1588800034465" duration="2822000" />
     </task>
     <task id="LOCAL-00001" summary="Actualización de la ayuda">
       <created>1587147937792</created>
@@ -89,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587147937792</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Documentación del código">
+      <created>1587152694659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587152694659</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,17 +121,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Actualización de la ayuda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización de la ayuda" />
+    <MESSAGE value="Documentación del código" />
+    <option name="LAST_COMMIT_MESSAGE" value="Documentación del código" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1587147936157">
+    <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801234688">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1587147936157" />
-    <state x="635" y="229" key="FileChooserDialogImpl" timestamp="1587145158729">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588801234688" />
+    <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1588802902935">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1588802902935" />
+    <state x="1306" y="259" width="424" height="491" key="FileChooserDialogImpl" timestamp="1587657647940">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145158729" />
+    <state x="1306" y="259" width="424" height="491" key="FileChooserDialogImpl/54.27.3786.1053@54.27.3786.1053" timestamp="1587657647940" />
     <state width="2528" height="281" key="GridCell.Tab.0.bottom" timestamp="1587150090844">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -128,17 +158,18 @@
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
     <state width="2528" height="281" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090844" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1587145784290">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="922" y="122" width="1024" height="852" key="SettingsEditor" timestamp="1587657665205">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145784290" />
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1587147939288">
+    <state x="922" y="122" width="1024" height="852" key="SettingsEditor/54.27.3786.1053@54.27.3786.1053" timestamp="1587657665205" />
+    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588802885258">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1587147939288" />
-    <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587150374023">
+    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1588802885258" />
+    <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588800034453">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="990" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1587150374023" />
+    <state x="990" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1588800034453" />
   </component>
 </project>
