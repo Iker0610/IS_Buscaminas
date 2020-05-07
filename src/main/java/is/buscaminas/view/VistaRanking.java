@@ -17,7 +17,7 @@ import java.net.URISyntaxException;
 
 public class VistaRanking extends GridPane implements PropertyChangeListener {
 
-    public VistaRanking () throws URISyntaxException
+    public VistaRanking ()
     {
         super();
         //Se añade esta instancia como observer del contador

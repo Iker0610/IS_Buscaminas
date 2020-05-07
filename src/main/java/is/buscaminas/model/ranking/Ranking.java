@@ -51,8 +51,8 @@ public class Ranking {
         int dificultadAct = 1;   //Leeremos 3 ficheros (0, 1 y 2)
         while (dificultadAct <= 3) {
             try {
-                File archivoRanking = new File(String.valueOf(this.getClass().getResource(
-                        "is/buscaminas/rankings/ranking" + dificultadAct + ".tsv")));
+
+                File archivoRanking = new File( "src/main/resources/is/buscaminas/rankings/ranking" + dificultadAct + ".tsv");
 
                 FileReader fr = new FileReader(archivoRanking);
                 BufferedReader br = new BufferedReader(fr);
@@ -62,7 +62,7 @@ public class Ranking {
                     //Obtenemos la información de cada jugador y la añadimos a la lista correspondiente
                     String[] datosJugador = linea.split("\t");
                     JugadorRanking jugador = new JugadorRanking(datosJugador[0], Integer.parseInt(datosJugador[1]));
-                    lJugadoresPorDificultad[dificultadAct].add(jugador);
+                    lJugadoresPorDificultad[dificultadAct-1].add(jugador);
                 }
                 //Cerramos el fichero
                 fr.close();
@@ -76,10 +76,10 @@ public class Ranking {
 
     private void actualizarRanking (int pDificultad)
     {
-        Object[] top10 = lJugadoresPorDificultad[pDificultad].getTop10();
+        Object[] top10 = lJugadoresPorDificultad[pDificultad-1].getTop10();
         //Escribir en el fichero
         try {
-            File archivoRanking = new File(String.valueOf(this.getClass().getResource("is/buscaminas/rankings/ranking" + pDificultad + ".tsv")));
+            File archivoRanking = new File("src/main/resources/is/buscaminas/rankings/ranking" + pDificultad + ".tsv");
             FileWriter fileWritter = new FileWriter(archivoRanking, false);
 
             for (Object elem : top10) {
@@ -111,7 +111,7 @@ public class Ranking {
 
         JugadorRanking[] lista = new JugadorRanking[10];
         int i = 0;
-        for (Object elem : lJugadoresPorDificultad[pDificultad].getTop10()) {
+        for (Object elem : lJugadoresPorDificultad[pDificultad-1].getTop10()) {
             if (elem instanceof JugadorRanking) {
                 lista[i++] = (JugadorRanking) elem;
             }
