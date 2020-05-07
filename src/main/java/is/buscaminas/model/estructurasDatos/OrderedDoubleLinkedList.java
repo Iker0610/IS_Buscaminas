@@ -10,18 +10,19 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
     private int count;
 
     // Constructor
-    public OrderedDoubleLinkedList() {
+    public OrderedDoubleLinkedList ()
+    {
         first = null;
         count = 0;
     }
 
-    public boolean isEmpty()
+    public boolean isEmpty ()
     //Determina si la lista está vacía
     {
         return first == null;
     }
 
-    public int size()
+    public int size ()
     //Determina el número de elementos de la lista
     {
         return count;
@@ -68,16 +69,21 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
         }
     }
 
-    public void removeLast(){
-        Node<T> act = first.prev.prev;
-        act.next = first;
-        first.prev = act;
+    public Object[] getTop10 ()
+    {
+        int numPosiciones = -1;
+        Iterator<T> itr = getIterator();
+        Object[] top10 = new Object[10];
+
+        while (numPosiciones < 10 && itr.hasNext()) top10[++numPosiciones] = itr.next();
+        return top10;
     }
 
     /**
      * Return an iterator to the stack that iterates through the items .
      */
-    public Iterator<T> iterator() {
+    private Iterator<T> getIterator ()
+    {
         return new ListIterator();
     }
 
@@ -86,18 +92,21 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
         Node<T> elemAct = first;
 
         //Constructora
-        private ListIterator() {
+        private ListIterator ()
+        {
         }
 
         //Métodos
         @Override
-        public boolean hasNext() {
+        public boolean hasNext ()
+        {
             //O(1)
             return (elemAct != null);
         }
 
         @Override
-        public T next() {
+        public T next ()
+        {
             //O(1)
             if (!hasNext()) throw new NoSuchElementException();
             T next = elemAct.data;
@@ -106,7 +115,8 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
         }
 
         @Override
-        public void remove() {
+        public void remove ()
+        {
             throw new UnsupportedOperationException();
         }
 

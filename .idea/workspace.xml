@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/OrderedDoubleLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/JugadorRanking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" afterDir="false" />
+    <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="Arreglo bug con la lista ligada y las direcciones a los archivos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/META-INF/IS_Buscaminas.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/META-INF/IS_Buscaminas.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/OrderedDoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/OrderedDoubleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/rankings/ranking1.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking1.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/rankings/ranking2.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking2.tsv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/rankings/ranking3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking3.tsv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,21 +66,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DEV\Proyectos UNI\IS_Buscaminas\src\main\resources\is\buscaminas\" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="is.buscaminas.model.ranking" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -110,6 +107,7 @@
       <workItem from="1587657589003" duration="79000" />
       <workItem from="1588785212258" duration="295000" />
       <workItem from="1588800034465" duration="2822000" />
+      <workItem from="1588849681498" duration="3811000" />
     </task>
     <task id="LOCAL-00001" summary="Actualización de la ayuda">
       <created>1587147937792</created>
@@ -136,7 +134,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -145,54 +145,59 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Actualización de la ayuda" />
     <MESSAGE value="Documentación del código" />
-    <option name="LAST_COMMIT_MESSAGE" value="Documentación del código" />
+    <MESSAGE value="Arreglo bug con la lista ligada y las direcciones a los archivos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Arreglo bug con la lista ligada y las direcciones a los archivos" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="713" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588850459436">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="713" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588850459436" />
     <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801234688">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588801234688" />
-    <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1588802902935">
+    <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1588853420773">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1588802902935" />
+    <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1588853420773" />
     <state x="1306" y="259" width="424" height="491" key="FileChooserDialogImpl" timestamp="1587657647940">
       <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145158729" />
     <state x="1306" y="259" width="424" height="491" key="FileChooserDialogImpl/54.27.3786.1053@54.27.3786.1053" timestamp="1587657647940" />
-    <state width="2528" height="281" key="GridCell.Tab.0.bottom" timestamp="1587150090844">
+    <state width="1598" height="983" key="GridCell.Tab.0.bottom" timestamp="1588853289134">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
-    <state width="2528" height="281" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090844" />
-    <state width="2528" height="281" key="GridCell.Tab.0.center" timestamp="1587150090843">
+    <state width="1598" height="983" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1588853289134" />
+    <state width="1598" height="983" key="GridCell.Tab.0.center" timestamp="1588853289134">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
-    <state width="2528" height="281" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090843" />
-    <state width="2528" height="281" key="GridCell.Tab.0.left" timestamp="1587150090843">
+    <state width="1598" height="983" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1588853289134" />
+    <state width="1598" height="983" key="GridCell.Tab.0.left" timestamp="1588853289134">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
-    <state width="2528" height="281" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090843" />
-    <state width="2528" height="281" key="GridCell.Tab.0.right" timestamp="1587150090844">
+    <state width="1598" height="983" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1588853289134" />
+    <state width="1598" height="983" key="GridCell.Tab.0.right" timestamp="1588853289134">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
-    <state width="2528" height="281" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090844" />
+    <state width="1598" height="983" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1588853289134" />
     <state x="922" y="122" width="1024" height="852" key="SettingsEditor" timestamp="1587657665205">
       <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145784290" />
     <state x="922" y="122" width="1024" height="852" key="SettingsEditor/54.27.3786.1053@54.27.3786.1053" timestamp="1587657665205" />
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588802885258">
+    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588853501368">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1588802885258" />
-    <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588800034453">
+    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1588853501368" />
+    <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588849681375">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="990" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1588800034453" />
+    <state x="990" y="344" key="com.intellij.ide.util.TipDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1588849681375" />
   </component>
 </project>

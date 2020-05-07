@@ -180,17 +180,24 @@ public class Partida extends Application {
         //Pre: Un boolean indicando si el jugador a ganado o no
         //Post: Se ha finalizado la partida
 
-        //Se para y resetea el contador
-        Contador.getContador().reset();
-
-        //Se abre la ventana del ranking
-        this.mostrarRanking(pVictoria);
-
         //Se indica que no hay partidas activas
         partidaActiva = false;
 
         //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
         lObservers.firePropertyChange("estadoPartida", null, pVictoria);
+
+        Contador.getContador().parar();
+
+        //Si el usuario ha ganado la partida se envían los datos para actualizar el ranking
+        if (pVictoria){
+            Ranking.getRanking().addJugadorRanking(dificultad,nombreUsuario);
+
+            //Se abre la ventana del ranking
+            this.mostrarRanking();
+        }
+
+        //Se para y resetea el contador
+        Contador.getContador().reset();
     }
 
 
@@ -236,7 +243,7 @@ public class Partida extends Application {
 
     }
 
-    public void mostrarRanking(boolean pVictoria){
+    public void mostrarRanking(){
         // Pre:
         // Post: se carga y muestra una ventana emergente que muestra el menú de ayuda
         try {
@@ -260,11 +267,6 @@ public class Partida extends Application {
 
             // Finalmente antes de mostrar la ventana se para el contador
             Contador.getContador().parar();
-
-            //Si el usuario ha ganado la partida se envían los datos para actualizar el ranking
-            if (pVictoria){
-                Ranking.getRanking().addJugadorRanking(dificultad,nombreUsuario);
-            }
 
             // Se muestra la ventana
             ventanaRanking.show();

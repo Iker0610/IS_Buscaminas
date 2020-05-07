@@ -20,6 +20,6 @@ public class PanelMenuBuscaminasController {
 
     @FXML
     private void mostrarRanking (ActionEvent pEvento) {
-        Partida.getPartida().mostrarRanking(false);
+        Partida.getPartida().mostrarRanking();
     }
 }
