@@ -4,14 +4,24 @@ import is.buscaminas.model.estructurasDatos.Node;
 import is.buscaminas.model.estructurasDatos.OrderedDoubleLinkedList;
 import is.buscaminas.model.ranking.JugadorRanking;
 import is.buscaminas.model.ranking.Ranking;
+import is.buscaminas.view.VistaRanking;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class VentanaRankingController{
 
+    private VistaRanking tabla;
     @FXML
     private Button aceptar;
+    @FXML
+    private GridPane matrizRanking;
+
+    public void initialize ()
+    {
+        Ranking.getRanking().actualizarRanking(1);
+    }
 
     @FXML
     public void pulsarAceptar() {
@@ -20,16 +30,17 @@ public class VentanaRankingController{
     }
     @FXML
     public void mostrarRanking1(){
-        //TODO
+        Ranking.getRanking().actualizarRanking(1);
+
     }
 
     @FXML
     public void mostrarRanking2(){
-        //TODO
+        Ranking.getRanking().actualizarRanking(2);
     }
 
     @FXML
     public void mostrarRanking3(){
-        //TODO
+        Ranking.getRanking().actualizarRanking(3);
     }
 }

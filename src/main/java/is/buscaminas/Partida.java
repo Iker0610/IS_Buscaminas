@@ -274,7 +274,7 @@ public class Partida extends Application {
         catch (IOException e) {
             // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
             Alert errorDeCarga = new Alert(Alert.AlertType.ERROR);
-            errorDeCarga.setTitle("Error carga FXML o XML");
+            errorDeCarga.setTitle("Error carga FXML");
             errorDeCarga.setHeaderText("Error al cargar el archivo FXML: ui/fxml/ventanaRanking.fxml");
             errorDeCarga.setContentText(e.toString() + Arrays.toString(e.getStackTrace()) + "\n\nLa aplicación se cerrará");
             errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
