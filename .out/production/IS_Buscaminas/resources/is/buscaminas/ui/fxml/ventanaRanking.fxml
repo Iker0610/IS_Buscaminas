@@ -1,49 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #0d102f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.VentanaRankingController">
-   <top>
-      <VBox BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER" prefHeight="174.0" prefWidth="600.0">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.VentanaRankingController">
+   <children>
+      <ImageView fitHeight="960.0" fitWidth="540.0">
+         <image>
+            <Image url="@../assets/ranking/fondoRanking.png" />
+         </image>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0">
+         <top>
+            <VBox BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="167.0" fitWidth="511.0">
-                     <image>
-                        <Image url="@../assets/ranking/titulo.png" />
-                     </image>
-                  </ImageView>
+                  <HBox alignment="CENTER" prefHeight="191.0" prefWidth="540.0">
+                     <children>
+                        <ImageView fitHeight="166.0" fitWidth="528.0">
+                           <image>
+                              <Image url="@../assets/ranking/titulo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="540.0" spacing="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 1" />
+                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 2" />
+                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 3" />
+                     </children>
+                  </HBox>
                </children>
-            </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            </VBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="540.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Dificultad 1" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Dificultad 2" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Dificultad 3" />
+                  <Button fx:id="aceptar" mnemonicParsing="false" onAction="#pulsarAceptar" prefHeight="40.0" prefWidth="80.0" text="Aceptar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </HBox>
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <Pane prefHeight="99.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="aceptar" layoutX="268.0" layoutY="34.0" mnemonicParsing="false" onAction="#pulsarAceptar" prefHeight="31.0" prefWidth="65.0" text="Aceptar" />
-         </children>
-      </Pane>
-   </bottom>
-   <center>
-      <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0" />
-         </children>
-      </StackPane>
-   </center>
-</BorderPane>
+         </bottom>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="666.0" prefWidth="540.0" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

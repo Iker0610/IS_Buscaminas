@@ -68,6 +68,12 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
         }
     }
 
+    public void removeLast(){
+        Node<T> act = first.prev.prev;
+        act.next = first;
+        first.prev = act;
+    }
+
     /**
      * Return an iterator to the stack that iterates through the items .
      */

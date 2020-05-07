@@ -2,6 +2,7 @@ package is.buscaminas;
 
 import is.buscaminas.model.Contador;
 import is.buscaminas.model.Tablero;
+import is.buscaminas.model.ranking.Ranking;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -183,7 +184,7 @@ public class Partida extends Application {
         Contador.getContador().reset();
 
         //Se abre la ventana del ranking
-        this.mostrarRanking();
+        this.mostrarRanking(pVictoria);
 
         //Se indica que no hay partidas activas
         partidaActiva = false;
@@ -235,7 +236,7 @@ public class Partida extends Application {
 
     }
 
-    public void mostrarRanking(){
+    public void mostrarRanking(boolean pVictoria){
         // Pre:
         // Post: se carga y muestra una ventana emergente que muestra el menú de ayuda
         try {
@@ -259,6 +260,11 @@ public class Partida extends Application {
 
             // Finalmente antes de mostrar la ventana se para el contador
             Contador.getContador().parar();
+
+            //Si el usuario ha ganado la partida se envían los datos para actualizar el ranking
+            if (pVictoria){
+                Ranking.getRanking().addJugadorRanking(dificultad,nombreUsuario);
+            }
 
             // Se muestra la ventana
             ventanaRanking.show();
