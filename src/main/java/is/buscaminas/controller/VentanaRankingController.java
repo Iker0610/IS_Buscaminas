@@ -1,5 +1,6 @@
 package is.buscaminas.controller;
 
+import is.buscaminas.Partida;
 import is.buscaminas.model.estructurasDatos.Node;
 import is.buscaminas.model.estructurasDatos.OrderedDoubleLinkedList;
 import is.buscaminas.model.ranking.JugadorRanking;
@@ -12,7 +13,6 @@ import javafx.stage.Stage;
 
 public class VentanaRankingController{
 
-    private VistaRanking tabla;
     @FXML
     private Button aceptar;
     @FXML
@@ -20,27 +20,27 @@ public class VentanaRankingController{
 
     public void initialize ()
     {
-        Ranking.getRanking().actualizarRanking(1);
+        Ranking.getRanking().obtenerRanking(Partida.getPartida().getDificultad());
+    }
+
+    @FXML
+    public void mostrarRanking1(){
+        Ranking.getRanking().obtenerRanking(1);
+    }
+
+    @FXML
+    public void mostrarRanking2(){
+        Ranking.getRanking().obtenerRanking(2);
+    }
+
+    @FXML
+    public void mostrarRanking3(){
+        Ranking.getRanking().obtenerRanking(3);
     }
 
     @FXML
     public void pulsarAceptar() {
         Stage stage = (Stage) aceptar.getScene().getWindow();
         stage.close();
-    }
-    @FXML
-    public void mostrarRanking1(){
-        Ranking.getRanking().actualizarRanking(1);
-
-    }
-
-    @FXML
-    public void mostrarRanking2(){
-        Ranking.getRanking().actualizarRanking(2);
-    }
-
-    @FXML
-    public void mostrarRanking3(){
-        Ranking.getRanking().actualizarRanking(3);
     }
 }

@@ -51,7 +51,8 @@ public class Ranking {
         int dificultadAct = 1;   //Leeremos 3 ficheros (0, 1 y 2)
         while (dificultadAct <= 3) {
             try {
-                File archivoRanking = new File(String.valueOf(this.getClass().getResource("is/buscaminas/rankings/ranking" + dificultadAct + ".tsv")));
+                File archivoRanking = new File(String.valueOf(this.getClass().getResource(
+                        "is/buscaminas/rankings/ranking" + dificultadAct + ".tsv")));
 
                 FileReader fr = new FileReader(archivoRanking);
                 BufferedReader br = new BufferedReader(fr);
@@ -73,7 +74,7 @@ public class Ranking {
         }
     }
 
-    public void actualizarRanking (int pDificultad)
+    private void actualizarRanking (int pDificultad)
     {
         Object[] top10 = lJugadoresPorDificultad[pDificultad].getTop10();
         //Escribir en el fichero
@@ -94,7 +95,6 @@ public class Ranking {
             e.printStackTrace();
         }
         // notificamos a los observers de que hay que mostrar el ranking de otro nivel
-        lObservers.firePropertyChange("numRanking", null, pDificultad);
     }
 
     public void addJugadorRanking (int pDificultad, String pNombre)
@@ -105,19 +105,18 @@ public class Ranking {
         actualizarRanking(pDificultad);
     }
 
-    public JugadorRanking[] obtenerRanking (int pDificultad)
+    public void obtenerRanking (int pDificultad)
     {
         // Devuelve los **10 primeros jugadores (si los hay)**
-        // No sé si se debería hacer así o con observer, hay que preguntar a iñigo
-        JugadorRanking[] lista = new JugadorRanking[9];
-        Object elem;
-        for (int i = 0; i < 10; i++) {
-            elem = lJugadoresPorDificultad[pDificultad].getTop10()[i];
+
+        JugadorRanking[] lista = new JugadorRanking[10];
+        int i = 0;
+        for (Object elem : lJugadoresPorDificultad[pDificultad].getTop10()) {
             if (elem instanceof JugadorRanking) {
-                lista[i] = (JugadorRanking) elem;
+                lista[i++] = (JugadorRanking) elem;
             }
         }
-        return lista;
+        lObservers.firePropertyChange("lRanking", null, lista);
     }
 
     private int calcularPuntuacion (int pDificultad)
