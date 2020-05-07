@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -10,7 +11,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="is.buscaminas.controller.VentanaRankingController">
    <children>
@@ -21,29 +21,29 @@
       </ImageView>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0">
          <top>
-            <VBox BorderPane.alignment="CENTER">
+            <VBox prefHeight="189.0" prefWidth="540.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER" prefHeight="191.0" prefWidth="540.0">
+                  <HBox alignment="CENTER" prefHeight="104.0" prefWidth="540.0">
                      <children>
-                        <ImageView fitHeight="166.0" fitWidth="528.0">
+                        <ImageView fitHeight="121.0" fitWidth="528.0">
                            <image>
                               <Image url="@../assets/ranking/titulo.png" />
                            </image>
                         </ImageView>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="540.0" spacing="50.0">
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="540.0" spacing="50.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 1" />
-                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 2" />
-                        <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Dificultad 3" />
+                        <Button mnemonicParsing="false" onAction="#mostrarRanking1" prefHeight="35.0" prefWidth="100.0" text="Dificultad 1" />
+                        <Button mnemonicParsing="false" onAction="#mostrarRanking1" prefHeight="35.0" prefWidth="100.0" text="Dificultad 2" />
+                        <Button mnemonicParsing="false" onAction="#mostrarRanking1" prefHeight="35.0" prefWidth="100.0" text="Dificultad 3" />
                      </children>
                   </HBox>
                </children>
             </VBox>
          </top>
          <bottom>
-            <HBox alignment="CENTER" prefHeight="82.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="165.0" prefWidth="540.0" BorderPane.alignment="CENTER">
                <children>
                   <Button fx:id="aceptar" mnemonicParsing="false" onAction="#pulsarAceptar" prefHeight="40.0" prefWidth="80.0" text="Aceptar">
                      <font>
@@ -59,7 +59,199 @@
          <center>
             <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox prefHeight="666.0" prefWidth="540.0" />
+                  <VBox prefHeight="666.0" prefWidth="540.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="31.0" prefWidth="540.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="primero">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p1">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="segundo">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p2">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/3.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="tercero">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p3">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/4.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="cuarto">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p4">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/5.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="quinto">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p5">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/6.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="sexto">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p6">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/7.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="septimo">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p7">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/8.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="octavo">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p8">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/9.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="noveno">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p9">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../assets/ranking/10.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="decimo">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="p10">
+                                 <font>
+                                    <Font name="System Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children></VBox>
                </children>
             </StackPane>
          </center>
