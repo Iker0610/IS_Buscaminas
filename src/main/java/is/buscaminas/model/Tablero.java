@@ -282,4 +282,13 @@ public class Tablero {
             }
         }
     }
+    public void mostrarMinas(){
+        for (int fila = 0; fila <= matrizCasillas.length-1; fila++) {
+            for (int columna = 0; columna <= matrizCasillas[0].length-1; columna++) {
+                if (matrizCasillas[fila][columna] instanceof CasillaMina){
+                    matrizCasillas[fila][columna].despejar();
+                }
+            }
+        }
+    }
 }

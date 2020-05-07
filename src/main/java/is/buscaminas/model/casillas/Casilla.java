@@ -65,4 +65,7 @@ public abstract class Casilla {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
     }
+    public IEstadoCasilla getEstadoAct(){
+        return estadoAct;
+    }
 }

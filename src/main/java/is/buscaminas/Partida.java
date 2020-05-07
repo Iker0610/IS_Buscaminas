@@ -172,7 +172,7 @@ public class Partida extends Application {
     public void finalizarPartida (boolean pVictoria)
     {
         //Pre: Un boolean indicando si el jugador a ganado o no
-        //Post: Se ha finalizado la partida
+        //Post: Se ha finalizado la partida y se han mostrado todas las minas ocultas
 
         //Se para y resetea el contador
         Contador.getContador().reset();
@@ -182,6 +182,7 @@ public class Partida extends Application {
 
         //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
         lObservers.firePropertyChange("estadoPartida", null, pVictoria);
+        Tablero.getTablero().mostrarMinas();
     }
 
 
