@@ -40,9 +40,15 @@ public class VentanaRankingController {
     }
 
     private void mostrarRanking(int pDificultad){
-        zonaRanking.getChildren().clear();
+        clean();
         zonaRanking.getChildren().add(rankingPorNivel[pDificultad-1]);
         Ranking.getRanking().obtenerRanking(pDificultad);
+    }
+
+    private void clean(){
+        zonaRanking.getChildren().clear();
+        for (int i = 0; i<3; i++) rankingPorNivel[i].getChildren().clear();
+        for (int i = 0; i<3; i++) rankingPorNivel[i] = new VistaRanking();
     }
 
     @FXML

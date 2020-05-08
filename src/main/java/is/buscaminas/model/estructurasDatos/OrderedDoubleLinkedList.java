@@ -73,7 +73,7 @@ public class OrderedDoubleLinkedList<T extends Comparable<? super T>> {
     {
         int numPosiciones = -1;
         Iterator<T> itr = getIterator();
-        Object[] top10 = new Object[9];
+        Object[] top10 = new Object[10];
 
         while (numPosiciones < 9 && itr.hasNext()) top10[++numPosiciones] = itr.next();
         return top10;
