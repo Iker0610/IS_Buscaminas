@@ -215,40 +215,43 @@ public class Tablero {
         //Post: - Se ha despejado la casilla en caso de poderse
 
         if (Partida.getPartida().hayPartidaActiva()) {
-           int result = matrizCasillas[pFila][pColumna].despejar();
+            int result = matrizCasillas[pFila][pColumna].despejar();
 
             // - Segun lo devuelto por el intento de despejar la casilla se ejecutan las siguientes acciones:
 
             /* variable "result", int:
              *  0 = no hacer absolutamente nada
-             *  1 = Se únicamente disminuir el contador 'casillasPorDespejar'
+             *  1 = Únicamente disminuir el contador 'casillasPorDespejar'
              *  2 = Se ha hecho click en mina, fin de la partida
              *  3 = casilla sin minas adyacentes -> Despejar las de alrededor y decrementar el contador 'casillasPorDespejar'
-             *  4..12 = Despejar las casillas que estén inmediatamente adyacentes a la casilla despejada en caso de que el numero de minas adyacentes (result - 4)
-             *          sea exactamente el número de casillas marcadas en las 8 celdas inmediatamente adyacentes
+             *  4 = Despejar las casillas que estén inmediatamente adyacentes a la casilla despejada en caso de que el numero de minas adyacentes que tenga
+             *          sea exactamente el número de casillas marcadas en las 8 celdas inmediatamente adyacentes (no necesariamente tienen que estar bien marcadas)
              */
 
-            if (result == 1) {                                                      //caso 1
-                casillasPorDespejar--;
-            } else if (result == 2) {                                               //caso 2
-                Partida.getPartida().finalizarPartida(false);
-            } else if (result == 3) {                                               //caso 3
-                despejarAlrededor(pFila, pColumna);
-            } else if (result < 13 && result > 3) {                                 // caso 4 a 12: 12 es el Máximo número que se nos puede presentar (casilla con número 8)
-                int banderasAdyacentes = 0;
-                for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
-                    for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
-                        if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
-                                columna < matrizCasillas[0].length) {
-                            if (matrizCasillas[fila][columna].estaMarcada())    // Si es casilla marcada se aumenta el numero de banderas adyacentes
-                                banderasAdyacentes++;
+            switch (result) {
+                case 1: // Se ha despejado una casilla no-mina
+                    casillasPorDespejar--;
+                    break;
+                case 2: // Se ha despejado una mina
+                    Partida.getPartida().finalizarPartida(false);
+                    break;
+                case 3: // Despejar alrededor normal
+                    despejarAlrededor(pFila, pColumna);
+                    break;
+                case 4: // Despejar inmediatas adyacentes
+                    int banderasAdyacentes = 0;
+                    for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
+                        for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
+                            if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
+                                    columna < matrizCasillas[0].length) {
+                                if (matrizCasillas[fila][columna].estaMarcada())    // Si es casilla marcada se aumenta el numero de banderas adyacentes
+                                    banderasAdyacentes++;
+                            }
                         }
                     }
-                }
-                if (banderasAdyacentes == (result - 4)) {                       // Si se cumplen las condiciones, se procede a despejar
-                    despejarAdyacentes(pFila, pColumna);
-                }
-            }                                                                   // Cualquier otro caso es ignorado
+                    if (banderasAdyacentes == calcularMinasAdyacentes(pFila,pColumna)) despejarAdyacentes(pFila, pColumna);    // Si se cumplen las condiciones, se procede a despejar
+                    break;
+            }   //Se ignoran el resto de casos
         }
     }
 

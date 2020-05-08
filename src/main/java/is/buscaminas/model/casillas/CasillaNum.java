@@ -31,13 +31,6 @@ public class CasillaNum extends Casilla {
         return (minasAdyacentes == 0);
     }
 
-    public int hallarCombinacion()
-    {
-        //Pre:
-        //Post: Se devuelve 4 (selector de opción) + el número de minas adyacentes a esta casilla.
-        return (minasAdyacentes + 4);
-    }
-
     @Override
     public void cambiarEstado (IEstadoCasilla pEstado)
     {

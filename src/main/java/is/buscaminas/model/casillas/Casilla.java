@@ -39,16 +39,7 @@ public abstract class Casilla {
         //Pre:
         //Post: Un int indicando qué acción debe realizar la tabla
 
-        /*
-         *   IMPORTANTE: en caso de que el número sea un 4 (lo que significa que hay que despejar las adyacentes):
-         *   Se va a devolver 4 + el número de minas adyacentes a esta casilla.
-         */
-        int opcion = estadoAct.despejar(this);
-        if (this instanceof CasillaNum && (opcion == 4))        // En caso de que haya que ejecutarse la opción 4, se devuelve 4 + minas adyacentes
-        {
-            return (((CasillaNum) this).hallarCombinacion());   // Lo calcula un método de CasillaNum
-        }
-        return (opcion);                                        // En cualquier otro caso, se devuelve la orden inicial
+        return (estadoAct.despejar(this));
     }
 
     public Pair<Boolean, Boolean> marcar()
