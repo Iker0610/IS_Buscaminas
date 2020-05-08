@@ -85,7 +85,7 @@ public class Ranking {
             for (Object elem : top10) {
                 if (elem instanceof JugadorRanking) {
                     JugadorRanking jugador = (JugadorRanking) elem;
-                    fileWritter.write(jugador.getNombre() + "\t" + jugador.getPuntuacion());
+                    fileWritter.write(jugador.getNombre() + "\t" + jugador.getPuntuacion() + "\n");
                 }
             }
 
@@ -100,6 +100,7 @@ public class Ranking {
     public void addJugadorRanking (int pDificultad, String pNombre)
     {
         int puntuacionJugador = calcularPuntuacion(pDificultad);
+        System.out.println("PUNTUACION "+puntuacionJugador);
         JugadorRanking jugador = new JugadorRanking(pNombre, puntuacionJugador);
         lJugadoresPorDificultad[pDificultad - 1].add(jugador);
         actualizarRanking(pDificultad);
@@ -121,6 +122,6 @@ public class Ranking {
 
     private int calcularPuntuacion (int pDificultad)
     {
-        return (1 / Contador.getContador().getSeconds()) * pDificultad * 2000;
+        return ((pDificultad*2000) / Contador.getContador().getSeconds());
     }
 }

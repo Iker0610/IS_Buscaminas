@@ -190,7 +190,7 @@ public class Partida extends Application {
 
         //Si el usuario ha ganado la partida se envían los datos para actualizar el ranking
         if (pVictoria){
-            Ranking.getRanking().addJugadorRanking(dificultad,nombreUsuario);
+            Ranking.getRanking().addJugadorRanking(dificultad, nombreUsuario);
 
             //Se abre la ventana del ranking
             this.mostrarRanking();
