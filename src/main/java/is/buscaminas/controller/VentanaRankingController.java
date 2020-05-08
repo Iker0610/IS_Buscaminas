@@ -1,6 +1,7 @@
 package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
+import is.buscaminas.model.Contador;
 import is.buscaminas.model.estructurasDatos.Node;
 import is.buscaminas.model.estructurasDatos.OrderedDoubleLinkedList;
 import is.buscaminas.model.ranking.JugadorRanking;
@@ -48,6 +49,7 @@ public class VentanaRankingController {
     public void pulsarAceptar ()
     {
         Stage stage = (Stage) aceptar.getScene().getWindow();
+        Contador.getContador().continuar();
         stage.close();
     }
 }

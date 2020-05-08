@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,6 +69,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="is.buscaminas.model.ranking" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
