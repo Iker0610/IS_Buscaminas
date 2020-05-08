@@ -23,12 +23,19 @@ public class CasillaNum extends Casilla {
     }
 
     //Metodos
-    public boolean estaDespejado ()
+    public boolean tieneCeroMinasAdyacentes()
     {
         //Pre:
         //Post: Si no hay minas adyacentes devuelve true, si no false
 
         return (minasAdyacentes == 0);
+    }
+
+    public int hallarCombinacion()
+    {
+        //Pre:
+        //Post: Se devuelve 4 (selector de opción) + el número de minas adyacentes a esta casilla.
+        return (minasAdyacentes + 4);
     }
 
     @Override

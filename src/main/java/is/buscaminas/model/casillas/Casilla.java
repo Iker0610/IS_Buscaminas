@@ -1,6 +1,7 @@
 package is.buscaminas.model.casillas;
 
 import is.buscaminas.model.casillas.estados.IEstadoCasilla;
+import is.buscaminas.model.casillas.estados.Marcado;
 import is.buscaminas.model.casillas.estados.Oculto;
 import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
@@ -32,12 +33,22 @@ public abstract class Casilla {
 
 
     //Metodos
-    public Pair<Boolean, Boolean> despejar ()
+
+    public int despejar ()
     {
         //Pre:
-        //Post: Un par de booleans indicando qué acción debe realizar la tabla
+        //Post: Un int indicando qué acción debe realizar la tabla
 
-        return estadoAct.despejar(this);
+        /*
+         *   IMPORTANTE: en caso de que el número sea un 4 (lo que significa que hay que despejar las adyacentes):
+         *   Se va a devolver 4 + el número de minas adyacentes a esta casilla.
+         */
+        int opcion = estadoAct.despejar(this);
+        if (this instanceof CasillaNum && (opcion == 4))        // En caso de que haya que ejecutarse la opción 4, se devuelve 4 + minas adyacentes
+        {
+            return (((CasillaNum) this).hallarCombinacion());   // Lo calcula un método de CasillaNum
+        }
+        return (opcion);                                        // En cualquier otro caso, se devuelve la orden inicial
     }
 
     public Pair<Boolean, Boolean> marcar()
@@ -55,6 +66,15 @@ public abstract class Casilla {
 
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName());
+    }
+
+    public boolean estaMarcada()
+    {
+        //Pre:
+        //Post: Se devuelve true si esta casilla está marcada
+
+        //TODO pensar sobre alternativas a este método que no atenten contra la ética moral de los principios de la ocultación de información. O dejarlo así.
+        return (estadoAct instanceof Marcado);
     }
 
     protected void cambiarEstado (IEstadoCasilla pEstado, int pNum)
