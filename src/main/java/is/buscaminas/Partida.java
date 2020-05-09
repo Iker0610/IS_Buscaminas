@@ -1,6 +1,7 @@
 package is.buscaminas;
 
 import is.buscaminas.model.Contador;
+import is.buscaminas.model.SFXPlayer;
 import is.buscaminas.model.Tablero;
 import is.buscaminas.model.ranking.Ranking;
 import javafx.application.Application;
@@ -83,6 +84,8 @@ public class Partida extends Application {
 
         // Se muestra la pantalla de Login
         iniciarLogin();
+
+        SFXPlayer.getSFXPlayer().setBackgroundTheme("SuperMarioBrosMedley");
     }
 
     //Singleton
@@ -206,7 +209,9 @@ public class Partida extends Application {
 
             //Se abre la ventana del ranking
             this.mostrarRanking();
+            SFXPlayer.getSFXPlayer().playSFX("victory");
         }
+        else SFXPlayer.getSFXPlayer().playSFX("gameover");
 
         //Se para y resetea el contador
         Contador.getContador().reset();
