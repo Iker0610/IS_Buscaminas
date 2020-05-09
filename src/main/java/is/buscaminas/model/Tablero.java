@@ -247,6 +247,7 @@ public class Tablero {
                 else {
                     //En caso de bomba
                     Partida.getPartida().finalizarPartida(false);
+                    mostrarMinas();
                 }
             }
         }
@@ -279,6 +280,13 @@ public class Tablero {
                 else {                              //Si se ha desmarcado una casilla (Segundo boolean = FALSE) se aumenta el numero de banderas "numMinasPorMarcar"
                     lObservers.firePropertyChange("numMinasPorMarcar", numMinasPorMarcar, ++numMinasPorMarcar);
                 }
+            }
+        }
+    }
+    private void mostrarMinas(){
+        for (int fila = 0; fila <= matrizCasillas.length-1; fila++) {
+            for (int columna = 0; columna <= matrizCasillas[0].length-1; columna++) {
+                matrizCasillas[fila][columna].verMinas();
             }
         }
     }

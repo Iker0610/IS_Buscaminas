@@ -30,4 +30,5 @@ public class Oculto implements IEstadoCasilla {
         pCasilla.cambiarEstado(new Marcado());
         return new Pair<>(true,true);
     }
+
 }

@@ -190,7 +190,7 @@ public class Partida extends Application {
     public void finalizarPartida (boolean pVictoria)
     {
         //Pre: Un boolean indicando si el jugador a ganado o no
-        //Post: Se ha finalizado la partida
+        //Post: Se ha finalizado la partida y se han mostrado todas las minas ocultas
 
         //Se indica que no hay partidas activas
         partidaActiva = false;

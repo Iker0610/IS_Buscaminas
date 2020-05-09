@@ -1,7 +1,6 @@
 package is.buscaminas.model.casillas;
 
-import is.buscaminas.model.casillas.estados.IEstadoCasilla;
-import is.buscaminas.model.casillas.estados.Oculto;
+import is.buscaminas.model.casillas.estados.*;
 import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
@@ -56,7 +55,6 @@ public abstract class Casilla {
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName());
     }
-
     protected void cambiarEstado (IEstadoCasilla pEstado, int pNum)
     {
         //Pre: Un estado y un número entero indicando las minas adyacentes
@@ -64,5 +62,17 @@ public abstract class Casilla {
 
         estadoAct = pEstado;
         lObservers.firePropertyChange("estado", null, pEstado.getClass().getSimpleName() + pNum);
+    }
+
+    public void verMinas(){
+        if(estadoAct.getClass().getSimpleName().toString().equals("Oculto") && this instanceof CasillaMina){
+            cambiarEstado(new MinaSinMarcar());
+        }
+        else if (estadoAct.getClass().getSimpleName().toString().equals("Marcado") && this instanceof CasillaNum){
+            cambiarEstado(new MarcadoIncorrecto());
+        }
+        else if (estadoAct.getClass().getSimpleName().toString().equals("Interrogacion") && this instanceof CasillaMina){
+            cambiarEstado(new MinaSinMarcar());
+        }
     }
 }
