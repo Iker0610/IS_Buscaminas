@@ -231,25 +231,31 @@ public class Tablero {
             switch (result) {
                 case 1: // Se ha despejado una casilla no-mina
                     casillasPorDespejar--;
+                    if (casillasPorDespejar==0) Partida.getPartida().finalizarPartida(true);
                     break;
                 case 2: // Se ha despejado una mina
                     Partida.getPartida().finalizarPartida(false);
                     break;
                 case 3: // Despejar alrededor normal
                     despejarAlrededor(pFila, pColumna);
+                    casillasPorDespejar--;
+                    if (casillasPorDespejar==0) Partida.getPartida().finalizarPartida(true); // Debería saltar un logro si ganas por esta llamada
                     break;
                 case 4: // Despejar inmediatas adyacentes
-                    int banderasAdyacentes = 0;
+                    int banderasAdyacentes= 0;  // Contador de las casillas marcadas
+                    int minasAdyacentes = 0;    // Contador de las minas
                     for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
                         for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
-                            if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
-                                    columna < matrizCasillas[0].length) {
-                                if (matrizCasillas[fila][columna].estaMarcada())    // Si es casilla marcada se aumenta el numero de banderas adyacentes
-                                    banderasAdyacentes++;
+                            if (0 <= fila && fila < matrizCasillas.length &&
+                                    0 <= columna && columna < matrizCasillas[0].length) {
+                                if (matrizCasillas[fila][columna].estaMarcada()) banderasAdyacentes++;          // Si es casilla marcada se aumenta el numero de banderas adyacentes
+                                if (matrizCasillas[fila][columna] instanceof CasillaMina) minasAdyacentes++;    // Si la casilla es una mina incrementa el contador de minas
                             }
                         }
                     }
-                    if (banderasAdyacentes == calcularMinasAdyacentes(pFila,pColumna)) despejarAdyacentes(pFila, pColumna);    // Si se cumplen las condiciones, se procede a despejar
+                    if (banderasAdyacentes == minasAdyacentes) despejarAdyacentes(pFila, pColumna);     // Si el número de minas adyacentes es igual al número de casillas
+                    break;                                                                              // con banderas, se procede a despejar las casillas
+                default:
                     break;
             }   //Se ignoran el resto de casos
         }
@@ -263,10 +269,9 @@ public class Tablero {
         for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
             for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                 if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
-                        columna < matrizCasillas[0].length && ((fila!=pFila)||(columna!=pColumna))) { //no se intenta despejar la casilla central porque ya se ha despejado
-
-
-                    despejarCasilla(fila, columna);
+                        columna < matrizCasillas[0].length) {                       // La casilla está en el tablero.
+                    if (!matrizCasillas[fila][columna].estaDespejada()) despejarCasilla(fila, columna);             // La casilla no está despejada. Aumenta la eficiencia del programa,
+                                                                                                                    // además evita loops innecesarios al mandar despejar casillas
                 }
             }
         }
@@ -288,12 +293,20 @@ public class Tablero {
         for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
             for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                 if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
-                        columna < matrizCasillas[0].length) {
+                        columna < matrizCasillas[0].length && (fila!=pFila ||columna!=pColumna)) { // La casilla está en el tablero. Además, no hay que despejar la casilla inicial
                     int result = matrizCasillas[fila][columna].despejar();
 
-                    if (result == 3) despejarAlrededor(pFila, pColumna);                        // Si al despejar la casilla se pide despejar las de alrededor, se hace
-                    else if(result==2) Partida.getPartida().finalizarPartida(false);   // Si se manda despejar una mina, se acaba la partida
-
+                    if (result == 3)                                                                // Si al despejar la casilla se pide despejar las de alrededor, se hace
+                    {
+                        despejarAlrededor(pFila, pColumna);
+                        casillasPorDespejar--;
+                        if (casillasPorDespejar==0) Partida.getPartida().finalizarPartida(true); // Comprobamos si se ha ganado (este sería un raro caso muy puntual)
+                    }
+                    else if(result == 2) Partida.getPartida().finalizarPartida(false);     // Si se manda despejar una mina, se acaba la partida
+                    else if(result == 1) {                                                          // Si se ha despejado una casilla num, se decrementa el contador y se comprueba
+                        casillasPorDespejar--;                                                      // si se ha ganado
+                        if (casillasPorDespejar==0) Partida.getPartida().finalizarPartida(true);
+                    }
                 }
             }
         }

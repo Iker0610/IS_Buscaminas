@@ -1,5 +1,6 @@
 package is.buscaminas.model.casillas;
 
+import is.buscaminas.model.casillas.estados.Despejado;
 import is.buscaminas.model.casillas.estados.IEstadoCasilla;
 import is.buscaminas.model.casillas.estados.Marcado;
 import is.buscaminas.model.casillas.estados.Oculto;
@@ -63,9 +64,14 @@ public abstract class Casilla {
     {
         //Pre:
         //Post: Se devuelve true si esta casilla está marcada
-
-        //TODO pensar sobre alternativas a este método que no atenten contra la ética moral de los principios de la ocultación de información. O dejarlo así.
         return (estadoAct instanceof Marcado);
+    }
+
+    public boolean estaDespejada()
+    {
+        //Pre:
+        //Post: Se devuelve true si esta casilla está despejada
+        return (estadoAct instanceof Despejado);
     }
 
     protected void cambiarEstado (IEstadoCasilla pEstado, int pNum)
