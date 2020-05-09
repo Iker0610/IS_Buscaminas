@@ -231,7 +231,7 @@ public class Partida extends Application {
 
             //Se configura el Stage
             ventanaAyuda.setTitle("Ayuda");
-            ventanaAyuda.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ayuda.jpg").toURI().toString()));
+            ventanaAyuda.getIcons().add(new Image(new File("src/main/resources/is/buscaminas/ui/assets/logo/ayuda.png").toURI().toString()));
             ventanaAyuda.setResizable(false);
             ventanaAyuda.centerOnScreen();
             ventanaAyuda.initModality(Modality.WINDOW_MODAL);   // Hace que se carge el stage como ventana emergente (ventana hija)

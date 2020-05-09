@@ -6,7 +6,6 @@ import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
 import is.buscaminas.model.casillas.CasillaTemp;
-import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeListener;
@@ -83,7 +82,7 @@ public class Tablero {
     //----------------------------------------------
     //Metodos para generar las casillas del tablero
     //----------------------------------------------
-    public void generarCasillasTablero (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones) {
+    public void generarCasillasTablero (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones) {
         //* Este método es llamado por el controller cuando el usuario hace el primer click
 
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
@@ -97,7 +96,7 @@ public class Tablero {
         generarNoMinas(pMatrizBotones);
     }
 
-    public void marcarPrevio (int pFila, int pColumna, VistaCasilla pCasillaMarcada) {
+    public void marcarPrevio (int pFila, int pColumna, PropertyChangeListener pCasillaMarcada) {
         // Si no está generado el tablero y se hace click derecho, se genera una CasillaTemp temporal
 
         //      Pre:    - Fila y columna de la primera casilla seleccionada por el jugador
@@ -112,7 +111,7 @@ public class Tablero {
 
     }
 
-    private void generarMinas (int pFila, int pColumna, VistaCasilla[][] pMatrizBotones) {
+    private void generarMinas (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones) {
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
         //     - Matriz con referencias a las casillas de la Vista
         //Post: Se generan las minas con los siguientes criterios:
@@ -153,7 +152,7 @@ public class Tablero {
         }
     }
 
-    private void generarNoMinas (VistaCasilla[][] pMatrizBotones) {
+    private void generarNoMinas (PropertyChangeListener[][] pMatrizBotones) {
         //Pre: Matriz con referencias a las casillas de la Vista
         //Post: Se han generado las casillas que no contienen minas
 

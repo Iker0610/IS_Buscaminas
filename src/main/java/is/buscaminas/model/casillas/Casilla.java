@@ -1,7 +1,6 @@
 package is.buscaminas.model.casillas;
 
 import is.buscaminas.model.casillas.estados.*;
-import is.buscaminas.view.VistaCasilla;
 import javafx.util.Pair;
 
 import java.beans.PropertyChangeListener;
@@ -14,7 +13,7 @@ public abstract class Casilla {
     private PropertyChangeSupport lObservers;
 
     // Gets para subtipos de casillas
-    protected Casilla (VistaCasilla pVistaCasilla) {
+    protected Casilla (PropertyChangeListener pVistaCasilla) {
         estadoAct = new Oculto();
         lObservers = new PropertyChangeSupport(this);
         lObservers.addPropertyChangeListener(pVistaCasilla);

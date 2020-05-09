@@ -1,11 +1,11 @@
 package is.buscaminas.model.casillas;
 
-import is.buscaminas.view.VistaCasilla;
+import java.beans.PropertyChangeListener;
 
 public class CasillaMina extends Casilla {
 
     //Constructora
-    public CasillaMina (VistaCasilla pVistaCasilla){
+    public CasillaMina (PropertyChangeListener pVistaCasilla){
         super(pVistaCasilla);
     }
 

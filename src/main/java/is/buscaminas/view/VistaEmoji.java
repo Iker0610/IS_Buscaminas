@@ -17,7 +17,7 @@ public class VistaEmoji extends Button implements PropertyChangeListener {
     // - Elemento UI dedicado al emoji del buscaminas
 
     //Atributos
-    private static final int size = 35;
+    private static final int size = 70;
 
     public VistaEmoji ()
     {
