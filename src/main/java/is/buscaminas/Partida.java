@@ -182,7 +182,6 @@ public class Partida extends Application {
 
         //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
         lObservers.firePropertyChange("estadoPartida", null, pVictoria);
-        Tablero.getTablero().mostrarMinas();
     }
 
 
