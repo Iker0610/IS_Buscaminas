@@ -242,21 +242,18 @@ public class Tablero {
                     if (casillasPorDespejar==0) Partida.getPartida().finalizarPartida(true); // Debería saltar un logro si ganas por esta llamada
                     break;
                 case 4: // Despejar inmediatas adyacentes
-                    int banderasAdyacentes= 0;  // Contador de las casillas marcadas
-                    int minasAdyacentes = 0;    // Contador de las minas
+                    int relacionMinasBanderas= 0;  // Contador de las casillas marcadas
                     for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
                         for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                             if (0 <= fila && fila < matrizCasillas.length &&
                                     0 <= columna && columna < matrizCasillas[0].length) {
-                                if (matrizCasillas[fila][columna].estaMarcada()) banderasAdyacentes++;          // Si es casilla marcada se aumenta el numero de banderas adyacentes
-                                if (matrizCasillas[fila][columna] instanceof CasillaMina) minasAdyacentes++;    // Si la casilla es una mina incrementa el contador de minas
+                                if (matrizCasillas[fila][columna].estaMarcada()) relacionMinasBanderas++;          // Si es casilla marcada se aumenta el numero de banderas adyacentes
+                                if (matrizCasillas[fila][columna] instanceof CasillaMina) relacionMinasBanderas--;    // Si la casilla es una mina incrementa el contador de minas
                             }
                         }
                     }
-                    if (banderasAdyacentes == minasAdyacentes) despejarAdyacentes(pFila, pColumna);     // Si el número de minas adyacentes es igual al número de casillas
+                    if (relacionMinasBanderas == 0) despejarAdyacentes(pFila, pColumna);     // Si el número de minas adyacentes es igual al número de casillas
                     break;                                                                              // con banderas, se procede a despejar las casillas
-                default:
-                    break;
             }   //Se ignoran el resto de casos
         }
     }
