@@ -1,6 +1,7 @@
 package is.buscaminas;
 
 import is.buscaminas.model.Contador;
+import is.buscaminas.model.SFXPlayer;
 import is.buscaminas.model.Tablero;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -65,6 +66,8 @@ public class Partida extends Application {
 
         // Se muestra la pantalla de Login
         iniciarLogin();
+
+        SFXPlayer.getSFXPlayer().setBackgroundTheme("SuperMarioBrosMedley");
     }
 
     //Singleton
@@ -182,6 +185,10 @@ public class Partida extends Application {
 
         //Se avisa a los observers que ha finalizado la partida y cual ha sido el resultado
         lObservers.firePropertyChange("estadoPartida", null, pVictoria);
+
+        //Se activa el efecto de sonido
+        if (pVictoria) SFXPlayer.getSFXPlayer().playSFX("victory");
+        else SFXPlayer.getSFXPlayer().playSFX("gameover");
     }
 
 

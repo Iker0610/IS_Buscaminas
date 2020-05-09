@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/MostrarMinas" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/SFXPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/themes/SuperMarioBrosMedley.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaAccesoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaAccesoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,14 +38,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\DEV\Proyectos UNI\IS_Buscaminas\.idea" />
-      </set>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ag6kncXPhFQUjguwklkyHWafBm" />
   <component name="ProjectLevelVcsManager">
@@ -33,13 +51,13 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/themes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -49,6 +67,17 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/effects" />
+      <recent name="$PROJECT_DIR$/src/main/resources/is/buscaminas/" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/themes" />
+      <recent name="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx" />
+      <recent name="$PROJECT_DIR$/src/main/java/is/buscaminas/model" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -95,39 +124,75 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/MostrarMinas" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Actualización de la ayuda" />
     <option name="LAST_COMMIT_MESSAGE" value="Actualización de la ayuda" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1579" y="355" width="725" height="410" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589024307270">
+      <screen x="54" y="27" width="3786" height="1053" />
+    </state>
+    <state x="1579" y="355" width="725" height="410" key="#com.intellij.fileTypes.FileTypeChooser/54.27.3786.1053@54.27.3786.1053" timestamp="1589024307270" />
     <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1587147936157">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1587147936157" />
+    <state x="1573" y="127" width="1219" height="853" maximized="true" key="DiffContextDialog" timestamp="1589018188331">
+      <screen x="54" y="27" width="3786" height="1053" />
+    </state>
+    <state x="1573" y="127" width="1219" height="853" maximized="true" key="DiffContextDialog/54.27.3786.1053@54.27.3786.1053" timestamp="1589018188331" />
     <state x="635" y="229" key="FileChooserDialogImpl" timestamp="1587145158729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145158729" />
-    <state width="2528" height="281" key="GridCell.Tab.0.bottom" timestamp="1587150090844">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state width="1847" height="275" key="GridCell.Tab.0.bottom" timestamp="1589024232253">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
     <state width="2528" height="281" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090844" />
-    <state width="2528" height="281" key="GridCell.Tab.0.center" timestamp="1587150090843">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state width="1847" height="275" key="GridCell.Tab.0.bottom/54.27.3786.1053@54.27.3786.1053" timestamp="1589024232253" />
+    <state width="1847" height="275" key="GridCell.Tab.0.center" timestamp="1589024232252">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
     <state width="2528" height="281" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090843" />
-    <state width="2528" height="281" key="GridCell.Tab.0.left" timestamp="1587150090843">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state width="1847" height="275" key="GridCell.Tab.0.center/54.27.3786.1053@54.27.3786.1053" timestamp="1589024232252" />
+    <state width="1847" height="275" key="GridCell.Tab.0.left" timestamp="1589024232249">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
     <state width="2528" height="281" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090843" />
-    <state width="2528" height="281" key="GridCell.Tab.0.right" timestamp="1587150090844">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state width="1847" height="275" key="GridCell.Tab.0.left/54.27.3786.1053@54.27.3786.1053" timestamp="1589024232249" />
+    <state width="1847" height="275" key="GridCell.Tab.0.right" timestamp="1589024232253">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587146820427" />
     <state width="2528" height="281" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1587150090844" />
+    <state width="1847" height="275" key="GridCell.Tab.0.right/54.27.3786.1053@54.27.3786.1053" timestamp="1589024232253" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1587145784290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
