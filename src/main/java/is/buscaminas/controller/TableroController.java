@@ -37,8 +37,8 @@ public class TableroController {
         //Post: Se ha generado y configurado el trablero
 
         //Se configura el espacio entre elementos del GridPane
-        tableroCasillas.setVgap(0);
-        tableroCasillas.setHgap(0);
+        tableroCasillas.setVgap(1);
+        tableroCasillas.setHgap(1);
 
         //Se crea el evento que se ejecutará al despejar por primera vez una casilla (antes de despejarla en el modelo)
         EventHandler<MouseEvent> primerClick = new EventHandler<>() {
