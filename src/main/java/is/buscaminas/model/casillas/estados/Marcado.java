@@ -8,12 +8,12 @@ import javafx.util.Pair;
 public class Marcado implements IEstadoCasilla{
 
     @Override
-    public Pair<Boolean, Boolean> despejar(Casilla pCasilla)
+    public int despejar(Casilla pCasilla)
     {
         //Pre: Se recibe una casilla para despejar
-        //Post: Puesto que la casilla está marcada, no se realiza ninguna acción, por lo que se devuelve el par (false,false)
+        //Post: Puesto que la casilla está marcada, no se realiza ninguna acción, por lo que se devuelve 0
 
-        return new Pair<>(false,false);
+        return 0;
     }
 
     @Override

@@ -10,11 +10,10 @@ public class CasillaTemp extends Casilla{
     }
 
     @Override
-    public Pair<Boolean, Boolean> despejar ()
+    public int despejar ()
     {
         //Pre:
-        //Post: Un par de booleans indicando qué acción debe realizar la tabla
-
-        return new Pair<>(false,false);
+        //Post: Devuelve 0 indicando que no hay que hacer nada. Esta opción nunca debería *debería* presentarse. Pero por si las moscas.
+        return 0;
     }
 }

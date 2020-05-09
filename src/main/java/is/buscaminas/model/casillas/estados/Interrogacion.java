@@ -8,23 +8,23 @@ import javafx.util.Pair;
 public class Interrogacion implements IEstadoCasilla {
 
     @Override
-    public Pair<Boolean, Boolean> despejar (Casilla pCasilla) {
+    public int despejar (Casilla pCasilla) {
         //Pre: Recibe una casilla para despejar
-        //Post: Dependiendo del tipo de casilla devuelve un par de booleans diferente (ver tabla valores en el método despejar de Tabla).
+        //Post: Dependiendo del tipo de casilla devuelve número diferente (ver tabla valores en el método despejar de Tabla).
 
         pCasilla.cambiarEstado(new Despejado());
-        if (pCasilla instanceof CasillaNum) {
-            return new Pair<>(((CasillaNum) pCasilla).estaDespejado(), true);
+        if (pCasilla instanceof CasillaNum)                                     // Si no es mina
+        {
+            if (((CasillaNum) pCasilla).tieneCeroMinasAdyacentes()) return 3;       // si tiene 0 minas adyacentes
+            else return 1;                                                          // Si tiene alguna mina adyacente
         }
-        else {
-            return new Pair<>(true, false);
-        }
+        else return 2;                                                          // Si es mina
     }
 
     @Override
     public Pair<Boolean, Boolean> marcar (Casilla pCasilla) {
         //Pre: Se recibe una casilla para marcar
-        //Post: Se cambia el estado a oculto. Como la casilla interrogación no cuenta como marcada, se devuelve (falase,false)
+        //Post: Se cambia el estado a oculto. Como la casilla interrogación no cuenta como marcada, se devuelve (false,false)
 
         pCasilla.cambiarEstado(new Oculto());
         return new Pair<>(false, false);

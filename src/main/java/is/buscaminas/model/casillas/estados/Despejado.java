@@ -6,12 +6,12 @@ import javafx.util.Pair;
 public class Despejado implements IEstadoCasilla {
 
     @Override
-    public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
+    public int despejar(Casilla pCasilla)
     {
         //Pre: Una casilla
-        //Post: Devuelve (false,false), indicando que la casilla ya esta despejada por lo que no tiene que hacer nada
+        //Post: Devuelve 4, indicando que la casilla ya esta despejada, así que se deben comprobar las inmediatas adyacentes
 
-        return new Pair<>(false,false);
+        return 4;
     }
 
     @Override

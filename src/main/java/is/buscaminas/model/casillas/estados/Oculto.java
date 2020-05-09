@@ -8,18 +8,18 @@ import javafx.util.Pair;
 public class Oculto implements IEstadoCasilla {
 
     @Override
-    public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
+    public int despejar(Casilla pCasilla)
     {
         //Pre: Recibe una casilla para despejar
-        //Post: Dependiendo del tipo de casilla devuelve un par de booleans diferente (ver tabla valores en el método despejar de Tabla).
+        //Post: Dependiendo del tipo de casilla devuelve un número diferente (ver tabla valores en el método despejar de Tabla).
 
         pCasilla.cambiarEstado(new Despejado());
-        if (pCasilla instanceof CasillaNum) {
-            return new Pair<>(((CasillaNum) pCasilla).estaDespejado(), true);
+        if (pCasilla instanceof CasillaNum)                                     // Si no es mina
+        {
+            if (((CasillaNum) pCasilla).tieneCeroMinasAdyacentes()) return 3;       // si tiene 0 minas adyacentes
+            else return 1;                                                          // Si tiene alguna mina adyacente
         }
-        else {
-            return new Pair<>(true, false);
-        }
+        else return 2;                                                          // Si es mina
     }
 
     @Override

@@ -23,7 +23,7 @@ public class CasillaNum extends Casilla {
     }
 
     //Metodos
-    public boolean estaDespejado ()
+    public boolean tieneCeroMinasAdyacentes()
     {
         //Pre:
         //Post: Si no hay minas adyacentes devuelve true, si no false
