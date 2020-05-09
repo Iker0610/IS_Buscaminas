@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaRankingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaRankingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MarcadoIncorrecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MarcadoIncorrecto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MinaSinMarcar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MinaSinMarcar.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,13 +25,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\DEV\Proyectos UNI\IS_Buscaminas\.idea" />
-      </set>
-    </option>
   </component>
   <component name="ProjectId" id="1ag6kncXPhFQUjguwklkyHWafBm" />
   <component name="ProjectLevelVcsManager">
@@ -69,18 +57,6 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="is.buscaminas.model.ranking" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Partida" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -151,13 +127,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Actualización de la ayuda" />
@@ -171,10 +146,11 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="713" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588850459436" />
-    <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1588801234688">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state x="1597" y="263" width="374" height="592" key="#com.intellij.ide.util.MemberChooser" timestamp="1589045191346">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588801234688" />
+    <state x="1597" y="263" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/54.27.3786.1053@54.27.3786.1053" timestamp="1589045191346" />
     <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1588871378322">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -220,15 +196,24 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="3797" height="329" key="GridCell.Tab.1.right/0.0.3840.1040@0.0.3840.1040" timestamp="1588872860078" />
+    <state x="724" y="121" width="3028" height="879" key="MergeDialog" timestamp="1589044286743">
+      <screen x="54" y="27" width="3786" height="1053" />
+    </state>
+    <state x="724" y="121" width="3028" height="879" key="MergeDialog/54.27.3786.1053@54.27.3786.1053" timestamp="1589044286743" />
+    <state x="1827" y="421" width="831" height="271" key="MultipleFileMergeDialog" timestamp="1589044315046">
+      <screen x="54" y="27" width="3786" height="1053" />
+    </state>
+    <state x="1827" y="421" width="831" height="271" key="MultipleFileMergeDialog/54.27.3786.1053@54.27.3786.1053" timestamp="1589044315046" />
     <state x="922" y="122" width="1024" height="852" key="SettingsEditor" timestamp="1587657665205">
       <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145784290" />
     <state x="922" y="122" width="1024" height="852" key="SettingsEditor/54.27.3786.1053@54.27.3786.1053" timestamp="1587657665205" />
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1588853501368">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589045143235">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1588853501368" />
+    <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2/54.27.3786.1053@54.27.3786.1053" timestamp="1589045143235" />
     <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588868026430">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>

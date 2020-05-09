@@ -4,15 +4,19 @@ import is.buscaminas.model.casillas.Casilla;
 import javafx.util.Pair;
 
 public class MinaSinMarcar implements IEstadoCasilla {
-    public Pair<Boolean, Boolean> despejar (Casilla pCasilla)
+
+    @Override
+    public int despejar (Casilla pCasilla)
     {
-        return null;
+        return 0;
     }
 
     @Override
     public Pair<Boolean, Boolean> marcar(Casilla pCasilla)
     {
-        return null;
+        //Pre: Una casilla
+        //Post: Devuelve 0 ya que no se ha marcado ni desmarcado la casilla
+        return new Pair<>(false,false);
     }
 
     @Override
