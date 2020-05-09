@@ -1,6 +1,7 @@
 package is.buscaminas.model.casillas.estados;
 
 import is.buscaminas.model.casillas.Casilla;
+import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
 import javafx.util.Pair;
 
@@ -31,4 +32,8 @@ public class Oculto implements IEstadoCasilla {
         return new Pair<>(true,true);
     }
 
+    @Override
+    public void verMinas (Casilla pCasilla) {
+        if (pCasilla instanceof CasillaMina) pCasilla.cambiarEstado(new MinaSinMarcar());
+    }
 }

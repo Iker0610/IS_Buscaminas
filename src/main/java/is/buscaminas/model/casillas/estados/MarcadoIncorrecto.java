@@ -15,4 +15,7 @@ public class MarcadoIncorrecto implements IEstadoCasilla {
     {
         return null;
     }
+
+    @Override
+    public void verMinas (Casilla pCasilla) {}
 }

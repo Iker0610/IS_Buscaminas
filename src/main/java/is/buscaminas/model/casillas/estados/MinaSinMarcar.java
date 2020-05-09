@@ -15,4 +15,6 @@ public class MinaSinMarcar implements IEstadoCasilla {
         return null;
     }
 
+    @Override
+    public void verMinas (Casilla pCasilla) {}
 }
