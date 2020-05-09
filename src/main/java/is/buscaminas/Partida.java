@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.w3c.dom.Document;
@@ -17,9 +18,12 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.awt.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -52,6 +56,14 @@ public class Partida extends Application {
     {
         //Pre:
         //Post: Se inicia la aplicación
+
+        //Se carga la fuente
+        try {
+            Font.loadFont(new FileInputStream(new File("src/main/resources/is/buscaminas/fuentes/MarioFont.ttf")), 20);
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         //Se guarda la instancia
         mPartida = this;

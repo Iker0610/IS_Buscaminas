@@ -55,7 +55,7 @@ public class VentanaRankingController {
     public void pulsarAceptar ()
     {
         Stage stage = (Stage) aceptar.getScene().getWindow();
-        Contador.getContador().continuar();
+        Contador.getContador().continuar(); //Reanudar contador
         stage.close();
     }
 }

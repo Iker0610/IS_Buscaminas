@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 import java.awt.*;
@@ -55,21 +56,25 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
     {
         int pos = 0;
         for (JugadorRanking jugador : pLJugadores) {
-            String nombre = "------";
-            String puntuacion = "------";
+            String nombre = "   -";
+            String puntuacion = "-";
             if (jugador != null) {
                 nombre = jugador.getNombre();
                 puntuacion = Integer.toString(jugador.getPuntuacion());
             }
             //Creamos los label ajustando el tamaño
             Label nombreLabel = new Label(nombre);
-            nombreLabel.setFont(Font.font("Consolas",25));
+            nombreLabel.setFont(Font.font("MarioFont",28));
+            nombreLabel.setTextFill(Color.color(1,1,1));
             Label puntuacionLabel = new Label(puntuacion);
-            puntuacionLabel.setFont(Font.font("Consolas",25));
+            puntuacionLabel.setFont(Font.font("MarioFont",28));
+            puntuacionLabel.setTextFill(Color.color(1,1,1));
 
             // Por cada usuario, insertamos la imagen de su posición, su nombre y puntuación.
-            this.add(nombreLabel, 1, pos);
-            this.add(puntuacionLabel, 2, pos++);
+            this.add(new Label("                  "), 1, pos);
+            this.add(nombreLabel, 2, pos);
+            this.add(new Label("        "), 3, pos);
+            this.add(puntuacionLabel, 4, pos++);
         }
     }
 }
