@@ -1,6 +1,8 @@
 package is.buscaminas.model.casillas.estados;
 
 import is.buscaminas.model.casillas.Casilla;
+import is.buscaminas.model.casillas.CasillaMina;
+import is.buscaminas.model.casillas.CasillaNum;
 import javafx.util.Pair;
 
 public class Marcado implements IEstadoCasilla{
@@ -22,5 +24,10 @@ public class Marcado implements IEstadoCasilla{
 
         pCasilla.cambiarEstado(new Interrogacion());
         return new Pair<>(true,false);
+    }
+
+    @Override
+    public void verMinas (Casilla pCasilla) {
+        if (pCasilla instanceof CasillaNum) pCasilla.cambiarEstado(new MarcadoIncorrecto());
     }
 }

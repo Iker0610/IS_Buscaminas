@@ -21,4 +21,7 @@ public class Despejado implements IEstadoCasilla {
         //Post: Devuelve 0 ya que no se ha marcado ni desmarcado la casilla
         return new Pair<>(false,false); //No ocurre nada si se manda marcar una casilla despejada
     }
+
+    @Override
+    public void verMinas (Casilla pCasilla) {}
 }

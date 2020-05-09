@@ -65,14 +65,6 @@ public abstract class Casilla {
     }
 
     public void verMinas(){
-        if(estadoAct.getClass().getSimpleName().toString().equals("Oculto") && this instanceof CasillaMina){
-            cambiarEstado(new MinaSinMarcar());
-        }
-        else if (estadoAct.getClass().getSimpleName().toString().equals("Marcado") && this instanceof CasillaNum){
-            cambiarEstado(new MarcadoIncorrecto());
-        }
-        else if (estadoAct.getClass().getSimpleName().toString().equals("Interrogacion") && this instanceof CasillaMina){
-            cambiarEstado(new MinaSinMarcar());
-        }
+        estadoAct.verMinas(this);
     }
 }
