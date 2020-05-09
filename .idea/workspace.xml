@@ -27,10 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/SFXPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/themes/SuperMarioBrosMedley.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/effects/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/effects/hereWeGo.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/sfx/effects/victory.wav" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -118,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587147937792</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="SFX: Se ha añadido la clase sound effect y algunos .mp3 y .wav">
+      <created>1589024392580</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589024392580</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,18 +156,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Actualización de la ayuda" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización de la ayuda" />
+    <MESSAGE value="SFX: Se ha añadido la clase sound effect y algunos .mp3 y .wav" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFX: Se ha añadido la clase sound effect y algunos .mp3 y .wav" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1579" y="355" width="725" height="410" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589024307270">
       <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="1579" y="355" width="725" height="410" key="#com.intellij.fileTypes.FileTypeChooser/54.27.3786.1053@54.27.3786.1053" timestamp="1589024307270" />
-    <state x="905" y="118" key="CommitChangelistDialog2" timestamp="1587147936157">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state x="946" y="146" width="912" height="911" key="CommitChangelistDialog2" timestamp="1589024391856">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="905" y="118" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1587147936157" />
+    <state x="946" y="146" width="912" height="911" key="CommitChangelistDialog2/54.27.3786.1053@54.27.3786.1053" timestamp="1589024391856" />
     <state x="1573" y="127" width="1219" height="853" maximized="true" key="DiffContextDialog" timestamp="1589018188331">
       <screen x="54" y="27" width="3786" height="1053" />
     </state>
@@ -197,10 +207,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145784290" />
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2" timestamp="1587147939288">
-      <screen x="0" y="0" width="3840" height="1040" />
+    <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589024402080">
+      <screen x="54" y="27" width="3786" height="1053" />
     </state>
     <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1587147939288" />
+    <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2/54.27.3786.1053@54.27.3786.1053" timestamp="1589024402080" />
     <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1587150374023">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
