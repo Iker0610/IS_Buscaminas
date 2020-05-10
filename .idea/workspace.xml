@@ -1,60 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="Limpieza de imports y demás">
+    <list default="true" id="738b99d2-2ee9-42c3-8538-1ba6bad1941a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking1.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking1.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking2.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking2.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/rankings/ranking3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking1.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking1.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking2.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking2.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/rankings/ranking3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/.out/production/IS_Buscaminas/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/Partida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/MenuAyudaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/PanelMenuBuscaminasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaRankingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/controller/VentanaRankingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Contador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/SFXPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/SFXPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/Tablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaMina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/CasillaTemp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Despejado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Despejado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/IEstadoCasilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Interrogacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Interrogacion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Marcado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Marcado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MarcadoIncorrecto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MarcadoIncorrecto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MinaSinMarcar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/MinaSinMarcar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Oculto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/casillas/estados/Oculto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/estructurasDatos/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/JugadorRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/JugadorRanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/model/ranking/Ranking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaAyuda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaAyuda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCifra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaCifra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaDisplay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/is/buscaminas/view/VistaRanking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking1.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking1.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking2.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking2.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking3.tsv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/rankings/ranking3.tsv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/panelMenuBuscaminas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/tablero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaAcceso.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaMenuAyuda.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaPartidaBase.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/is/buscaminas/ui/fxml/ventanaRanking.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588871381238</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Limpieza de imports y demás">
+      <created>1589070286342</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589070286342</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,10 +161,10 @@
     </state>
     <state x="1565" y="233" key="#com.intellij.ide.util.MemberChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1588801234688" />
     <state x="1597" y="263" width="374" height="592" key="#com.intellij.ide.util.MemberChooser/54.27.3786.1053@54.27.3786.1053" timestamp="1589045191346" />
-    <state x="905" y="118" width="1876" height="811" key="CommitChangelistDialog2" timestamp="1589070243404">
+    <state x="905" y="118" width="1876" height="811" key="CommitChangelistDialog2" timestamp="1589070283950">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="905" y="118" width="1876" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1589070243404" />
+    <state x="905" y="118" width="1876" height="811" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1589070283950" />
     <state x="299" y="90" key="DiffContextDialog" timestamp="1589070132778">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -216,26 +174,26 @@
     </state>
     <state x="635" y="229" key="FileChooserDialogImpl/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145158729" />
     <state x="1306" y="259" width="424" height="491" key="FileChooserDialogImpl/54.27.3786.1053@54.27.3786.1053" timestamp="1587657647940" />
-    <state width="1598" height="983" key="GridCell.Tab.0.bottom" timestamp="1589070247840">
+    <state width="1598" height="983" key="GridCell.Tab.0.bottom" timestamp="1589071170652">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1589069076008" />
-    <state width="1598" height="983" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1589070247840" />
-    <state width="1598" height="983" key="GridCell.Tab.0.center" timestamp="1589070247840">
+    <state width="1598" height="983" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1589071170652" />
+    <state width="1598" height="983" key="GridCell.Tab.0.center" timestamp="1589071170652">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.0.center/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1589069076008" />
-    <state width="1598" height="983" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1589070247840" />
-    <state width="1598" height="983" key="GridCell.Tab.0.left" timestamp="1589070247839">
+    <state width="1598" height="983" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1589071170652" />
+    <state width="1598" height="983" key="GridCell.Tab.0.left" timestamp="1589071170652">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.0.left/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1589069076008" />
-    <state width="1598" height="983" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1589070247839" />
-    <state width="1598" height="983" key="GridCell.Tab.0.right" timestamp="1589070247840">
+    <state width="1598" height="983" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1589071170652" />
+    <state width="1598" height="983" key="GridCell.Tab.0.right" timestamp="1589071170652">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1877" height="180" key="GridCell.Tab.0.right/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1589069076008" />
-    <state width="1598" height="983" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1589070247840" />
+    <state width="1598" height="983" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1589071170652" />
     <state width="1877" height="136" key="GridCell.Tab.1.bottom" timestamp="1589066694166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -269,10 +227,10 @@
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.54.1280.984@0.0.1920.1040" timestamp="1587145784290" />
     <state x="922" y="122" width="1024" height="852" key="SettingsEditor/54.27.3786.1053@54.27.3786.1053" timestamp="1587657665205" />
-    <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589045143235">
-      <screen x="54" y="27" width="3786" height="1053" />
+    <state x="871" y="256" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1589070292235">
+      <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1588853501368" />
+    <state x="871" y="256" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1589070292235" />
     <state x="913" y="286" width="800" height="535" key="Vcs.Push.Dialog.v2/54.27.3786.1053@54.27.3786.1053" timestamp="1589045143235" />
     <state x="990" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1588868026430">
       <screen x="0" y="0" width="3840" height="1040" />
