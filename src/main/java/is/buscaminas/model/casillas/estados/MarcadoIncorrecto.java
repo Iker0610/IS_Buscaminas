@@ -1,7 +1,6 @@
 package is.buscaminas.model.casillas.estados;
 
 import is.buscaminas.model.casillas.Casilla;
-import is.buscaminas.model.casillas.CasillaNum;
 import javafx.util.Pair;
 
 public class MarcadoIncorrecto implements IEstadoCasilla {
@@ -13,12 +12,13 @@ public class MarcadoIncorrecto implements IEstadoCasilla {
     }
 
     @Override
-    public Pair<Boolean, Boolean> marcar(Casilla pCasilla)
+    public Pair<Boolean, Boolean> marcar (Casilla pCasilla)
     {
         //Pre: Una casilla
         //Post: Devuelve 0 ya que no se ha marcado ni desmarcado la casilla
-        return new Pair<>(false,false);
+        return new Pair<>(false, false);
     }
+
     @Override
     public void verMinas (Casilla pCasilla) {}
 }

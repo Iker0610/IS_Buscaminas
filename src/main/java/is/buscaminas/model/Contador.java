@@ -37,7 +37,8 @@ public class Contador {
         lObservers.addPropertyChangeListener(pObserver);
     }
 
-    public int getSeconds(){
+    public int getSeconds ()
+    {
         return seconds;
     }
 

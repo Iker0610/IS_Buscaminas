@@ -3,19 +3,15 @@ package is.buscaminas.view;
 import is.buscaminas.model.ranking.JugadorRanking;
 import is.buscaminas.model.ranking.Ranking;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-import java.awt.*;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
-import java.net.URISyntaxException;
 
 public class VistaRanking extends GridPane implements PropertyChangeListener {
 
@@ -37,7 +33,7 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
             numPosicion.setMaxHeight(size);
             numPosicion.setMaxWidth(size);
 
-            Image imagenPosicion = new Image(new File("src/main/resources/is/buscaminas/ui/assets/ranking/"+ i + ".png").toURI().toString());
+            Image imagenPosicion = new Image(new File("src/main/resources/is/buscaminas/ui/assets/ranking/" + i + ".png").toURI().toString());
             BackgroundSize backgroundSize = new BackgroundSize(size, size, false, false, false, false);
             numPosicion.setBackground(new Background(new BackgroundImage(imagenPosicion, null, null, null, backgroundSize)));
 
@@ -64,11 +60,11 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
             }
             //Creamos los label ajustando el tamaño
             Label nombreLabel = new Label(nombre);
-            nombreLabel.setFont(Font.font("MarioFont",28));
-            nombreLabel.setTextFill(Color.color(1,1,1));
+            nombreLabel.setFont(Font.font("MarioFont", 28));
+            nombreLabel.setTextFill(Color.color(1, 1, 1));
             Label puntuacionLabel = new Label(puntuacion);
-            puntuacionLabel.setFont(Font.font("MarioFont",28));
-            puntuacionLabel.setTextFill(Color.color(1,1,1));
+            puntuacionLabel.setFont(Font.font("MarioFont", 28));
+            puntuacionLabel.setTextFill(Color.color(1, 1, 1));
 
             // Por cada usuario, insertamos la imagen de su posición, su nombre y puntuación.
             this.add(new Label("                  "), 1, pos);

@@ -2,9 +2,10 @@ package is.buscaminas.model.casillas;
 
 import java.beans.PropertyChangeListener;
 
-public class CasillaTemp extends Casilla{
+public class CasillaTemp extends Casilla {
 
-    public CasillaTemp(PropertyChangeListener pVistaCasilla) {
+    public CasillaTemp (PropertyChangeListener pVistaCasilla)
+    {
         super(pVistaCasilla);
     }
 

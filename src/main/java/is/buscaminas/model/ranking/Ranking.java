@@ -1,10 +1,8 @@
 package is.buscaminas.model.ranking;
 
-import is.buscaminas.Partida;
 import is.buscaminas.model.Contador;
 import is.buscaminas.model.estructurasDatos.OrderedDoubleLinkedList;
 import is.buscaminas.view.VistaRanking;
-import javafx.scene.Node;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -17,7 +15,7 @@ public class Ranking {
 
     // Atributos
     private static Ranking mRanking;
-    private OrderedDoubleLinkedList[] lJugadoresPorDificultad;
+    private OrderedDoubleLinkedList<JugadorRanking>[] lJugadoresPorDificultad;
     private PropertyChangeSupport lObservers; //lista de observers
     private VistaRanking gridPane;
 
@@ -52,7 +50,7 @@ public class Ranking {
         while (dificultadAct <= 3) {
             try {
 
-                File archivoRanking = new File( "src/main/resources/is/buscaminas/rankings/ranking" + dificultadAct + ".tsv");
+                File archivoRanking = new File("src/main/resources/is/buscaminas/rankings/ranking" + dificultadAct + ".tsv");
 
                 FileReader fr = new FileReader(archivoRanking);
                 BufferedReader br = new BufferedReader(fr);
@@ -62,7 +60,7 @@ public class Ranking {
                     //Obtenemos la información de cada jugador y la añadimos a la lista correspondiente
                     String[] datosJugador = linea.split("\t");
                     JugadorRanking jugador = new JugadorRanking(datosJugador[0], Integer.parseInt(datosJugador[1]));
-                    lJugadoresPorDificultad[dificultadAct-1].add(jugador);
+                    lJugadoresPorDificultad[dificultadAct - 1].add(jugador);
                 }
                 //Cerramos el fichero
                 fr.close();
@@ -76,7 +74,7 @@ public class Ranking {
 
     private void actualizarRanking (int pDificultad)
     {
-        Object[] top10 = lJugadoresPorDificultad[pDificultad-1].getTop10();
+        Object[] top10 = lJugadoresPorDificultad[pDificultad - 1].getTop10();
         //Escribir en el fichero
         try {
             File archivoRanking = new File("src/main/resources/is/buscaminas/rankings/ranking" + pDificultad + ".tsv");
@@ -100,7 +98,7 @@ public class Ranking {
     public void addJugadorRanking (int pDificultad, String pNombre)
     {
         int puntuacionJugador = calcularPuntuacion(pDificultad);
-        System.out.println("PUNTUACION "+puntuacionJugador);
+        System.out.println("PUNTUACION " + puntuacionJugador);
         JugadorRanking jugador = new JugadorRanking(pNombre, puntuacionJugador);
         lJugadoresPorDificultad[pDificultad - 1].add(jugador);
         actualizarRanking(pDificultad);
@@ -112,7 +110,7 @@ public class Ranking {
 
         JugadorRanking[] lista = new JugadorRanking[10];
         int i = 0;
-        for (Object elem : lJugadoresPorDificultad[pDificultad-1].getTop10()) {
+        for (Object elem : lJugadoresPorDificultad[pDificultad - 1].getTop10()) {
             if (elem instanceof JugadorRanking) {
                 lista[i++] = (JugadorRanking) elem;
             }
@@ -122,6 +120,6 @@ public class Ranking {
 
     private int calcularPuntuacion (int pDificultad)
     {
-        return ((pDificultad*2000) / Contador.getContador().getSeconds());
+        return ((pDificultad * 2000) / Contador.getContador().getSeconds());
     }
 }

@@ -2,7 +2,6 @@ package is.buscaminas.controller;
 
 
 import is.buscaminas.view.VistaAyuda;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;

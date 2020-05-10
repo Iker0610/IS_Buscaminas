@@ -17,14 +17,15 @@ public class CasillaNum extends Casilla {
         minasAdyacentes = pMinasAdyacentes;
     }
 
-    public CasillaNum (int pMinasAdyacentes, CasillaTemp pCasilla){
+    public CasillaNum (int pMinasAdyacentes, CasillaTemp pCasilla)
+    {
         //  Transforma la casilla temporal en una casilla numérica
         super(pCasilla);
         minasAdyacentes = pMinasAdyacentes;
     }
 
     //Metodos
-    public boolean tieneCeroMinasAdyacentes()
+    public boolean tieneCeroMinasAdyacentes ()
     {
         //Pre:
         //Post: Si no hay minas adyacentes devuelve true, si no false

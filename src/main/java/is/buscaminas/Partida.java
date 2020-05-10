@@ -13,13 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.awt.*;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.File;
@@ -203,7 +197,7 @@ public class Partida extends Application {
         Contador.getContador().parar();
 
         //Si el usuario ha ganado la partida se envían los datos para actualizar el ranking
-        if (pVictoria){
+        if (pVictoria) {
             Ranking.getRanking().addJugadorRanking(dificultad, nombreUsuario);
 
             //Se abre la ventana del ranking
@@ -261,7 +255,8 @@ public class Partida extends Application {
 
     }
 
-    public void mostrarRanking(){
+    public void mostrarRanking ()
+    {
         // Pre:
         // Post: se carga y muestra una ventana emergente que muestra el menú de ayuda
         try {
@@ -300,9 +295,5 @@ public class Partida extends Application {
             errorDeCarga.setOnCloseRequest((handler) -> System.exit(-1));
             errorDeCarga.show();
         }
-    }
-
-    public void cerrarRanking(){
-
     }
 }

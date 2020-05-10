@@ -1,13 +1,14 @@
 package is.buscaminas.model.ranking;
 
-public class JugadorRanking implements Comparable<JugadorRanking>{
+public class JugadorRanking implements Comparable<JugadorRanking> {
 
     // Atributos
     private String nombre;
     private int puntuacion;
 
     // Constructora
-    public JugadorRanking(String pNombre, int pPuntuacion){
+    public JugadorRanking (String pNombre, int pPuntuacion)
+    {
         nombre = pNombre;
         puntuacion = pPuntuacion;
     }

@@ -6,7 +6,7 @@ public class Node<T> {
     public Node<T> next;    // puntero al siguiente nodo de la lista
     // -------------------------------------------------------------
 
-    public Node(T dd)        // constructor
+    public Node (T dd)        // constructor
     {
         data = dd;
         next = null;

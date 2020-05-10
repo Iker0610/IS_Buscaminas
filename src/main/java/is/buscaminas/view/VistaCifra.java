@@ -21,7 +21,7 @@ public class VistaCifra extends Pane {
     private static final int height = 35;
     private static final int width = 20;
 
-    public VistaCifra()
+    public VistaCifra ()
     {
         super();
 

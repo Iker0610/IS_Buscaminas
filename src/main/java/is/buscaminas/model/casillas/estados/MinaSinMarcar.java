@@ -12,11 +12,11 @@ public class MinaSinMarcar implements IEstadoCasilla {
     }
 
     @Override
-    public Pair<Boolean, Boolean> marcar(Casilla pCasilla)
+    public Pair<Boolean, Boolean> marcar (Casilla pCasilla)
     {
         //Pre: Una casilla
         //Post: Devuelve 0 ya que no se ha marcado ni desmarcado la casilla
-        return new Pair<>(false,false);
+        return new Pair<>(false, false);
     }
 
     @Override

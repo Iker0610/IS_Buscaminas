@@ -6,7 +6,7 @@ import javafx.util.Pair;
 public class Despejado implements IEstadoCasilla {
 
     @Override
-    public int despejar(Casilla pCasilla)
+    public int despejar (Casilla pCasilla)
     {
         //Pre: Una casilla
         //Post: Devuelve 4, indicando que la casilla ya esta despejada, así que se deben comprobar las inmediatas adyacentes
@@ -15,11 +15,11 @@ public class Despejado implements IEstadoCasilla {
     }
 
     @Override
-    public Pair<Boolean, Boolean> marcar(Casilla pCasilla)
+    public Pair<Boolean, Boolean> marcar (Casilla pCasilla)
     {
         //Pre: Una casilla
         //Post: Devuelve 0 ya que no se ha marcado ni desmarcado la casilla
-        return new Pair<>(false,false); //No ocurre nada si se manda marcar una casilla despejada
+        return new Pair<>(false, false); //No ocurre nada si se manda marcar una casilla despejada
     }
 
     @Override

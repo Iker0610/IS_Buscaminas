@@ -25,17 +25,20 @@ public class Tablero {
 
 
     //Constructora
-    private Tablero () {
+    private Tablero ()
+    {
         lObservers = new PropertyChangeSupport(this);
         generarMatrizTablero();
     }
 
-    public static Tablero getTablero () {
+    public static Tablero getTablero ()
+    {
         if (mTablero == null) mTablero = new Tablero();
         return mTablero;
     }
 
-    public void iniciarTablero () {
+    public void iniciarTablero ()
+    {
         // Se crea o resetea (si ya existia) el tablero
         mTablero = new Tablero();
     }
@@ -44,7 +47,8 @@ public class Tablero {
 
     //Metodo para añadir observer del número del marcador de minas
 
-    public void addObserver (PropertyChangeListener pObserver) {
+    public void addObserver (PropertyChangeListener pObserver)
+    {
         //Pre: Un observer
         //Post: Se ha añadido el observer a la lista de observers
 
@@ -53,7 +57,8 @@ public class Tablero {
     }
 
     //Metodo para generar la matriz
-    private void generarMatrizTablero () {
+    private void generarMatrizTablero ()
+    {
         //Pre:
         //Post: - Se ha generado una matriz del tamaño indicado para el nivel de dificultad seleccionado
         //      - Se ha guardado el número de minas
@@ -82,7 +87,8 @@ public class Tablero {
     //----------------------------------------------
     //Metodos para generar las casillas del tablero
     //----------------------------------------------
-    public void generarCasillasTablero (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones) {
+    public void generarCasillasTablero (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones)
+    {
         //* Este método es llamado por el controller cuando el usuario hace el primer click
 
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
@@ -96,7 +102,8 @@ public class Tablero {
         generarNoMinas(pMatrizBotones);
     }
 
-    public void marcarPrevio (int pFila, int pColumna, PropertyChangeListener pCasillaMarcada) {
+    public void marcarPrevio (int pFila, int pColumna, PropertyChangeListener pCasillaMarcada)
+    {
         // Si no está generado el tablero y se hace click derecho, se genera una CasillaTemp temporal
 
         //      Pre:    - Fila y columna de la primera casilla seleccionada por el jugador
@@ -111,7 +118,8 @@ public class Tablero {
 
     }
 
-    private void generarMinas (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones) {
+    private void generarMinas (int pFila, int pColumna, PropertyChangeListener[][] pMatrizBotones)
+    {
         //Pre: - Fila y columna de la primera casilla seleccionada por el jugador
         //     - Matriz con referencias a las casillas de la Vista
         //Post: Se generan las minas con los siguientes criterios:
@@ -152,7 +160,8 @@ public class Tablero {
         }
     }
 
-    private void generarNoMinas (PropertyChangeListener[][] pMatrizBotones) {
+    private void generarNoMinas (PropertyChangeListener[][] pMatrizBotones)
+    {
         //Pre: Matriz con referencias a las casillas de la Vista
         //Post: Se han generado las casillas que no contienen minas
 
@@ -176,7 +185,8 @@ public class Tablero {
     }
 
 
-    private int calcularMinasAdyacentes (int pFila, int pColumna) {
+    private int calcularMinasAdyacentes (int pFila, int pColumna)
+    {
         //Pre:  La fila y la columna pertenecen a valores de la matriz
         //Post: Devuelve el número de minas adyacentes de una casilla
 
@@ -199,7 +209,8 @@ public class Tablero {
     //---------------------------------------------------------------------------
     //Metodos accesibles por el controlador a la hora de seleccionar casillas
     //---------------------------------------------------------------------------
-    public void despejarCasilla (int pFila, int pColumna) {
+    public void despejarCasilla (int pFila, int pColumna)
+    {
         //Pre:  La fila y la columna pertenecen a valores de la matriz
         //Post: - Se ha despejado la casilla en caso de poderse
 
@@ -229,8 +240,9 @@ public class Tablero {
                 case 3: // Despejar alrededor normal
                     despejarAlrededor(pFila, pColumna);
                     casillasPorDespejar--;
-                    if (casillasPorDespejar == 0)
+                    if (casillasPorDespejar == 0) {
                         Partida.getPartida().finalizarPartida(true); // Debería saltar un logro si ganas por esta llamada
+                    }
                     break;
                 case 4: // Despejar inmediatas adyacentes
                     int relacionMinasBanderas = 0;  // Contador de las casillas marcadas
@@ -238,37 +250,43 @@ public class Tablero {
                         for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                             if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
                                 columna < matrizCasillas[0].length) {
-                                if (matrizCasillas[fila][columna].estaMarcada())
+                                if (matrizCasillas[fila][columna].estaMarcada()) {
                                     relacionMinasBanderas++;          // Si es casilla marcada se aumenta el numero de banderas adyacentes
-                                if (matrizCasillas[fila][columna] instanceof CasillaMina)
+                                }
+                                if (matrizCasillas[fila][columna] instanceof CasillaMina) {
                                     relacionMinasBanderas--;    // Si la casilla es una mina incrementa el contador de minas
+                                }
                             }
                         }
                     }
-                    if (relacionMinasBanderas == 0)
+                    if (relacionMinasBanderas == 0) {
                         despejarAdyacentes(pFila, pColumna);     // Si el número de minas adyacentes es igual al número de casillas
+                    }
                     break;                                                                              // con banderas, se procede a despejar las casillas
             }   //Se ignoran el resto de casos
         }
     }
 
 
-    public void despejarAlrededor (int pFila, int pColumna) {
+    public void despejarAlrededor (int pFila, int pColumna)
+    {
         // Pre:     Unas coordenadas de una casilla
         // Post:    Se despejan las casillas de alrededor
         for (int fila = pFila - 1; fila <= pFila + 1; fila++) {
             for (int columna = pColumna - 1; columna <= pColumna + 1; columna++) {
                 if (0 <= fila && fila < matrizCasillas.length && 0 <= columna &&
                     columna < matrizCasillas[0].length) {                       // La casilla está en el tablero.
-                    if (!matrizCasillas[fila][columna].estaDespejada())
+                    if (!matrizCasillas[fila][columna].estaDespejada()) {
                         despejarCasilla(fila, columna);             // La casilla no está despejada. Aumenta la eficiencia del programa,
+                    }
                     // además evita loops innecesarios al mandar despejar casillas
                 }
             }
         }
     }
 
-    public void despejarAdyacentes (int pFila, int pColumna) {
+    public void despejarAdyacentes (int pFila, int pColumna)
+    {
         //Pre:  Recibe el número de fila y columna de la casilla seleccionada.
          /* Requisitos para despejar casillas adyacentes:
          *  1- La casilla seleccionada debe estar despejada
@@ -287,12 +305,14 @@ public class Tablero {
                                       pColumna)) { // La casilla está en el tablero. Además, no hay que despejar la casilla inicial
                     int result = matrizCasillas[fila][columna].despejar();
 
-                    if (result == 3)                                              // Si al despejar la casilla se pide despejar las de alrededor, se hace
+                    if (result ==
+                        3)                                              // Si al despejar la casilla se pide despejar las de alrededor, se hace
                     {
                         despejarAlrededor(pFila, pColumna);
                         casillasPorDespejar--;
-                        if (casillasPorDespejar == 0)
+                        if (casillasPorDespejar == 0) {
                             Partida.getPartida().finalizarPartida(true); // Comprobamos si se ha ganado (este sería un raro caso muy puntual)
+                        }
                     }
                     else if (result == 2) {
                         Partida.getPartida().finalizarPartida(false);    // Si se manda despejar una mina, se acaba la partida
@@ -308,7 +328,8 @@ public class Tablero {
         }
     }
 
-    public void marcarCasilla (int pFila, int pColumna) {
+    public void marcarCasilla (int pFila, int pColumna)
+    {
         //Pre:  Recibe el número de fila y columna de la casilla seleccionada a ser marcada
         //Post: Se marca, desmarca o "interroga" la casilla en cuestión situada en esa fila y columna
 
@@ -338,7 +359,8 @@ public class Tablero {
         }
     }
 
-    private void mostrarMinas () {
+    private void mostrarMinas ()
+    {
         for (int fila = 0; fila <= matrizCasillas.length - 1; fila++) {
             for (int columna = 0; columna <= matrizCasillas[0].length - 1; columna++) {
                 matrizCasillas[fila][columna].verMinas();

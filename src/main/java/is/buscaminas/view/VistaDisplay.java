@@ -9,7 +9,7 @@ import java.beans.PropertyChangeListener;
 import static java.lang.Math.abs;
 
 
-public class VistaDisplay extends GridPane implements PropertyChangeListener{
+public class VistaDisplay extends GridPane implements PropertyChangeListener {
     // Esta clase es un elemento de la vista
     // Extiende del GridPane lo que significa que se puede considerar un GridPane con funciones especiales
     // Se ha optado por un GridPane pues este nos permitía poner elementos en el ordenadamente
@@ -50,14 +50,14 @@ public class VistaDisplay extends GridPane implements PropertyChangeListener{
         //Post: Se ha actualizado el display de las de acuerdo al valor
 
         int cifraAct;
-        if (pValor< 1000 && pValor>(-100)) {
+        if (pValor < 1000 && pValor > (-100)) {
             cifraAct = abs(pValor) % 10;
             cifra1.cambiarCifra(cifraAct);
 
             cifraAct = (abs(pValor) % 100) / 10;
             cifra2.cambiarCifra(cifraAct);
 
-            if (pValor>=0) {                     //si el número es positivo, la cifra3 marcará un número
+            if (pValor >= 0) {                     //si el número es positivo, la cifra3 marcará un número
                 cifraAct = (abs(pValor) % 1000) / 100;
                 cifra3.cambiarCifra(cifraAct);
             }

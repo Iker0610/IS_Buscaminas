@@ -16,13 +16,15 @@ public class SFXPlayer {
     private SFXPlayer () {}
 
     // Singleton
-    public static SFXPlayer getSFXPlayer () {
+    public static SFXPlayer getSFXPlayer ()
+    {
         if (mSFXPlayer == null) mSFXPlayer = new SFXPlayer();
         return mSFXPlayer;
     }
 
     // Métodos
-    public void setBackgroundTheme (String pTheme) {
+    public void setBackgroundTheme (String pTheme)
+    {
         if (backgroundThemePlayer != null) {
             // Si se esta ejecutando un tema, se para y se libera la memoria
             backgroundThemePlayer.stop();
@@ -37,20 +39,19 @@ public class SFXPlayer {
         backgroundThemePlayer.play();
     }
 
-    public void playAbsoluteSFX(String pTheme)
+    public void playAbsoluteSFX (String pTheme)
     {
         backgroundThemePlayer.stop();
         // Se ejecuta el nuevo efecto
         Media effect = new Media(new File("src/main/resources/is/buscaminas/sfx/effects/" + pTheme + ".wav").toURI().toString());
         efectPlayer = new MediaPlayer(effect);
-        efectPlayer.setOnEndOfMedia(()->backgroundThemePlayer.play());
+        efectPlayer.setOnEndOfMedia(() -> backgroundThemePlayer.play());
         efectPlayer.play();
     }
 
 
-
-
-    public void playSFX (String pTheme) {
+    public void playSFX (String pTheme)
+    {
         if (efectPlayer != null) {
             // Si se esta ejecutando un efecto, se para y se libera la memoria
             efectPlayer.stop();

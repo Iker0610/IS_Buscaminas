@@ -27,7 +27,7 @@
                 -fx-background-repeat: no-repeat;
                 -fx-background-size: cover, auto;
                 -fx-background-color: transparent"/>
-        <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar" focusTraversable="false" />
+        <VistaEmoji GridPane.columnIndex="1" onAction="#reiniciar" focusTraversable="false"/>
         <Button focusTraversable="false" maxHeight="35" maxWidth="35" minHeight="35" minWidth="35" onAction="#mostrarAyuda"
                 style=" -fx-background-image: url(is/buscaminas/ui/assets/ayuda/btnAyuda.gif);
                 -fx-background-repeat: no-repeat;
@@ -35,7 +35,6 @@
                 -fx-background-color: transparent"/>
     </HBox>
     <VistaContador GridPane.columnIndex="2"/>
-
 
 
     <padding>

@@ -2,16 +2,11 @@ package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
 import is.buscaminas.model.Contador;
-import is.buscaminas.model.estructurasDatos.Node;
-import is.buscaminas.model.estructurasDatos.OrderedDoubleLinkedList;
-import is.buscaminas.model.ranking.JugadorRanking;
 import is.buscaminas.model.ranking.Ranking;
 import is.buscaminas.view.VistaRanking;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -27,7 +22,7 @@ public class VentanaRankingController {
     public void initialize ()
     {
         rankingPorNivel = new VistaRanking[3];
-        for (int i = 0; i<3; i++) rankingPorNivel[i] = new VistaRanking();
+        for (int i = 0; i < 3; i++) rankingPorNivel[i] = new VistaRanking();
 
         mostrarRanking(Partida.getPartida().getDificultad());
     }
@@ -39,16 +34,18 @@ public class VentanaRankingController {
         mostrarRanking(dificultad);
     }
 
-    private void mostrarRanking(int pDificultad){
+    private void mostrarRanking (int pDificultad)
+    {
         clean();
-        zonaRanking.getChildren().add(rankingPorNivel[pDificultad-1]);
+        zonaRanking.getChildren().add(rankingPorNivel[pDificultad - 1]);
         Ranking.getRanking().obtenerRanking(pDificultad);
     }
 
-    private void clean(){
+    private void clean ()
+    {
         zonaRanking.getChildren().clear();
-        for (int i = 0; i<3; i++) rankingPorNivel[i].getChildren().clear();
-        for (int i = 0; i<3; i++) rankingPorNivel[i] = new VistaRanking();
+        for (int i = 0; i < 3; i++) rankingPorNivel[i].getChildren().clear();
+        for (int i = 0; i < 3; i++) rankingPorNivel[i] = new VistaRanking();
     }
 
     @FXML
