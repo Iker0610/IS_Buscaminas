@@ -46,6 +46,15 @@ public class SFXPlayer {
 
     public void playAbsoluteSFX (String pTheme)
     {
+        if (efectPlayer != null) {
+            // Si se esta ejecutando un efecto, se para y se libera la memoria
+            efectPlayer.stop();
+            if(efectPlayer.getOnEndOfMedia() != null){
+                efectPlayer.getOnEndOfMedia().run();
+            }
+            efectPlayer.dispose();
+        }
+
         backgroundThemePlayer.stop();
         // Se ejecuta el nuevo efecto
         Media effect = new Media(new File("src/main/resources/is/buscaminas/sfx/effects/" + pTheme + ".wav").toURI().toString());
@@ -60,6 +69,9 @@ public class SFXPlayer {
         if (efectPlayer != null) {
             // Si se esta ejecutando un efecto, se para y se libera la memoria
             efectPlayer.stop();
+            if(efectPlayer.getOnEndOfMedia() != null){
+                efectPlayer.getOnEndOfMedia().run();
+            }
             efectPlayer.dispose();
         }
 
