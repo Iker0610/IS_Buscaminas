@@ -8,15 +8,10 @@ import javafx.fxml.FXML;
 public class PanelMenuBuscaminasController {
 
     @FXML
-    private void reiniciar (ActionEvent pEvento)
-    {
-            Partida.getPartida().reiniciarPartida();
-    }
+    private void reiniciar (ActionEvent pEvento) { Partida.getPartida().reiniciarPartida(); }
 
     @FXML
-    private void mostrarAyuda (ActionEvent pEvento) {
-        Partida.getPartida().mostrarAyuda();
-    }
+    private void mostrarAyuda (ActionEvent pEvento) { Partida.getPartida().mostrarAyuda(); }
 
     @FXML
     private void mostrarRanking (ActionEvent pEvento) {

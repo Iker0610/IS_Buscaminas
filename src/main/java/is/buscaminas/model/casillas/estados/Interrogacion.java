@@ -1,5 +1,6 @@
 package is.buscaminas.model.casillas.estados;
 
+import is.buscaminas.model.SFXPlayer;
 import is.buscaminas.model.casillas.Casilla;
 import is.buscaminas.model.casillas.CasillaMina;
 import is.buscaminas.model.casillas.CasillaNum;
@@ -15,10 +16,20 @@ public class Interrogacion implements IEstadoCasilla {
         pCasilla.cambiarEstado(new Despejado());
         if (pCasilla instanceof CasillaNum)                                     // Si no es mina
         {
-            if (((CasillaNum) pCasilla).tieneCeroMinasAdyacentes()) return 3;       // si tiene 0 minas adyacentes
-            else return 1;                                                          // Si tiene alguna mina adyacente
+            if (((CasillaNum) pCasilla).tieneCeroMinasAdyacentes())             // si tiene 0 minas adyacentes
+            {
+                SFXPlayer.getSFXPlayer().playSFX("waha");
+                return 3;
+            }
+
+            else return 1;                                                      // Si tiene alguna mina adyacente
         }
-        else return 2;                                                          // Si es mina
+        else
+        {                                                               // Si es mina
+
+            SFXPlayer.getSFXPlayer().playAbsoluteSFX("gameover");
+            return 2;
+        }                                                          // Si es mina
     }
 
     @Override

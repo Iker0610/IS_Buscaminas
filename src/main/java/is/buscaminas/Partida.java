@@ -84,8 +84,7 @@ public class Partida extends Application {
 
         // Se muestra la pantalla de Login
         iniciarLogin();
-
-        SFXPlayer.getSFXPlayer().setBackgroundTheme("SuperMarioBrosMedley");
+        SFXPlayer.getSFXPlayer().setBackgroundTheme("marioTheme");
     }
 
     //Singleton
@@ -211,7 +210,6 @@ public class Partida extends Application {
             this.mostrarRanking();
             SFXPlayer.getSFXPlayer().playSFX("victory");
         }
-        else SFXPlayer.getSFXPlayer().playSFX("gameover");
 
         //Se para y resetea el contador
         Contador.getContador().reset();
@@ -239,6 +237,7 @@ public class Partida extends Application {
 
             // Se configuran las acciones al cerrar la ventana -> Se reanuda el contador
             ventanaAyuda.setOnCloseRequest((pHandler) -> {
+                SFXPlayer.getSFXPlayer().setBackgroundTheme("marioTheme");
                 if (partidaActiva) Contador.getContador().continuar();
             });
 
@@ -247,6 +246,8 @@ public class Partida extends Application {
 
             // Se muestra la ventana
             ventanaAyuda.show();
+
+            SFXPlayer.getSFXPlayer().setBackgroundTheme("storeTheme");
         }
         catch (IOException e) {
             // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
@@ -279,6 +280,7 @@ public class Partida extends Application {
 
             // Se configuran las acciones al cerrar la ventana -> Se reanuda el contador
             ventanaRanking.setOnCloseRequest((pHandler) -> {
+                SFXPlayer.getSFXPlayer().setBackgroundTheme("marioTheme");
                 if (partidaActiva) Contador.getContador().continuar();
             });
 
@@ -287,6 +289,7 @@ public class Partida extends Application {
 
             // Se muestra la ventana
             ventanaRanking.show();
+            SFXPlayer.getSFXPlayer().setBackgroundTheme("challengeTheme");
         }
         catch (IOException e) {
             // Si existe algún error al cargar el fxml se indica y se cierra la aplicación
