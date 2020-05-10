@@ -305,10 +305,9 @@ public class Tablero {
                                       pColumna)) { // La casilla está en el tablero. Además, no hay que despejar la casilla inicial
                     int result = matrizCasillas[fila][columna].despejar();
 
-                    if (result ==
-                        3)                                              // Si al despejar la casilla se pide despejar las de alrededor, se hace
+                    if (result == 3)                                              // Si al despejar la casilla se pide despejar las de alrededor, se hace
                     {
-                        despejarAlrededor(pFila, pColumna);
+                        despejarAlrededor(fila, columna);
                         casillasPorDespejar--;
                         if (casillasPorDespejar == 0) {
                             Partida.getPartida().finalizarPartida(true); // Comprobamos si se ha ganado (este sería un raro caso muy puntual)
