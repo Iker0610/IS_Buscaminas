@@ -22,11 +22,11 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
         Ranking.getRanking().addObserver(this);
 
         this.setPadding(new Insets(50));
-        this.setHgap(25);
-        this.setVgap(20);
+        this.setHgap(30);
+        this.setVgap(0);
 
         for (int i = 1; i <= 10; i++) {
-            int size = 30;
+            int size = 61;
             Pane numPosicion = new Pane();
             numPosicion.setMinHeight(size);
             numPosicion.setMinWidth(size);
@@ -52,7 +52,7 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
     {
         int pos = 0;
         for (JugadorRanking jugador : pLJugadores) {
-            String nombre = "   -";
+            String nombre = "    -";
             String puntuacion = "-";
             if (jugador != null) {
                 nombre = jugador.getNombre();
@@ -60,10 +60,10 @@ public class VistaRanking extends GridPane implements PropertyChangeListener {
             }
             //Creamos los label ajustando el tamaño
             Label nombreLabel = new Label(nombre);
-            nombreLabel.setFont(Font.font("MarioFont", 28));
+            nombreLabel.setFont(Font.font("MarioFont", 30));
             nombreLabel.setTextFill(Color.color(1, 1, 1));
             Label puntuacionLabel = new Label(puntuacion);
-            puntuacionLabel.setFont(Font.font("MarioFont", 28));
+            puntuacionLabel.setFont(Font.font("MarioFont", 30));
             puntuacionLabel.setTextFill(Color.color(1, 1, 1));
 
             // Por cada usuario, insertamos la imagen de su posición, su nombre y puntuación.
