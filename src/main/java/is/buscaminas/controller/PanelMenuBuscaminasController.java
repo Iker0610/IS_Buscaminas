@@ -1,6 +1,7 @@
 package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
+import is.buscaminas.model.SFXPlayer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
@@ -17,5 +18,6 @@ public class PanelMenuBuscaminasController {
     private void mostrarRanking (ActionEvent pEvento)
     {
         Partida.getPartida().mostrarRanking();
+        SFXPlayer.getSFXPlayer().setBackgroundTheme("challengeTheme");
     }
 }

@@ -2,6 +2,7 @@ package is.buscaminas.controller;
 
 import is.buscaminas.Partida;
 import is.buscaminas.model.Contador;
+import is.buscaminas.model.SFXPlayer;
 import is.buscaminas.model.ranking.Ranking;
 import is.buscaminas.view.VistaRanking;
 import javafx.event.ActionEvent;
@@ -54,5 +55,6 @@ public class VentanaRankingController {
         Stage stage = (Stage) aceptar.getScene().getWindow();
         Contador.getContador().continuar(); //Reanudar contador
         stage.close();
+        SFXPlayer.getSFXPlayer().setBackgroundTheme("marioTheme");
     }
 }

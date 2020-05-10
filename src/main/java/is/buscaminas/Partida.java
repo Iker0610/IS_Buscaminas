@@ -202,6 +202,7 @@ public class Partida extends Application {
 
             //Se abre la ventana del ranking
             this.mostrarRanking();
+            SFXPlayer.getSFXPlayer().stopBackground();
             SFXPlayer.getSFXPlayer().playSFX("victory");
         }
 
@@ -284,7 +285,6 @@ public class Partida extends Application {
 
             // Se muestra la ventana
             ventanaRanking.show();
-            SFXPlayer.getSFXPlayer().setBackgroundTheme("challengeTheme");
         }
         catch (IOException e) {
             // Si existe algún error al cargar el fxml se indica y se cierra la aplicación

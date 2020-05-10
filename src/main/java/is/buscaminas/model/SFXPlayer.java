@@ -39,6 +39,11 @@ public class SFXPlayer {
         backgroundThemePlayer.play();
     }
 
+    public void stopBackground()
+    {
+        backgroundThemePlayer.stop();
+    }
+
     public void playAbsoluteSFX (String pTheme)
     {
         backgroundThemePlayer.stop();
